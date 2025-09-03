@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang }}" dir="{{ 'rtl' if page.lang == 'he' else 'ltr' }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        {% for item in collections.nav %}
+          {% if item.data.lang == page.lang %}
+            <li><a href="{{ item.url }}">{{ item.data.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </nav>
+    <div>
+      {% set translatedLink = page | getTranslatedLink %}
+      {% if translatedLink %}
+        <a href="{{ translatedLink }}">
+          {% if page.lang == 'he' %}
+            English
+          {% else %}
+            עברית
+          {% endif %}
+        </a>
+      {% endif %}
+    </div>
+  </header>
+  <main>
+    {{ content | safe }}
+  </main>
+  <footer>
+    <!-- Footer will go here -->
+  </footer>
+</body>
+</html>

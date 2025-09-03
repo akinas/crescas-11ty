@@ -1,6 +1,9 @@
 ---
-title: 'על המהדיר'
+title: 'על המהדיр'
 weight: 80
+tags: 'nav'
+permalink: 'he/docs/about/index.html'
+translationKey: 'about'
 ---
 
 ## על המהדיר
