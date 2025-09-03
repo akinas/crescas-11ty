@@ -4,6 +4,7 @@ weight: 80
 tags: 'nav'
 permalink: 'he/docs/about/index.html'
 translationKey: 'about'
+lang: he
 ---
 
 ## על המהדיר

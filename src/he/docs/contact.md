@@ -5,6 +5,7 @@ bookToc: false
 tags: 'nav'
 permalink: 'he/docs/contact/index.html'
 translationKey: 'contact'
+lang: he
 ---
 
 ## צור קשר

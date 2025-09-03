@@ -4,6 +4,7 @@ weight: 80
 tags: 'nav'
 permalink: 'en/docs/about/index.html'
 translationKey: 'about'
+lang: en
 ---
 
 ## About the Editor

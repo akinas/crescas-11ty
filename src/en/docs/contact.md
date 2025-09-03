@@ -5,6 +5,7 @@ bookToc: false
 tags: 'nav'
 permalink: 'en/docs/contact/index.html'
 translationKey: 'contact'
+lang: en
 ---
 
 ## Contact

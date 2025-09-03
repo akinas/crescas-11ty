@@ -18,7 +18,7 @@
       </ul>
     </nav>
     <div>
-      {% set translatedLink = page | getTranslatedLink %}
+      {% set translatedLink = lang | getTranslatedLink %}
       {% if translatedLink %}
         <a href="{{ translatedLink }}">
           {% if lang == 'he' %}

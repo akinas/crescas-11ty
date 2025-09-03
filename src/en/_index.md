@@ -2,6 +2,7 @@
 title: Ohr haShem
 type: docs
 lang: en
+permalink: /en/index.html
 ---
 
 # Rabbi Hasdai Crescas, _Light of the Lord_
