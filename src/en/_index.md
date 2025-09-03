@@ -1,6 +1,7 @@
 ---
 title: Ohr haShem
 type: docs
+lang: en
 ---
 
 # Rabbi Hasdai Crescas, _Light of the Lord_

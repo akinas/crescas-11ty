@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang }}" dir="{{ 'rtl' if page.lang == 'he' else 'ltr' }}">
+<html lang="{{ lang }}" dir="{{ 'rtl' if lang == 'he' else 'ltr' }}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +11,7 @@
     <nav>
       <ul>
         {% for item in collections.nav %}
-          {% if item.data.lang == page.lang %}
+          {% if item.data.lang == lang %}
             <li><a href="{{ item.url }}">{{ item.data.title }}</a></li>
           {% endif %}
         {% endfor %}
@@ -21,7 +21,7 @@
       {% set translatedLink = page | getTranslatedLink %}
       {% if translatedLink %}
         <a href="{{ translatedLink }}">
-          {% if page.lang == 'he' %}
+          {% if lang == 'he' %}
             English
           {% else %}
             עברית

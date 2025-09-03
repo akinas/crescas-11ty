@@ -2,6 +2,7 @@
 title: מהדורת דניאל לוין
 type: docs
 permalink: /index.html
+lang: he
 ---
 
 # ספר "אור השם" לרבינו חסדאי קרשקש
