@@ -1,5 +1,5 @@
 ---
-title: 'על המהדיр'
+title: 'על המהדיר'
 weight: 80
 tags: 'nav'
 permalink: 'he/docs/about/index.html'

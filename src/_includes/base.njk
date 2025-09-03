@@ -5,36 +5,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title }}</title>
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        {% for item in collections.nav %}
-          {% if item.data.lang == lang %}
-            <li><a href="{{ item.url }}">{{ item.data.title }}</a></li>
-          {% endif %}
-        {% endfor %}
-      </ul>
-    </nav>
-    <div>
-      {% set translatedLink = lang | getTranslatedLink %}
-      {% if translatedLink %}
-        <a href="{{ translatedLink }}">
-          {% if lang == 'he' %}
-            English
-          {% else %}
-            עברית
-          {% endif %}
-        </a>
-      {% endif %}
-    </div>
-  </header>
-  <main>
-    {{ content | safe }}
-  </main>
-  <footer>
-    <!-- Footer will go here -->
-  </footer>
+  <div class="page-wrapper">
+    <header class="site-header">
+      <div class="container">
+        <div class="header-top">
+          <div class="site-title">
+            <h1>{{ title }}</h1>
+          </div>
+          
+          <div class="language-toggle">
+            <button class="lang-btn lang-btn--active" disabled>
+              {% if lang == 'he' %}
+                עב
+              {% else %}
+                EN
+              {% endif %}
+            </button>
+            {% set translatedLink = lang | getTranslatedLink %}
+            {% if translatedLink %}
+              <a href="{{ translatedLink }}" class="lang-btn lang-btn--inactive" aria-label="Switch language">
+                {% if lang == 'he' %}
+                  EN
+                {% else %}
+                  עב
+                {% endif %}
+              </a>
+            {% endif %}
+          </div>
+        </div>
+        
+        <nav class="main-nav" role="navigation">
+          <ul class="nav-list">
+            {% for item in collections.nav %}
+              {% if item.data.lang == lang %}
+                <li class="nav-item">
+                  <a href="{{ item.url }}" class="nav-link">{{ item.data.title }}</a>
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-content" role="main">
+      <div class="container">
+        <div class="content-wrapper">
+          {{ content | safe }}
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-content">
+          <!-- Footer content will go here -->
+        </div>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>
