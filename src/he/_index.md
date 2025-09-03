@@ -1,6 +1,7 @@
 ---
 title: מהדורת דניאל לוין
 type: docs
+permalink: /index.html
 ---
 
 # ספר "אור השם" לרבינו חסדאי קרשקש
