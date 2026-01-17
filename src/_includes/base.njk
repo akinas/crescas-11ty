@@ -7,49 +7,65 @@
   <link rel="stylesheet" href="/css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="{{ site.googleFontsUrl[lang] or site.googleFontsUrl.en }}" rel="stylesheet">
+  <style>
+    :root {
+      --font-en-serif: {{ site.fonts.en.serif | safe }};
+      --font-en-sans: {{ site.fonts.en.sans | safe }};
+      --font-he-serif: {{ site.fonts.he.serif | safe }};
+      --font-he-sans: {{ site.fonts.he.sans | safe }};
+    }
+  </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1YNBEKBG45"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-1YNBEKBG45');
+  </script>
 </head>
 <body>
   <div class="page-wrapper">
     <header class="site-header">
       <div class="container">
-        <div class="header-top">
-          <div class="site-title">
-            <h1>{{ title }}</h1>
-          </div>
-          
+        <!-- Top Bar for Language Toggle -->
+        <div class="header-top-bar">
           <div class="language-toggle">
-            <button class="lang-btn lang-btn--active" disabled>
-              {% if lang == 'he' %}
-                עב
-              {% else %}
-                EN
-              {% endif %}
-            </button>
             {% set translatedLink = lang | getTranslatedLink %}
-            {% if translatedLink %}
-              <a href="{{ translatedLink }}" class="lang-btn lang-btn--inactive" aria-label="Switch language">
-                {% if lang == 'he' %}
-                  EN
-                {% else %}
-                  עב
-                {% endif %}
-              </a>
-            {% endif %}
+            
+            <span class="lang-switch-btn {{ 'active' if lang == 'he' }}">
+              {% if lang == 'he' %}עב{% else %}<a href="{{ translatedLink }}" class="lang-switch-btn">עב</a>{% endif %}
+            </span>
+            <span class="lang-separator">|</span>
+            <span class="lang-switch-btn {{ 'active' if lang == 'en' }}">
+              {% if lang == 'en' %}EN{% else %}<a href="{{ translatedLink }}" class="lang-switch-btn">EN</a>{% endif %}
+            </span>
           </div>
         </div>
-        
-        <nav class="main-nav" role="navigation">
-          <ul class="nav-list">
-            {% for item in collections.nav %}
-              {% if item.data.lang == lang %}
-                <li class="nav-item">
-                  <a href="{{ item.url }}" class="nav-link">{{ item.data.title }}</a>
-                </li>
-              {% endif %}
-            {% endfor %}
-          </ul>
-        </nav>
+
+        <!-- Main Header Area: Title and Nav -->
+        <div class="header-inner">
+          <div class="site-title">
+            <!-- Use language-specific site title -->
+            <h1><a href="{{ '/en/' | url if lang == 'en' else '/' | url }}">{{ (site.title[lang] or site.title.en or "Crescas") | markdownInline | safe }}</a></h1>
+          </div>
+          
+          <nav class="main-nav" role="navigation" aria-label="Main navigation">
+            <ul class="nav-list">
+              {% for item in collections.nav %}
+                {% if item.data.lang == lang %}
+                  <li class="nav-item">
+                    <a href="{{ item.url }}" class="nav-link {{ 'active' if page.url == item.url }}" {% if page.url == item.url %}aria-current="page"{% endif %}>
+                      {{ item.data.title }}
+                    </a>
+                  </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
 

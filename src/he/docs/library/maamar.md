@@ -1,6 +1,7 @@
 ---
 title: 'מאמר אלוהי'
 weight: 25
+lang: he
 ---
 
 ## מאמר אלוהי לרבי משה בן יוסף הלוי מסביליה
@@ -14,10 +15,6 @@ weight: 25
 
 ## איפה להשיג?
 
-{{< hint warning >}}
-
-
-[![זמין ב-Amazon.com](https://res.cloudinary.com/dyj4i2vhr/image/upload/c_scale,w_200/c_mpad,g_south,h_55,w_300/v1686674375/amazon_small_jpucbt.png)](https://www.amazon.com/dp/B0C7J5HBV9)
 
 [זמין ב-Amazon.com](https://www.amazon.com/dp/B0C7J5HBV9) ובזירות מסחר של Amazon במדינות אחרות
 
@@ -34,7 +31,7 @@ weight: 25
 &nbsp; &gt; [AU](https://www.amazon.com.au/dp/B0C7J5HBV9) &lt;
 
 
-{{< /hint >}}
+
 
 
 ## על הספר

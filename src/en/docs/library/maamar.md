@@ -1,6 +1,7 @@
 ---
 title: Metaphysical Treatise
 weight: 35
+lang: en
 ---
 
 ## *Metaphysical Treatise* by Rabbi Moshe ben Yosef Halevi of Seville 
@@ -16,13 +17,9 @@ A critical edition of the Judeo-Arabic source and an anonymous medieval Hebrew t
 
 ## Where to buy?
 
-{{< hint warning >}}
 
-[Available at Amazon.com](https://www.amazon.com/dp/B0C7J5HBV9)
 
-[![Availabel at Amazon.com](https://res.cloudinary.com/dyj4i2vhr/image/upload/c_scale,h_35/v1686674375/amazon_small_jpucbt.png)](https://www.amazon.com/dp/B0C7J5HBV9)
-
-Other Amazon marketplaces:
+[Availabel at Amazon.com](https://www.amazon.com/dp/B0C7J5HBV9) and other Amazon marketplaces:
 
 &gt; [UK](https://www.amazon.co.uk/dp/B0C7J5HBV9)
 &nbsp; &gt; [DE](https://www.amazon.de/dp/B0C7J5HBV9)
@@ -36,7 +33,7 @@ Other Amazon marketplaces:
 &nbsp; &gt; [CA](https://www.amazon.ca/dp/B0C7J5HBV9)
 &nbsp; &gt; [AU](https://www.amazon.com.au/dp/B0C7J5HBV9)
 
-{{< /hint >}}
+
 
 
 

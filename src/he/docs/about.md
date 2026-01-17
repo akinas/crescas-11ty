@@ -1,7 +1,7 @@
 ---
 title: 'על המהדיר'
 weight: 80
-tags: 'nav'
+#tags: 'nav'
 permalink: 'he/docs/about/index.html'
 translationKey: 'about'
 lang: he

@@ -2,7 +2,7 @@
 title: 'צור קשר'
 weight: 110
 bookToc: false
-tags: 'nav'
+#tags: 'nav'
 permalink: 'he/docs/contact/index.html'
 translationKey: 'contact'
 lang: he

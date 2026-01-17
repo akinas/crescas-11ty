@@ -1,7 +1,7 @@
 ---
 title: 'About the Editor'
 weight: 80
-tags: 'nav'
+#tags: 'nav'
 permalink: 'en/docs/about/index.html'
 translationKey: 'about'
 lang: en

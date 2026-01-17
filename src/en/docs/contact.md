@@ -2,7 +2,7 @@
 title: 'Contact'
 weight: 110
 bookToc: false
-tags: 'nav'
+#tags: 'nav'
 permalink: 'en/docs/contact/index.html'
 translationKey: 'contact'
 lang: en

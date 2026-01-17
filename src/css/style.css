@@ -16,11 +16,13 @@
   --color-surface: #f8fafc;
   --color-border: #e2e8f0;
   --color-text-light: #a0aec0;
-  
-  /* Typography */
-  --font-serif: 'Crimson Text', Georgia, 'Times New Roman', serif;
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  
+
+  /* Typography Variables by Language */
+  --font-en-serif: 'Crimson Text', Georgia, 'Times New Roman', serif;
+  --font-en-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-he-serif: 'Frank Ruhl Libre', serif;
+  --font-he-sans: 'Assistant', sans-serif;
+
   /* Spacing Scale */
   --space-xs: 0.5rem;
   --space-sm: 1rem;
@@ -28,11 +30,11 @@
   --space-lg: 2rem;
   --space-xl: 3rem;
   --space-2xl: 4rem;
-  
+
   /* Layout */
   --container-max: 72rem;
   --content-max: 65ch;
-  --header-height: 4rem;
+  --header-height: auto;
 }
 
 /* Base Typography */
@@ -42,7 +44,7 @@ html {
 }
 
 body {
-  font-family: var(--font-serif);
+  font-family: var(--font-en-serif);
   font-size: 1.125rem;
   color: var(--color-primary);
   background-color: var(--color-background);
@@ -50,6 +52,11 @@ body {
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hebrew Overrides */
+[lang="he"] body {
+  font-family: var(--font-he-serif);
 }
 
 /* Layout Structure */
@@ -63,6 +70,7 @@ body {
   max-width: var(--container-max);
   margin: 0 auto;
   padding: 0 var(--space-md);
+  width: 100%;
 }
 
 /* Header Styles */
@@ -74,36 +82,52 @@ body {
   z-index: 100;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+  padding: var(--space-md) 0;
 }
 
 /* Header Layout */
-.header-top {
+.header-top-bar {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
+  padding-bottom: var(--space-xs);
+  margin-bottom: var(--space-xs);
+  border-bottom: 1px solid var(--color-surface);
+}
+
+[dir="rtl"] .header-top-bar {
+  justify-content: flex-end;
+  /* In RTL, 'flex-end' is logically Left, which is correct for "end of line" */
+}
+
+.header-inner {
+  display: flex;
   align-items: center;
-  padding: var(--space-md) 0 var(--space-sm) 0;
-  border-bottom: 1px solid var(--color-border);
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-md);
 }
 
 /* Site Title */
-.site-title {
-  flex: 1;
-}
-
 .site-title h1 {
-  font-family: var(--font-serif);
-  font-size: 1.75rem;
+  font-family: var(--font-en-serif);
+  font-size: 2rem;
   font-weight: 600;
   color: var(--color-primary);
   margin: 0;
-  line-height: 1.2;
+  line-height: 1.1;
   letter-spacing: -0.02em;
 }
 
-/* Navigation Styles */
-.main-nav {
-  padding: var(--space-sm) 0;
+[lang="he"] .site-title h1 {
+  font-family: var(--font-he-serif);
 }
+
+.site-title a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
 
 .nav-list {
   display: flex;
@@ -111,87 +135,127 @@ body {
   margin: 0;
   padding: 0;
   gap: var(--space-xl);
-}
-
-.nav-item {
-  margin: 0;
+  flex-wrap: wrap;
 }
 
 .nav-link {
-  font-family: var(--font-sans);
+  font-family: var(--font-en-sans);
   font-weight: 400;
   font-size: 0.95rem;
   letter-spacing: 0.02em;
   color: var(--color-secondary);
   text-decoration: none;
-  padding: var(--space-xs) var(--space-sm);
-  border-bottom: 2px solid transparent;
-  transition: all 0.2s ease;
+  padding: var(--space-xs) 0;
   position: relative;
+  transition: color 0.2s ease;
+}
+
+[lang="he"] .nav-link {
+  font-family: var(--font-he-sans);
+  font-weight: 500;
+}
+
+/* Hover/Active State - Underline Effect */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-accent);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+[dir="ltr"] .nav-link::after {
+  transform-origin: right;
+}
+
+[dir="ltr"] .nav-link:hover::after,
+[dir="ltr"] .nav-link.active::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+[dir="rtl"] .nav-link::after {
+  transform-origin: left;
+}
+
+[dir="rtl"] .nav-link:hover::after,
+[dir="rtl"] .nav-link.active::after {
+  transform: scaleX(1);
+  transform-origin: right;
 }
 
 .nav-link:hover,
-.nav-link:focus {
+.nav-link:focus,
+.nav-link.active {
   color: var(--color-primary);
-  border-bottom-color: var(--color-accent);
 }
 
 .nav-link:focus {
   outline: none;
+}
+
+.nav-link:focus-visible {
+  outline: 2px solid var(--color-accent-light);
+  outline-offset: 4px;
   border-radius: 2px;
-  box-shadow: 0 0 0 2px var(--color-accent-light);
 }
 
 /* Language Toggle */
 .language-toggle {
   display: flex;
   align-items: center;
-  gap: 2px;
-  flex-shrink: 0;
+  gap: var(--space-xs);
 }
 
-.lang-btn {
-  font-family: var(--font-sans);
-  font-weight: 500;
-  font-size: 0.75rem;
-  letter-spacing: 0.05em;
-  padding: 6px 12px;
-  border: 1px solid var(--color-border);
+.lang-separator {
+  color: var(--color-border);
+  user-select: none;
+}
+
+.lang-switch-btn {
+  font-family: var(--font-en-sans);
+  font-size: 0.85rem;
+  color: var(--color-tertiary);
+  text-decoration: none;
+  padding: 4px 8px;
   border-radius: 4px;
   transition: all 0.2s ease;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 36px;
-  cursor: pointer;
-  background: none;
+  font-weight: 500;
 }
 
-.lang-btn--active {
-  background-color: var(--color-accent);
-  color: white;
-  border-color: var(--color-accent);
+[lang="he"] .lang-switch-btn {
+  font-family: var(--font-he-sans);
+}
+
+.lang-switch-btn:hover {
+  color: var(--color-primary);
+  background-color: var(--color-surface);
+}
+
+.lang-switch-btn.active {
+  color: var(--color-primary);
+  font-weight: 700;
   cursor: default;
 }
 
-.lang-btn--inactive {
-  background-color: var(--color-surface);
-  color: var(--color-tertiary);
-  border-color: var(--color-border);
-}
+/* 
+   Layout Logic:
+   .header-inner uses justify-content: space-between.
+   
+   LTR (English):
+   Order: Title (Start/Left), Nav (End/Right)
+   
+   RTL (Hebrew):
+   Order: Title (Start/Right), Nav (End/Left)
+   
+   This matches the requirements naturally.
+*/
 
-.lang-btn--inactive:hover,
-.lang-btn--inactive:focus {
-  color: var(--color-accent);
-  border-color: var(--color-accent);
-  background-color: var(--color-background);
-}
-
-.lang-btn:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px var(--color-accent-light);
-}
 
 /* Main Content */
 .main-content {
@@ -214,112 +278,129 @@ body {
 
 .footer-content {
   text-align: center;
-  font-family: var(--font-sans);
+  font-family: var(--font-en-sans);
   font-size: 0.875rem;
   color: var(--color-tertiary);
 }
 
-/* RTL Support */
-[dir="rtl"] .header-top {
-  flex-direction: row-reverse;
+[lang="he"] .footer-content {
+  font-family: var(--font-he-sans);
 }
 
-[dir="rtl"] .nav-list {
-  justify-content: flex-start;
+
+/* Hero Image */
+.hero-image-container {
+  margin: var(--space-lg) 0;
+  text-align: center;
 }
 
-[dir="ltr"] .nav-list {
-  justify-content: flex-end;
+.hero-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  /* Elevation */
+  transition: transform 0.3s ease;
 }
 
-[dir="rtl"] .nav-link {
-  text-align: right;
+.hero-image:hover {
+  transform: translateY(-2px);
 }
 
-[dir="rtl"] .site-title h1 {
-  text-align: right;
+/* Button Component */
+.button {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: #ffffff !important;
+  /* Force white text */
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-family: var(--font-en-sans);
+  /* Use sans serif for buttons */
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border: none;
+  cursor: pointer;
+  line-height: 1.2;
+}
+
+[lang="he"] .button {
+  font-family: var(--font-he-sans);
+}
+
+.button:hover {
+  background-color: var(--color-accent-light);
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+.button:active {
+  transform: translateY(0);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .container {
-    padding: 0 var(--space-sm);
-  }
-  
-  .header-top {
+  .header-inner {
     flex-direction: column;
     gap: var(--space-sm);
     text-align: center;
-    padding: var(--space-sm) 0;
   }
-  
+
+  .main-nav {
+    width: 100%;
+    order: 3;
+    border-top: 1px solid var(--color-surface);
+    padding-top: var(--space-sm);
+  }
+
+  /* Hero Image */
+  .hero-image-container {
+    margin: var(--space-lg) 0;
+    text-align: center;
+  }
+
   .site-title {
     order: 1;
   }
-  
+
   .language-toggle {
     order: 2;
+    position: absolute;
+    top: var(--space-md);
+    right: var(--space-md);
+    /* Fixed position on mobile for lang toggle often nicer? Or flow. Let's keep flow for now but maybe absolute is better to save space */
   }
-  
-  .main-nav {
-    order: 3;
-    padding: var(--space-sm) 0;
-  }
-  
-  .nav-list {
-    justify-content: center !important;
-    gap: var(--space-md);
-    flex-wrap: wrap;
-  }
-  
-  .site-title h1 {
-    font-size: 1.5rem;
-    text-align: center;
-  }
-  
-  .main-content {
-    padding: var(--space-lg) 0;
-  }
-  
-  body {
-    font-size: 1rem;
-  }
-}
 
-@media (max-width: 480px) {
-  .container {
-    padding: 0 var(--space-sm);
+  [dir="rtl"] .language-toggle {
+    right: auto;
+    left: var(--space-md);
   }
-  
+
   .nav-list {
+    flex-direction: column;
     gap: var(--space-sm);
-  }
-  
-  .nav-link {
-    font-size: 0.85rem;
-  }
-  
-  .main-content {
-    padding: var(--space-md) 0;
+    align-items: center;
   }
 }
 
-/* Print Styles */
 @media print {
+
   .site-header,
   .site-footer,
   .language-toggle {
     display: none;
   }
-  
+
   .page-wrapper {
     min-height: auto;
   }
-  
+
   .main-content {
     padding: 0;
   }
-  
+
   body {
     background: white;
     color: black;
