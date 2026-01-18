@@ -1,5 +1,5 @@
 ---
-title: Rabbi Hasdai Crescas’s Library
+title: R. Crescas’s Library
 weight: 30
 lang: en
 tags: 'nav'

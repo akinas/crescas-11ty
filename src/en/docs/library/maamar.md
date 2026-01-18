@@ -17,9 +17,9 @@ A critical edition of the Judeo-Arabic source and an anonymous medieval Hebrew t
 
 ## Where to buy?
 
+<strong>In Israel:</strong> [BookPod](https://bookpod.co.il/product/%d7%9e%d7%90%d7%9e%d7%a8-%d7%90%d7%9c%d7%95%d7%94%d7%99/)
 
-
-[Availabel at Amazon.com](https://www.amazon.com/dp/B0C7J5HBV9) and other Amazon marketplaces:
+<strong>Internationally:</strong> [Amazon.com](https://www.amazon.com/dp/B0C7J5HBV9) and other Amazon marketplaces:
 
 &gt; [UK](https://www.amazon.co.uk/dp/B0C7J5HBV9)
 &nbsp; &gt; [DE](https://www.amazon.de/dp/B0C7J5HBV9)

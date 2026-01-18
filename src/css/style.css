@@ -6,16 +6,21 @@
 }
 
 :root {
-  /* Color Palette - Cold, Minimal */
-  --color-primary: #1a1d29;
-  --color-secondary: #4a5568;
-  --color-tertiary: #718096;
-  --color-accent: #2b6cb0;
-  --color-accent-light: #3182ce;
-  --color-background: #fdfdfe;
-  --color-surface: #f8fafc;
-  --color-border: #e2e8f0;
-  --color-text-light: #a0aec0;
+  /* Color Palette - Modern, Warm, Accessible */
+  --color-primary: #333333;
+  --color-secondary: #555555;
+  --color-tertiary: #767676;
+  --color-accent: #0056b3;
+  --color-accent-hover: #004494;
+  --color-accent-light: #3395ff;
+  --color-background: #f8f9fa;
+  --color-surface: #ffffff;
+  --color-border: #e9ecef;
+  --color-text-light: #6c757d;
+
+  --color-link: #0056b3;
+  --color-link-hover: #004494;
+  --color-link-visited: #5c4d7d;
 
   /* Typography Variables by Language */
   --font-en-serif: 'Crimson Text', Georgia, 'Times New Roman', serif;
@@ -41,6 +46,47 @@
 html {
   font-size: 16px;
   line-height: 1.6;
+}
+
+/* Global Link Styles */
+a {
+  color: var(--color-link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  transition: color 0.15s ease;
+}
+
+a:hover {
+  color: var(--color-link-hover);
+  text-decoration-thickness: 2px;
+}
+
+a:visited {
+  color: var(--color-link-visited);
+}
+
+/* Component Overrides for Links */
+.nav-link,
+.site-title a,
+.lang-switch-btn,
+.button {
+  text-decoration: none;
+  /* Colors managed by their own classes */
+}
+
+/* Prevent visited color bleed for nav/buttons */
+.nav-link:visited {
+  /* Keep visited nav links consistent with their state (hover/active override this mostly, but good for base) */
+  color: var(--color-secondary);
+}
+
+.site-title a:visited {
+  color: var(--color-primary);
+}
+
+.button:visited {
+  color: #ffffff !important;
 }
 
 body {
@@ -140,14 +186,18 @@ body {
 
 .nav-link {
   font-family: var(--font-en-sans);
-  font-weight: 400;
+  font-weight: 500;
   font-size: 0.95rem;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
   color: var(--color-secondary);
   text-decoration: none;
-  padding: var(--space-xs) 0;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  background-color: var(--color-surface);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   position: relative;
-  transition: color 0.2s ease;
+  overflow: hidden;
 }
 
 [lang="he"] .nav-link {
@@ -155,17 +205,16 @@ body {
   font-weight: 500;
 }
 
-/* Hover/Active State - Underline Effect */
+/* Hover/Active State - Animated Underline */
 .nav-link::after {
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 2px;
+  height: 3px;
   background-color: var(--color-accent);
   transform: scaleX(0);
-  transform-origin: right;
   transition: transform 0.3s ease;
 }
 
@@ -190,9 +239,16 @@ body {
 }
 
 .nav-link:hover,
-.nav-link:focus,
-.nav-link.active {
+.nav-link:focus {
+  background-color: var(--color-surface);
   color: var(--color-primary);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.nav-link.active {
+  background-color: var(--color-surface);
+  color: var(--color-accent);
+  font-weight: 600;
 }
 
 .nav-link:focus {
@@ -201,8 +257,7 @@ body {
 
 .nav-link:focus-visible {
   outline: 2px solid var(--color-accent-light);
-  outline-offset: 4px;
-  border-radius: 2px;
+  outline-offset: 2px;
 }
 
 /* Language Toggle */
@@ -331,7 +386,7 @@ body {
 }
 
 .button:hover {
-  background-color: var(--color-accent-light);
+  background-color: var(--color-accent-hover);
   transform: translateY(-1px);
   text-decoration: none;
 }
@@ -363,6 +418,8 @@ body {
 
   .site-title {
     order: 1;
+    margin-top: var(--space-lg);
+    /* Space for language toggle */
   }
 
   .language-toggle {
@@ -407,4 +464,33 @@ body {
     font-size: 12pt;
     line-height: 1.4;
   }
+}
+
+/* Notice Box - Pop Style */
+.notice-box {
+  background-color: #fffaf0;
+  /* Warm cream/orange tint */
+  border-left: 4px solid #dd6b20;
+  /* Vibrant Orange */
+  padding: 1rem 1.25rem;
+  border-radius: 4px;
+  margin: var(--space-md) 0;
+  color: #2d3748;
+  /* Dark grey for readability */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.notice-box a {
+  color: #c05621;
+  /* Darker orange/brown for links */
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.notice-box a:hover {
+  color: #9c4221;
+}
+
+.notice-box strong {
+  color: #c05621;
 }

@@ -15,8 +15,9 @@ lang: he
 
 ## איפה להשיג?
 
+<strong>בישראל:</strong> [BookPod](https://bookpod.co.il/product/%d7%9e%d7%90%d7%9e%d7%a8-%d7%90%d7%9c%d7%95%d7%94%d7%99/)
 
-[זמין ב-Amazon.com](https://www.amazon.com/dp/B0C7J5HBV9) ובזירות מסחר של Amazon במדינות אחרות
+<strong>בארץ ובחו"ל:</strong> [Amazon.com](https://www.amazon.com/dp/B0C7J5HBV9) ובזירות מסחר של Amazon במדינות אחרות
 
 [UK](https://www.amazon.co.uk/dp/B0C7J5HBV9)
 &nbsp; &gt; [DE](https://www.amazon.de/dp/B0C7J5HBV9)

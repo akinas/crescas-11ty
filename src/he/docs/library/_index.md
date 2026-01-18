@@ -1,5 +1,5 @@
 ---
-title: 'ספריית רבנו חסדאי קרשקש'
+title: 'ספריית רבי קרשקש'
 weight: 20
 tags: 'nav'
 lang: he
