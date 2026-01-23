@@ -26,11 +26,16 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/static");
   eleventyConfig.addPlugin(eleventyNavigation);
 
+  eleventyConfig.addShortcode("msurl", function (id, text) {
+    // Replicates: <a href="https://www.nli.org.il/en/manuscripts/NNL_ALEPH{{ .Get 0 }}">{{ .Get 1 }}</a>
+    return `<a href="https://www.nli.org.il/en/manuscripts/NNL_ALEPH${id}" target="_blank" rel="noopener noreferrer">${text}</a>`;
+  });
+
 
   return {
     dir: {
       input: "src"
     },
-    markdownTemplateEngine: false
+    markdownTemplateEngine: "njk"
   };
 };

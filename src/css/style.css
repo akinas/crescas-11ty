@@ -266,6 +266,19 @@ body {
   outline-offset: 2px;
 }
 
+/* Migrated Hugo Columns */
+.columns-container {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  align-items: start;
+}
+
+.columns-container>* {
+  flex: 1;
+  min-width: 250px;
+}
+
 /* Call to Action Button in Nav */
 /* Call to Action Split Button */
 .nav-cta-group {
