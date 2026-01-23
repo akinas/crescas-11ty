@@ -2,7 +2,7 @@
 title: 'צור קשר'
 weight: 110
 bookToc: false
-#tags: 'nav'
+tags: 'nav'
 permalink: 'he/docs/contact/index.html'
 translationKey: 'contact'
 lang: he
@@ -10,6 +10,6 @@ lang: he
 
 ## צור קשר
 
-{{< button href="mailto:daniel@shinmem.org" >}}daniel@shinmem.org{{< /button >}}
+<a class="button" href="mailto:daniel@shinmem.org">daniel@shinmem.org</a>
 
 

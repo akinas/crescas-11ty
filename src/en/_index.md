@@ -18,7 +18,7 @@ permalink: /en/index.html
        width="1200" height="800">
 </div>
 
-<div class="notice-box"><strong>New!</strong> Now available for order in Israel on <a href="https://bookpod.co.il/product/%d7%90%d7%95%d7%a8-%d7%94%d7%a9%d7%9d/">BookPod</a>.</div>
+<div class="notice-box notice-box-en"><strong>New!</strong> Now available for order in Israel on <a href="https://bookpod.co.il/product/%d7%90%d7%95%d7%a8-%d7%94%d7%a9%d7%9d/">BookPod</a>.</div>
 
 
 *Light of the Lord* is a classic work of Jewish philosophy written by Hasdai Crescas, a renowned medieval Jewish philosopher, rabbi, and statesman. This new Hebrew edition of the book offers a corrected version of the original text, based on the most authentic manuscript available.
@@ -38,6 +38,8 @@ Whether you are a seasoned scholar or new to the work of Hasdai Crescas, this ne
 
 <strong>In Israel:</strong> [BookPod](https://bookpod.co.il/product/%d7%90%d7%95%d7%a8-%d7%94%d7%a9%d7%9d/)
 
+<a class="button" href="https://bookpod.co.il/product/%d7%90%d7%95%d7%a8-%d7%94%d7%a9%d7%9d/">Buy now on BookPod</a>
+
 <strong>Internationally:</strong> [Amazon.com](https://www.amazon.com/dp/9655982092) and other Amazon marketplaces:
 
 &gt; [UK](https://www.amazon.co.uk/dp/9655982092)
@@ -52,7 +54,7 @@ Whether you are a seasoned scholar or new to the work of Hasdai Crescas, this ne
 &nbsp; &gt; [CA](https://www.amazon.ca/dp/9655982092)
 &nbsp; &gt; [AU](https://www.amazon.com.au/dp/9655982092)
 
-
+<a class="button" href="https://www.amazon.com/dp/9655982092">Buy now on Amazon</a>
 
 * Paperback
 * 393 pages
@@ -62,7 +64,7 @@ Whether you are a seasoned scholar or new to the work of Hasdai Crescas, this ne
 
 ## Book Sample
 
-<a class="button" href="/static/Pages_from_Ohr_haShem_8nov2019_marks.pdf">Download sample pages in PDF format</a>
+<a href="/static/Pages_from_Ohr_haShem_8nov2019_marks.pdf">Download sample pages in PDF format</a>
 
 
 

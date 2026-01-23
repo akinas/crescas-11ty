@@ -18,7 +18,7 @@ lang: he
        width="1200" height="800">
 </div>
 
-<div class="notice-box"><strong>חדש!</strong> זמין לרכישה בישראל ב-<a href="https://bookpod.co.il/product/%d7%90%d7%95%d7%a8-%d7%94%d7%a9%d7%9d/">BookPod</a>.</div>
+<div class="notice-box notice-box-he"><strong>חדש!</strong> זמין לרכישה בישראל ב-<a href="https://bookpod.co.il/product/%d7%90%d7%95%d7%a8-%d7%94%d7%a9%d7%9d/">BookPod</a>.</div>
 
 באחד החיבורים החשובים ביותר בהגות היהודית של ימי הבינים מציע ר׳ חסדאי קרשקש, שנמנה עם גדולי רבני ספרד, את שיטתו המקורית בסוגיית עיקרי האמונה. מטרתו הסופית הינה לנתק את הקשר שקשר הרמב״ם בין השאיפה לשלמות השכלית של הפילוסופיה לבין עבודת השם באהבה ודבקות של התורה. לשם כך לקח על עצמו ר׳ חסדאי את המשימה למוטט את סמכותו הכמעט בלתי מעורערת של אריסטו בתחום הפיזיקה והמטאפיזיקה.
 
@@ -41,6 +41,10 @@ __מהדורה שלישית, מתוקנת__
 
 <strong>בישראל:</strong> [BookPod](https://bookpod.co.il/product/%d7%90%d7%95%d7%a8-%d7%94%d7%a9%d7%9d/)
 
+<a class="button" href="https://bookpod.co.il/product/%d7%90%d7%95%d7%a8-%d7%94%d7%a9%d7%9d/">
+קנה עכשיו
+</a>
+
 <strong>בארץ ובחו"ל:</strong> [Amazon.com](https://www.amazon.com/dp/9655982092) ובזירות מסחר של Amazon במדינות אחרות
 
 [UK](https://www.amazon.co.uk/dp/9655982092)
@@ -55,11 +59,15 @@ __מהדורה שלישית, מתוקנת__
 &nbsp; &gt; [CA](https://www.amazon.ca/dp/9655982092)
 &nbsp; &gt; [AU](https://www.amazon.com.au/dp/9655982092) &lt;
 
+<a class="button" href="https://www.amazon.com/dp/9655982092">
+לרכישה באמזון
+</a>
+
 
 
 ## עמודים מהספר
 
-<a class="button" href="/static/Pages_from_Ohr_haShem_8nov2019_marks.pdf">הורידו עמודים מהספר בפורמט PDF</a>
+<a href="/static/Pages_from_Ohr_haShem_8nov2019_marks.pdf">הורידו עמודים מהספר בפורמט PDF</a>
 
 
 

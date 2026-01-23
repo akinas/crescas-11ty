@@ -1,5 +1,5 @@
 ---
-title: R. Crescas’s Library
+title: 'Library'
 weight: 30
 lang: en
 tags: 'nav'

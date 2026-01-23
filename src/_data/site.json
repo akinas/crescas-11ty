@@ -1,7 +1,7 @@
 {
     "title": {
         "en": "Rabbi Hasdai Crescas, *Light of the Lord*",
-        "he": "ספר “אור השם” לרבי חסדאי קרשקש"
+        "he": "ספר \"אור השם\" לרבי חסדאי קרשקש"
     },
     "googleFontsUrl": {
         "en": "https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap",
@@ -16,5 +16,13 @@
             "serif": "'Frank Ruhl Libre', serif",
             "sans": "'Assistant', sans-serif"
         }
+    },
+    "buyLinks": {
+        "amazon": "https://www.amazon.com/dp/9655982092",
+        "israel": "https://bookpod.co.il/product/%d7%90%d7%95%d7%a8-%d7%94%d7%a9%d7%9d/"
+    },
+    "defaultBuyLink": {
+        "en": "amazon",
+        "he": "israel"
     }
 }
