@@ -1,6 +1,6 @@
 ---
 title: 'צור קשר'
-weight: 110
+weight: 200
 bookToc: false
 tags: 'nav'
 permalink: 'he/docs/contact/index.html'

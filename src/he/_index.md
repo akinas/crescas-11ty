@@ -4,6 +4,7 @@ type: docs
 permalink: /index.html
 lang: he
 tags: "nav"
+weight: 1
 ---
 
 ## ספר "אור השם" – מהדורת דניאל לוין

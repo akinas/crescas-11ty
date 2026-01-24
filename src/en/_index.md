@@ -4,6 +4,7 @@ type: docs
 lang: en
 permalink: /en/index.html
 tags: "nav"
+weight: 1
 ---
 
 ## _Light of the Lord_, edited by Daniel Levin

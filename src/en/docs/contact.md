@@ -1,6 +1,6 @@
 ---
 title: 'Contact Us'
-weight: 110
+weight: 200
 bookToc: false
 tags: 'nav'
 permalink: 'en/docs/contact/index.html'
