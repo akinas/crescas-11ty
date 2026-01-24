@@ -1,8 +1,9 @@
 ---
-title: Ohr haShem
+title: Home
 type: docs
 lang: en
 permalink: /en/index.html
+tags: "nav"
 ---
 
 ## _Light of the Lord_, edited by Daniel Levin
@@ -34,32 +35,14 @@ Whether you are a seasoned scholar or new to the work of Hasdai Crescas, this ne
 
 ## _Light of the Lord_, Third Corrected Edition
 
-## Where to buy?
+<ul>
+    <li>Paperback</li>
+    <li>393 pages</li>
+    <li>Dimensions: 6.3 x 9.4 inches</li>
+    <li>ISBN: 978-965-598-209-1</li>
+  </ul>
 
-<strong>In Israel:</strong> [BookPod](https://bookpod.co.il/product/%d7%90%d7%95%d7%a8-%d7%94%d7%a9%d7%9d/)
-
-<a class="button" href="https://bookpod.co.il/product/%d7%90%d7%95%d7%a8-%d7%94%d7%a9%d7%9d/">Buy now on BookPod</a>
-
-<strong>Internationally:</strong> [Amazon.com](https://www.amazon.com/dp/9655982092) and other Amazon marketplaces:
-
-&gt; [UK](https://www.amazon.co.uk/dp/9655982092)
-&nbsp; &gt; [DE](https://www.amazon.de/dp/9655982092)
-&nbsp; &gt; [FR](https://www.amazon.fr/dp/9655982092)
-&nbsp; &gt; [ES](https://www.amazon.es/dp/9655982092)
-&nbsp; &gt; [IT](https://www.amazon.it/dp/9655982092)
-&nbsp; &gt; [NL](https://www.amazon.nl/dp/9655982092)
-&nbsp; &gt; [PL](https://www.amazon.pl/dp/9655982092)
-&nbsp; &gt; [SE](https://www.amazon.se/dp/9655982092)
-&nbsp; &gt; [JP](https://www.amazon.co.jp/dp/9655982092)
-&nbsp; &gt; [CA](https://www.amazon.ca/dp/9655982092)
-&nbsp; &gt; [AU](https://www.amazon.com.au/dp/9655982092)
-
-<a class="button" href="https://www.amazon.com/dp/9655982092">Buy now on Amazon</a>
-
-* Paperback
-* 393 pages
-* Dimensions: 160 x 240 mm
-* ISBN: 978-965-598-209-1
+{% include "where-to-buy.njk" %}
 
 
 ## Book Sample
@@ -69,7 +52,11 @@ Whether you are a seasoned scholar or new to the work of Hasdai Crescas, this ne
 
 
 
+<div class="crescas-library-section">
+
 ## Rabbi Hasdai Crescas’s Library
 ### A Book Series on Medieval Jewish Thought
 
 <a href="/en/docs/library/maamar">*Metaphysical Treatise* by Rabbi Moshe ben Yosef Halevi of Seville</a>
+
+</div>

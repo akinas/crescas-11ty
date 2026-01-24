@@ -1,8 +1,9 @@
 ---
-title: ספר "אור השם" מהדורת דניאל לוין
+title: ראשי
 type: docs
 permalink: /index.html
 lang: he
+tags: "nav"
 ---
 
 ## ספר "אור השם" – מהדורת דניאל לוין
@@ -37,32 +38,8 @@ __מהדורה שלישית, מתוקנת__
 
 
 
-## איפה להשיג?
 
-<strong>בישראל:</strong> [BookPod](https://bookpod.co.il/product/%d7%90%d7%95%d7%a8-%d7%94%d7%a9%d7%9d/)
-
-<a class="button" href="https://bookpod.co.il/product/%d7%90%d7%95%d7%a8-%d7%94%d7%a9%d7%9d/">
-קנה עכשיו
-</a>
-
-<strong>בארץ ובחו"ל:</strong> [Amazon.com](https://www.amazon.com/dp/9655982092) ובזירות מסחר של Amazon במדינות אחרות
-
-[UK](https://www.amazon.co.uk/dp/9655982092)
-&nbsp; &gt; [DE](https://www.amazon.de/dp/9655982092)
-&nbsp; &gt; [FR](https://www.amazon.fr/dp/9655982092)
-&nbsp; &gt; [ES](https://www.amazon.es/dp/9655982092)
-&nbsp; &gt; [IT](https://www.amazon.it/dp/9655982092)
-&nbsp; &gt; [NL](https://www.amazon.nl/dp/9655982092)
-&nbsp; &gt; [PL](https://www.amazon.pl/dp/9655982092)
-&nbsp; &gt; [SE](https://www.amazon.se/dp/9655982092)
-&nbsp; &gt; [JP](https://www.amazon.co.jp/dp/9655982092)
-&nbsp; &gt; [CA](https://www.amazon.ca/dp/9655982092)
-&nbsp; &gt; [AU](https://www.amazon.com.au/dp/9655982092) &lt;
-
-<a class="button" href="https://www.amazon.com/dp/9655982092">
-לרכישה באמזון
-</a>
-
+{% include "where-to-buy.njk" %}
 
 
 ## עמודים מהספר
@@ -133,8 +110,14 @@ _— "עמודי המחשבה הישראלית"_
 
 </details>
 
-### סדרת ספריית רבנו חסדאי קרשקש – מסע במחשבת ישראל של ימי הביניים
+<div class="crescas-library-section">
+
+## ספריית רבנו חסדאי קרשקש
+
+### מסע במחשבת ישראל של ימי הביניים
 
 <a href="/he/docs/library/maamar">ספר "מאמר אלוהי" לרבי משה בן יוסף הלוי מסביליה</a>
+
+</div>
 
 

@@ -12,4 +12,6 @@ lang: he
 
 <a class="button" href="mailto:daniel@shinmem.org">daniel@shinmem.org</a>
 
+{% include "where-to-buy.njk" %}
+
 

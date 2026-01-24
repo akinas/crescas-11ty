@@ -647,3 +647,165 @@ body {
   display: inline-block;
   margin: 0 0.5rem;
 }
+
+.buy-section-container {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  margin: var(--space-sm) 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.buy-section-item:not(:last-child) {
+  margin-bottom: var(--space-xl);
+}
+
+/* Details and Summary Styling */
+details {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  margin: var(--space-sm) 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+details[open] {
+  padding-bottom: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border-color: var(--color-accent-light);
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  /* Hide default triangle in some browsers */
+  position: relative;
+  color: var(--color-primary);
+  /* font-family: var(--font-en-sans); Use existing font inheritance */
+}
+
+summary::-webkit-details-marker {
+  display: none;
+  /* Hide default triangle in WebKit */
+}
+
+summary::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  font-weight: 300;
+  font-size: 1.5rem;
+  color: var(--color-tertiary);
+  transition: transform 0.2s ease;
+}
+
+[dir="rtl"] summary::after {
+  right: auto;
+  left: 0;
+}
+
+details[open] summary::after {
+  content: '-';
+  /* Or rotate existing plus */
+  transform: rotate(180deg);
+  /* Just for fun interaction if using icon */
+  /* Since we swap content, rotation might look weird, let's keep it simple or just rotate */
+}
+
+/* Let's try rotation with SVG or pure CSS shape instead of changing content for smooth anim? 
+   Actually, standard "+" to "-" content swap is robust. 
+*/
+
+summary:hover {
+  color: var(--color-accent);
+}
+
+summary:hover::after {
+  color: var(--color-accent);
+}
+
+/* Smooth reveal for content? 
+   Pure CSS height transition for details is tricky. 
+   For now, simple state change. 
+*/
+
+/* Crescas Library Section Styling */
+.crescas-library-section {
+  background-color: #f0f7ff;
+  /* Very light blue tint */
+  border-top: 4px solid var(--color-accent);
+  padding: var(--space-xl) var(--space-lg);
+  margin-top: var(--space-2xl);
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.crescas-library-section h2 {
+  font-family: var(--font-en-serif);
+  color: var(--color-accent);
+  font-size: 2.25rem;
+  margin-bottom: var(--space-xs);
+}
+
+.crescas-library-section h3 {
+  font-family: var(--font-en-sans);
+  font-weight: 400;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-tertiary);
+  margin-top: 0;
+  margin-bottom: var(--space-lg);
+}
+
+.crescas-library-section a {
+  font-weight: 600;
+  font-size: 1.25rem;
+  text-decoration: none;
+  border-bottom: 2px solid var(--color-accent-light);
+  padding-bottom: 2px;
+  transition: all 0.2s ease;
+}
+
+.crescas-library-section a:hover {
+  background-color: rgba(0, 86, 179, 0.05);
+  border-bottom-color: var(--color-accent);
+  color: var(--color-accent-hover);
+}
+
+/* Marketplaces Styling */
+.marketplaces {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.marketplaces li {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.marketplaces li::before {
+  content: "> ";
+  color: var(--color-tertiary);
+  margin-right: 0.2rem;
+}
+
+[dir="rtl"] .marketplaces li {
+  margin-right: 0;
+  margin-left: 0.5rem;
+}
+
+[dir="rtl"] .marketplaces li::before {
+  margin-right: 0;
+  margin-left: 0.2rem;
+  content: "< ";
+}
