@@ -54,7 +54,7 @@ isCustomHome: true
     <div class="grid-2 reveal">
       <div>
         <div class="eyebrow">פתח דבר</div>
-        <p class="lede">להחזיר עטרה ליושנה.</p>
+        <h2 class="lede">להחזיר עטרה ליושנה</h2>
         <p class="body-text">
           לאחר 600 שנה של נוסחאות משובשות וטעויות העתקה, ראה אור נוסח מדעי, מדויק ומוער של חיבור המופת מאת רבי חסדאי קרשקש. נקי משיבושי הדפוס, ונאמן לטקסט המקורי.
         </p>
@@ -81,7 +81,7 @@ isCustomHome: true
   <div class="section-inner">
     <div class="grid-2 flip reveal">
       <div class="plate-col">
-        <div class="plate" style="background:linear-gradient(160deg,#e6e2d8,#d9d4c5);">
+        <div class="plate">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true">
             <rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 8h8M8 12h8M8 16h5"/>
           </svg>
@@ -91,7 +91,7 @@ isCustomHome: true
       </div>
       <div>
         <div class="eyebrow">המקור</div>
-        <h2>חזרה למקורות:<br>כתב יד פירנצה</h2>
+        <h2 class="lede">חזרה למקורות:<br>כתב יד פירנצה</h2>
         <p class="body-text">
           המהדורה החדשה נוטשת לחלוטין את מהדורות הדפוס המאוחרות. בבסיסה עומדת טיוטה נדירה משנת 1405 – כחמש שנים לפני חתימת הספר – החושפת את שלבי העריכה ההיסטוריים, ההגהות והתוספות המקוריות שאבדו ברבות השנים.
         </p>
@@ -121,7 +121,7 @@ isCustomHome: true
   <div class="section-inner">
     <div class="reveal">
       <div class="eyebrow">השיטה המדעית</div>
-      <h2>ארכיאולוגיה של טקסט</h2>
+      <h2 class="lede">ארכיאולוגיה של טקסט</h2>
       <p class="body-text">
         עם למעלה מ־2,000 תיקוני נוסח ממופים, המהדורה מתחקה אחר התפתחות הספר. האפראט המדעי מסווג במדויק ארבע ׳ידיים׳ שונות של עריכה היסטורית, ומצליב עדויות מכתבי יד מרכזיים נוספים, לגיבוש הנוסח השלם ביותר שהיה בידי בני דורו של המחבר.
       </p>
@@ -171,7 +171,7 @@ isCustomHome: true
     <div class="grid-2 reveal">
       <div>
         <div class="eyebrow">הנאמנות למקור</div>
-        <h2>נאמנות מוחלטת<br>לשפת המחבר</h2>
+        <h2 class="lede">נאמנות מוחלטת<br>לשפת המחבר</h2>
         <p class="body-text">
           המהדורה משמרת את כתיבו המקורי של רבנו קרשקש, ללא ׳תיקונים׳ מודרניים או פיענוח מאולץ של קיצורים. בשילוב מראי מקום מדויקים למקורות פילוסופיים וציון מספור העמודים של כתב היד המקורי, מוגשת לקורא חוויית עיון אותנטית, מחקרית ושקופה לחלוטין.
         </p>
@@ -182,7 +182,7 @@ isCustomHome: true
         </div>
       </div>
       <div class="plate-col">
-        <div class="plate" style="background:linear-gradient(160deg,#e6e2d8,#d9d4c5);">
+        <div class="plate">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true">
             <path d="M5 4c4-1.4 10-1.4 14 0v16c-4-1.4-10-1.4-14 0z"/><path d="M12 4v16"/>
           </svg>
@@ -199,7 +199,7 @@ isCustomHome: true
   <div class="section-inner">
     <div class="content-wrapper reveal">
       <div class="eyebrow">פרטי המהדורה</div>
-      <h2>ספר ״אור השם״ — מהדורה שלישית מתוקנת</h2>
+      <h2 class="lede">ספר ״אור השם״ — מהדורה שלישית מתוקנת</h2>
 
       <div class="notice-box">
         <strong>חדש!</strong> זמין לרכישה ישירה בישראל ב-<a href="{{ site.buyLinks.israel }}" target="_blank" rel="noopener noreferrer">BookPod</a> ובכל זירות המסחר של <a href="{{ site.buyLinks.amazon }}" target="_blank" rel="noopener noreferrer">Amazon</a> ברחבי העולם.

@@ -54,7 +54,7 @@ isCustomHome: true
     <div class="grid-2 reveal">
       <div>
         <div class="eyebrow">Preface</div>
-        <p class="lede">Restoring the Original Text.</p>
+        <h2 class="lede">Restoring the Original Text</h2>
         <p class="body-text">
           After 600 years of corrupted printed editions and transmission errors, a definitive, annotated critical Hebrew edition of Rabbi Hasdai Crescas's masterpiece has now been published. Free from print distortions and faithful to the original manuscript tradition.
         </p>
@@ -81,7 +81,7 @@ isCustomHome: true
   <div class="section-inner">
     <div class="grid-2 flip reveal">
       <div class="plate-col">
-        <div class="plate" style="background:linear-gradient(160deg,#e6e2d8,#d9d4c5);">
+        <div class="plate">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true">
             <rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 8h8M8 12h8M8 16h5"/>
           </svg>
@@ -91,7 +91,7 @@ isCustomHome: true
       </div>
       <div>
         <div class="eyebrow">The Source</div>
-        <h2>Returning to the Roots:<br>The Florence Manuscript</h2>
+        <h2 class="lede">Returning to the Roots:<br>The Florence Manuscript</h2>
         <p class="body-text">
           This new edition abandons corrupted late printings. It is founded upon a rare 1405 draft created approximately five years before the completion of the work, uncovering authorial revisions, marginalia, and original readings lost across centuries.
         </p>
@@ -121,7 +121,7 @@ isCustomHome: true
   <div class="section-inner">
     <div class="reveal">
       <div class="eyebrow">The Methodology</div>
-      <h2>Textual Archaeology</h2>
+      <h2 class="lede">Textual Archaeology</h2>
       <p class="body-text">
         With more than 2,000 systematically mapped textual variants, this edition reconstructs the evolution of the text. The critical apparatus distinguishes four historical scribal and editorial hands, cross-referencing all major surviving medieval manuscripts.
       </p>
@@ -171,7 +171,7 @@ isCustomHome: true
     <div class="grid-2 reveal">
       <div>
         <div class="eyebrow">Authenticity</div>
-        <h2>Strict Fidelity to the<br>Author's Language</h2>
+        <h2 class="lede">Strict Fidelity to the<br>Author's Language</h2>
         <p class="body-text">
           The edition preserves Rabbi Crescas's authentic spelling without modernizing distortions or speculative acronym expansions. Coupled with precise citations of philosophical sources and original manuscript pagination, it provides a transparent and authoritative reading experience.
         </p>
@@ -182,7 +182,7 @@ isCustomHome: true
         </div>
       </div>
       <div class="plate-col">
-        <div class="plate" style="background:linear-gradient(160deg,#e6e2d8,#d9d4c5);">
+        <div class="plate">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true">
             <path d="M5 4c4-1.4 10-1.4 14 0v16c-4-1.4-10-1.4-14 0z"/><path d="M12 4v16"/>
           </svg>
@@ -199,7 +199,7 @@ isCustomHome: true
   <div class="section-inner">
     <div class="content-wrapper reveal">
       <div class="eyebrow">Edition Details</div>
-      <h2>Light of the Lord — Third Corrected Edition</h2>
+      <h2 class="lede">Light of the Lord — Third Corrected Edition</h2>
 
       <div class="notice-box">
         <strong>New!</strong> Available for immediate order in Israel on <a href="{{ site.buyLinks.israel }}" target="_blank" rel="noopener noreferrer">BookPod</a> and worldwide via <a href="{{ site.buyLinks.amazon }}" target="_blank" rel="noopener noreferrer">Amazon</a>.

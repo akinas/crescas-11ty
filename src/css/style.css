@@ -798,12 +798,67 @@ img, svg {
   margin-inline: auto;
 }
 
+/* --- Section Themes --- */
 .section-pale {
   background-color: var(--pale);
+  color: var(--ink);
 }
 
+.section-pale h1,
+.section-pale h2,
+.section-pale h3,
+.section-pale h4,
+.section-pale h2.lede,
+.section-pale .lede {
+  color: var(--navy); /* Darker blue heading in section-pale */
+}
+
+.section-pale .eyebrow {
+  color: var(--blue);
+}
+
+.section-pale .eyebrow::before {
+  background: var(--rubric);
+}
+
+.section-pale .body-text {
+  color: rgba(12, 26, 43, 0.9);
+}
+
+/* Section Paper: Background #0664a4 with high-contrast pale text and white headings */
 .section-paper {
-  background-color: var(--paper);
+  background-color: #0664a4;
+  color: var(--pale);
+}
+
+.section-paper h1,
+.section-paper h2,
+.section-paper h3,
+.section-paper h4,
+.section-paper h2.lede,
+.section-paper .lede {
+  color: #ffffff; /* Crisp white headings */
+}
+
+.section-paper .eyebrow {
+  color: var(--paper);
+  opacity: 0.95;
+}
+
+.section-paper .eyebrow::before {
+  background: var(--paper);
+}
+
+.section-paper .body-text {
+  color: var(--pale); /* Section-pale color text on blue background */
+}
+
+.section-paper a {
+  color: #ffffff;
+}
+
+.section-paper a:hover {
+  color: var(--paper);
 }
 
 .section-dark {
@@ -813,38 +868,34 @@ img, svg {
 
 .section-dark h1,
 .section-dark h2,
-.section-dark h3 {
+.section-dark h3,
+.section-dark h2.lede,
+.section-dark .lede {
   color: #faf8f0;
 }
 
-.section h2 {
-  font-size: clamp(2rem, 6vw, 3.2rem);
-  line-height: 1.1;
-  margin-bottom: 1.4rem;
+.section-dark .body-text {
+  color: rgba(240, 241, 248, 0.88);
 }
 
-.section .lede {
-  font-size: clamp(1.25rem, 4vw, 1.65rem);
+/* --- Unified h2 and lede typography --- */
+.section h2,
+.section .lede,
+h2.lede,
+.lede {
   font-family: var(--display);
-  color: var(--navy);
-  font-weight: 600;
-  line-height: 1.4;
-  margin-bottom: 1.5rem;
-}
-
-.section-dark .lede {
-  color: var(--paper);
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.22;
+  margin-top: 0;
+  margin-bottom: 1.35rem;
+  letter-spacing: -0.01em;
 }
 
 .section .body-text {
   font-size: 1.1rem;
   line-height: 1.9;
-  color: rgba(12, 26, 43, 0.88);
   max-width: 58ch;
-}
-
-.section-dark .body-text {
-  color: rgba(240, 241, 248, 0.88);
 }
 
 .grid-2 {
@@ -940,11 +991,21 @@ img, svg {
   box-shadow: 0 0 0 1.5px var(--blue);
 }
 
+.section-paper .tl-dot {
+  background: #ffffff;
+  border: 3px solid var(--navy);
+  box-shadow: 0 0 0 2px #ffffff;
+}
+
 .tl-year {
   font-family: var(--display);
   font-weight: 700;
   font-size: 1.2rem;
   color: var(--navy);
+}
+
+.section-paper .tl-year {
+  color: #ffffff;
 }
 
 .tl-label {
@@ -957,6 +1018,10 @@ img, svg {
   font-weight: 500;
 }
 
+.section-paper .tl-label {
+  color: var(--paper);
+}
+
 .tl-connector {
   flex: 1 1 auto;
   height: 1px;
@@ -964,6 +1029,10 @@ img, svg {
   margin: 0 0.6rem;
   position: relative;
   top: -1.1rem;
+}
+
+.section-paper .tl-connector {
+  background: repeating-linear-gradient(90deg, rgba(240, 241, 248, 0.7) 0 6px, transparent 6px 11px);
 }
 
 .tl-connector-label {
@@ -974,6 +1043,33 @@ img, svg {
   text-align: center;
   margin-top: -1.4rem;
   font-weight: 600;
+}
+
+.section-paper .tl-connector-label {
+  color: #ffffff;
+}
+
+/* Plate contrast enhancement in section-paper */
+.section-paper .plate {
+  background:
+    repeating-linear-gradient(135deg, rgba(12, 26, 43, 0.04) 0 2px, transparent 2px 14px),
+    linear-gradient(160deg, #ffffff, var(--paper));
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.25);
+  color: var(--navy);
+}
+
+.section-paper .plate::after {
+  border: 1px solid rgba(29, 68, 125, 0.3);
+}
+
+.section-paper .plate span {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.section-paper .plate .tag {
+  color: var(--rubric-dark);
 }
 
 /* ================= MANUSCRIPT APPARATUS WIDGET ================= */
@@ -1124,6 +1220,18 @@ img, svg {
   color: var(--ink);
   margin-top: 0.35rem;
   margin-bottom: 0;
+}
+
+.section-paper .gloss {
+  border-inline-start: 2.5px solid var(--paper);
+}
+
+.section-paper .gloss-mark {
+  color: #ffffff;
+}
+
+.section-paper .gloss p {
+  color: var(--pale);
 }
 
 /* ================= NOTICE & CALLOUT BOXES ================= */
