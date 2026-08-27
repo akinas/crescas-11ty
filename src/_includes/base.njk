@@ -1,59 +1,195 @@
 <!DOCTYPE html>
-<html lang="{{ lang }}" dir="{{ 'rtl' if lang == 'he' else 'ltr' }}">
+<html lang="{{ lang or 'he' }}" dir="{{ 'rtl' if lang == 'he' else 'ltr' }}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title }}</title>
-  <link rel="stylesheet" href="/css/style.css">
+  
+  {# Page Title #}
+  {% set pageTitle = title ~ " | " ~ (site.siteName[lang] or site.siteName.he) if title and title != "ראשי" and title != "Home" else (site.title[lang] or site.title.he) %}
+  <title>{{ pageTitle }}</title>
+  
+  {# SEO & Canonical Metadata #}
+  {% set metaDesc = description or site.description[lang] or site.description.he %}
+  <meta name="description" content="{{ metaDesc }}">
+  <meta name="author" content="{{ site.author[lang] or site.author.he }}">
+  <meta name="publisher" content="{{ site.editor[lang] or site.editor.he }}">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+  {# Multilingual Hreflang Tags #}
+  {% set translatedLink = lang | getTranslatedLink %}
+  {% if lang == 'he' %}
+    <link rel="alternate" hreflang="he" href="{{ site.url }}/">
+    <link rel="alternate" hreflang="en" href="{{ site.url }}/en/">
+  {% else %}
+    <link rel="alternate" hreflang="en" href="{{ site.url }}/en/">
+    <link rel="alternate" hreflang="he" href="{{ site.url }}/">
+  {% endif %}
+  <link rel="alternate" hreflang="x-default" href="{{ site.url }}/">
+
+  {# GEO & Location Metadata #}
+  <meta name="geo.region" content="{{ site.geo.region }}">
+  <meta name="geo.placename" content="{{ site.geo.placename }}">
+  <meta name="geo.position" content="{{ site.geo.position }}">
+  <meta name="ICBM" content="{{ site.geo.icbm }}">
+  <meta name="dcterms.spatial" content="{{ site.geo.placename }}">
+
+  {# Open Graph / Facebook #}
+  <meta property="og:type" content="book">
+  <meta property="og:site_name" content="{{ site.siteName[lang] or 'אור ה׳' }}">
+  <meta property="og:title" content="{{ pageTitle }}">
+  <meta property="og:description" content="{{ metaDesc }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:locale" content="{{ 'he_IL' if lang == 'he' else 'en_US' }}">
+  <meta property="og:locale:alternate" content="{{ 'en_US' if lang == 'he' else 'he_IL' }}">
+  <meta property="og:image" content="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,w_1200/v1768680865/ohr_hashem_edited_paperback_opt_kjxk9d.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="800">
+  <meta property="og:image:alt" content="{{ site.title[lang] or site.title.he }}">
+
+  {# Twitter Card #}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ pageTitle }}">
+  <meta name="twitter:description" content="{{ metaDesc }}">
+  <meta name="twitter:image" content="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,w_1200/v1768680865/ohr_hashem_edited_paperback_opt_kjxk9d.png">
+
+  {# JSON-LD Structured Data #}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "{{ site.url }}/#website",
+        "url": "{{ site.url }}/",
+        "name": "{{ site.siteName.he }}",
+        "alternateName": "{{ site.siteName.en }}",
+        "description": "{{ site.description.he }}",
+        "inLanguage": ["he", "en"]
+      },
+      {
+        "@type": "Book",
+        "@id": "{{ site.url }}/#book",
+        "name": "אור ה׳",
+        "alternateName": "Light of the Lord (Ohr HaShem)",
+        "author": {
+          "@type": "Person",
+          "name": "{{ site.author.he }}",
+          "alternateName": "{{ site.author.en }}",
+          "birthDate": "1340",
+          "deathDate": "1410"
+        },
+        "editor": {
+          "@type": "Person",
+          "name": "{{ site.editor.he }}",
+          "alternateName": "{{ site.editor.en }}"
+        },
+        "isbn": "{{ site.isbn }}",
+        "bookFormat": "https://schema.org/Paperback",
+        "numberOfPages": 393,
+        "inLanguage": "he",
+        "datePublished": "2023",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Daniel Levin Scholarly Editions",
+          "location": {
+            "@type": "Place",
+            "name": "Jerusalem, Israel",
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 31.7683,
+              "longitude": 35.2137
+            }
+          }
+        },
+        "offers": [
+          {
+            "@type": "Offer",
+            "url": "{{ site.buyLinks.israel }}",
+            "availability": "https://schema.org/InStock",
+            "seller": {
+              "@type": "Organization",
+              "name": "BookPod Israel"
+            }
+          },
+          {
+            "@type": "Offer",
+            "url": "{{ site.buyLinks.amazon }}",
+            "availability": "https://schema.org/InStock",
+            "seller": {
+              "@type": "Organization",
+              "name": "Amazon"
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  {# Favicon & Fonts #}
   <link rel="icon" href="/static/favicon.png" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="{{ site.googleFontsUrl[lang] or site.googleFontsUrl.en }}" rel="stylesheet">
-  <style>
-    :root {
-      --font-en-serif: {{ site.fonts.en.serif | safe }};
-      --font-en-sans: {{ site.fonts.en.sans | safe }};
-      --font-he-serif: {{ site.fonts.he.serif | safe }};
-      --font-he-sans: {{ site.fonts.he.sans | safe }};
-    }
-  </style>
+  <link href="{{ site.googleFontsUrl }}" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1YNBEKBG45"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-1YNBEKBG45');
   </script>
 </head>
 <body>
+
+  <!-- Reading Progress Bar -->
+  <div id="progress" aria-hidden="true"></div>
+
   <div class="page-wrapper">
-    <header class="site-header">
+    
+    <!-- Site Header -->
+    <header class="site-header" role="banner">
       <div class="container">
-        <!-- Top Bar for Language Toggle -->
-        <div class="header-top-bar">
-          <div class="language-toggle">
-            {% set translatedLink = lang | getTranslatedLink %}
-            
-            <span class="lang-switch-btn {{ 'active' if lang == 'he' }}">
-              {% if lang == 'he' %}עב{% else %}<a href="{{ translatedLink }}" class="lang-switch-btn">עב</a>{% endif %}
-            </span>
-            <span class="lang-separator">|</span>
-            <span class="lang-switch-btn {{ 'active' if lang == 'en' }}">
-              {% if lang == 'en' %}EN{% else %}<a href="{{ translatedLink }}" class="lang-switch-btn">EN</a>{% endif %}
-            </span>
-          </div>
+        
+        <!-- Header Top Utility Bar -->
+        <div class="header-top">
+          <span class="header-top-tagline">
+            {% if lang == 'he' %}
+              מהדורה מדעית ביקורתית מבוססת על כתב יד פירנצה 1405
+            {% else %}
+              Critical Scholarly Edition based on the 1405 Florence Manuscript
+            {% endif %}
+          </span>
+          <nav class="lang-switch" aria-label="{% if lang == 'he' %}בחירת שפה{% else %}Language Selection{% endif %}">
+            <a href="{{ '/' if lang == 'en' else '#' }}" class="lang-btn {{ 'active' if lang == 'he' }}" aria-label="עברית" {% if lang == 'he' %}aria-current="page"{% endif %}>עב</a>
+            <span class="lang-sep" style="opacity:0.3;">|</span>
+            <a href="{{ '/en/' if lang == 'he' else '#' }}" class="lang-btn {{ 'active' if lang == 'en' }}" aria-label="English" {% if lang == 'en' %}aria-current="page"{% endif %}>EN</a>
+          </nav>
         </div>
 
-        <!-- Main Header Area: Title and Nav -->
-        <div class="header-inner">
-          <div class="site-title">
-            <!-- Use language-specific site title -->
-            <h1><a href="{{ '/en/' | url if lang == 'en' else '/' | url }}">{{ (site.title[lang] or site.title.en or "Crescas") | markdownInline | safe }}</a></h1>
-          </div>
-          
-          <nav class="main-nav" role="navigation" aria-label="Main navigation">
+        <!-- Header Main Bar -->
+        <div class="header-main">
+          <a href="{{ '/en/' if lang == 'en' else '/' }}" class="site-brand" aria-label="{{ site.siteName[lang] or 'אור ה׳' }}">
+            <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+              <path d="M5 4c4-1.4 10-1.4 14 0v16c-4-1.4-10-1.4-14 0z"/>
+              <path d="M12 4v16"/>
+            </svg>
+            <span class="site-title-text">{{ site.siteName[lang] or site.siteName.he }}</span>
+          </a>
+
+          <!-- Mobile Hamburger Button -->
+          <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="{% if lang == 'he' %}פתח תפריט ניווט{% else %}Toggle navigation menu{% endif %}">
+            <svg class="menu-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+
+          <!-- Navigation Drawer / Menu -->
+          <nav class="main-nav" id="main-nav" role="navigation" aria-label="{% if lang == 'he' %}תפריט ראשי{% else %}Main Navigation{% endif %}">
             <ul class="nav-list">
               {% for item in collections.nav %}
                 {% if item.data.lang == lang %}
@@ -64,78 +200,197 @@
                   </li>
                 {% endif %}
               {% endfor %}
-              <li class="nav-item">
-                <div class="nav-cta-group">
-                  {% set defaultLinkKey = site.defaultBuyLink[lang] or "amazon" %}
-                  {% set defaultUrl = site.buyLinks[defaultLinkKey] %}
-                  <a href="{{ defaultUrl }}" class="nav-cta-main">
-                    {% if lang == 'he' %}קנה עכשיו{% else %}Buy Now{% endif %}
-                  </a>
-                  <button class="nav-cta-arrow" aria-label="{% if lang == 'he' %}אפשרויות רכישה נוספות{% else %}More purchasing options{% endif %}" aria-expanded="false">
-                    <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </button>
-                  <ul class="nav-cta-dropdown">
-                    <li><a href="{{ site.buyLinks.amazon }}">Amazon (US)</a></li>
-                    <li><a href="{{ site.buyLinks.israel }}">{% if lang == 'he' %}ישראל (BookPod){% else %}Israel (BookPod){% endif %}</a></li>
-                  </ul>
-                </div>
-              </li>
             </ul>
+
+            <!-- Buy Button & Dropdown in Nav -->
+            <div class="nav-cta-wrapper">
+              {% set defaultBuyUrl = site.buyLinks.israel if lang == 'he' else site.buyLinks.amazon %}
+              <a href="{{ defaultBuyUrl }}" class="nav-cta-btn" target="_blank" rel="noopener noreferrer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M6 6h15l-1.5 9h-12z"/><path d="M6 6 5 3H2"/><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/>
+                </svg>
+                <span>{% if lang == 'he' %}לרכישה{% else %}Buy Now{% endif %}</span>
+              </a>
+              <button class="nav-cta-toggle" id="cta-toggle" aria-expanded="false" aria-label="{% if lang == 'he' %}אפשרויות רכישה נוספות{% else %}More purchasing options{% endif %}">
+                <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M1 1L5 5L9 1"/>
+                </svg>
+              </button>
+              <ul class="nav-cta-menu" id="cta-menu" role="menu">
+                <li role="none">
+                  <a href="{{ site.buyLinks.israel }}" target="_blank" rel="noopener noreferrer" role="menuitem">
+                    {% if lang == 'he' %}ישראל (BookPod){% else %}Israel (BookPod){% endif %}
+                  </a>
+                </li>
+                <li role="none">
+                  <a href="{{ site.buyLinks.amazon }}" target="_blank" rel="noopener noreferrer" role="menuitem">
+                    Amazon (US & Worldwide)
+                  </a>
+                </li>
+              </ul>
+            </div>
           </nav>
         </div>
       </div>
     </header>
 
-    <main class="main-content" role="main">
-      <div class="container">
-        <div class="content-wrapper">
+    <!-- Main Content Area -->
+    <main class="main-content" id="main-content" role="main">
+      {% if isCustomHome %}
+        {{ content | safe }}
+      {% else %}
+        {% if isSubpage or (title and title != "ראשי" and title != "Home") %}
+          <div class="page-header">
+            <div class="container">
+              <div class="eyebrow">
+                {% if lang == 'he' %}אור ה׳ · מהדורה מדעית ביקורתית{% else %}Light of the Lord · Critical Edition{% endif %}
+              </div>
+              <h1>{{ title }}</h1>
+            </div>
+          </div>
+          <div class="container page-body">
+            <div class="content-wrapper reveal is-in">
+              {{ content | safe }}
+            </div>
+          </div>
+        {% else %}
           {{ content | safe }}
-        </div>
-      </div>
+        {% endif %}
+      {% endif %}
     </main>
 
-    <footer class="site-footer">
+    <!-- Curved Divider -->
+    <div class="divider" aria-hidden="true">
+      <svg viewBox="0 0 1200 56" preserveAspectRatio="none">
+        <path d="M0,0 L1200,0 L1200,30 C900,55 300,10 0,40 Z" fill="#0c1a2b"></path>
+      </svg>
+    </div>
+
+    <!-- Site Footer -->
+    <footer class="site-footer" role="contentinfo">
       <div class="container">
-        <div class="footer-content">
-          <!-- Footer content will go here -->
+        <h3>
+          {% if lang == 'he' %}אור ה׳ — מהדורה מדעית מוערת{% else %}Light of the Lord — Critical Edition{% endif %}
+        </h3>
+        <p class="sub">
+          {% if lang == 'he' %}
+            בעריכה מדעית · מבוססת על כתב יד פירנצה ומכתבי יד מרכזיים נוספים
+          {% else %}
+            Scholarly critical edition based on the 1405 Florence manuscript and primary historical codices
+          {% endif %}
+        </p>
+
+        <a class="btn btn-primary" href="{{ site.buyLinks.israel if lang == 'he' else site.buyLinks.amazon }}" target="_blank" rel="noopener noreferrer" style="margin-bottom:2rem;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M6 6h15l-1.5 9h-12z"/><path d="M6 6 5 3H2"/><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/>
+          </svg>
+          {% if lang == 'he' %}לפרטים ורכישה{% else %}Purchase Book{% endif %}
+        </a>
+
+        <ul class="footer-nav">
+          {% for item in collections.nav %}
+            {% if item.data.lang == lang %}
+              <li><a href="{{ item.url }}">{{ item.data.title }}</a></li>
+            {% endif %}
+          {% endfor %}
+          <li><a href="{{ site.samplePdf }}">{% if lang == 'he' %}פרק לדוגמה (PDF){% else %}Sample Pages (PDF){% endif %}</a></li>
+        </ul>
+
+        <div class="colophon">
+          <div class="rule" aria-hidden="true"></div>
+          {% if lang == 'he' %}
+            מהדורה ביקורתית לספר ״אור ה׳״ לרבנו חסדאי בן יהודה קרשקש | עורך: דניאל לוין<br>
+            © כל הזכויות שמורות
+          {% else %}
+            Critical Edition of <em>Light of the Lord</em> by Rabbi Hasdai Crescas | Editor: Daniel Levin<br>
+            © All Rights Reserved
+          {% endif %}
         </div>
       </div>
     </footer>
-    </footer>
+
   </div>
 
+  <!-- Scripts -->
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const arrowBtn = document.querySelector('.nav-cta-arrow');
-      const dropdown = document.querySelector('.nav-cta-dropdown');
-      
-      if (arrowBtn && dropdown) {
-        arrowBtn.addEventListener('click', function(e) {
+    (function() {
+      // 1. Reading Progress Bar
+      var bar = document.getElementById('progress');
+      function updateProgress() {
+        if (!bar) return;
+        var h = document.documentElement;
+        var scrolled = h.scrollTop || document.body.scrollTop;
+        var max = h.scrollHeight - h.clientHeight;
+        bar.style.width = (max > 0 ? (scrolled / max) * 100 : 0) + '%';
+      }
+      window.addEventListener('scroll', updateProgress, { passive: true });
+      updateProgress();
+
+      // 2. IntersectionObserver for Reveal & Apparatus Animations
+      var targets = document.querySelectorAll('.reveal, .corr-line');
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function(entries) {
+          entries.forEach(function(e) {
+            if (e.isIntersecting) {
+              e.target.classList.add('is-in');
+              io.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.15, rootMargin: '0px 0px -6% 0px' });
+        targets.forEach(function(t) { io.observe(t); });
+      } else {
+        targets.forEach(function(t) { t.classList.add('is-in'); });
+      }
+
+      // 3. Mobile Menu Toggle
+      var menuToggle = document.getElementById('menu-toggle');
+      var mainNav = document.getElementById('main-nav');
+      if (menuToggle && mainNav) {
+        menuToggle.addEventListener('click', function(e) {
           e.stopPropagation();
-          const expanded = arrowBtn.getAttribute('aria-expanded') === 'true';
-          arrowBtn.setAttribute('aria-expanded', !expanded);
-          dropdown.classList.toggle('show');
+          var isOpen = mainNav.classList.contains('is-open');
+          mainNav.classList.toggle('is-open', !isOpen);
+          menuToggle.setAttribute('aria-expanded', !isOpen);
         });
 
-        // Close when clicking outside
-        document.addEventListener('click', function(event) {
-          if (!arrowBtn.contains(event.target) && !dropdown.contains(event.target)) {
-             arrowBtn.setAttribute('aria-expanded', 'false');
-             dropdown.classList.remove('show');
-          }
-        });
-        
-        // Close on escape key
-        document.addEventListener('keydown', function(event) {
-          if (event.key === 'Escape') {
-             arrowBtn.setAttribute('aria-expanded', 'false');
-             dropdown.classList.remove('show');
+        document.addEventListener('click', function(e) {
+          if (!mainNav.contains(e.target) && !menuToggle.contains(e.target)) {
+            mainNav.classList.remove('is-open');
+            menuToggle.setAttribute('aria-expanded', 'false');
           }
         });
       }
-    });
+
+      // 4. CTA Buy Dropdown Toggle
+      var ctaToggle = document.getElementById('cta-toggle');
+      var ctaMenu = document.getElementById('cta-menu');
+      if (ctaToggle && ctaMenu) {
+        ctaToggle.addEventListener('click', function(e) {
+          e.stopPropagation();
+          var isExpanded = ctaToggle.getAttribute('aria-expanded') === 'true';
+          ctaToggle.setAttribute('aria-expanded', !isExpanded);
+          ctaMenu.classList.toggle('is-active', !isExpanded);
+        });
+
+        document.addEventListener('click', function(e) {
+          if (!ctaToggle.contains(e.target) && !ctaMenu.contains(e.target)) {
+            ctaToggle.setAttribute('aria-expanded', 'false');
+            ctaMenu.classList.remove('is-active');
+          }
+        });
+
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') {
+            ctaToggle.setAttribute('aria-expanded', 'false');
+            ctaMenu.classList.remove('is-active');
+            if (mainNav) {
+              mainNav.classList.remove('is-open');
+              if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
+            }
+          }
+        });
+      }
+    })();
   </script>
 </body>
 </html>

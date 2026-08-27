@@ -1,28 +1,65 @@
 {
-    "title": {
-        "en": "Rabbi Hasdai Crescas, *Light of the Lord*",
-        "he": "ספר \"אור השם\" לרבי חסדאי קרשקש"
+  "url": "https://crescas.org",
+  "title": {
+    "en": "Rabbi Hasdai Crescas — Light of the Lord (Ohr HaShem) | Critical Edition",
+    "he": "אור ה׳ — מהדורה מדעית ביקורתית | רבנו חסדאי קרשקש"
+  },
+  "siteName": {
+    "en": "Light of the Lord",
+    "he": "אור ה׳"
+  },
+  "author": {
+    "en": "Rabbi Hasdai Crescas",
+    "he": "רבנו חסדאי בן יהודה קרשקש"
+  },
+  "editor": {
+    "en": "Daniel Levin",
+    "he": "דניאל לוין"
+  },
+  "description": {
+    "en": "Scholarly and annotated critical edition of 'Light of the Lord' (Ohr HaShem) by Rabbi Hasdai Crescas, based on the rare 1405 Florence manuscript and cross-referenced with primary historical codices.",
+    "he": "מהדורה מדעית ביקורתית ומוערת לספר ״אור ה׳״ מאת רבנו חסדאי קרשקש. נוסח מדויק ונאמן לטקסט המקורי, מבוסס על כתב יד פירנצה 1405."
+  },
+  "isbn": "978-965-598-209-1",
+  "googleFontsUrl": "https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&family=Frank+Ruhl+Libre:wght@400;500;700;900&family=Heebo:wght@400;500;600;700&display=swap",
+  "fonts": {
+    "en": {
+      "display": "\"Frank Ruhl Libre\", \"Times New Roman\", serif",
+      "body": "\"David Libre\", \"Frank Ruhl Libre\", Georgia, serif",
+      "meta": "\"Heebo\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif"
     },
-    "googleFontsUrl": {
-        "en": "https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap",
-        "he": "https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700&family=Assistant:wght@300;400;600&display=swap"
-    },
-    "fonts": {
-        "en": {
-            "serif": "'Crimson Text', Georgia, 'Times New Roman', serif",
-            "sans": "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
-        },
-        "he": {
-            "serif": "'Frank Ruhl Libre', serif",
-            "sans": "'Assistant', sans-serif"
-        }
-    },
-    "buyLinks": {
-        "amazon": "https://www.amazon.com/dp/9655982092",
-        "israel": "https://bookpod.co.il/product/%d7%90%d7%95%d7%a8-%d7%94%d7%a9%d7%9d/"
-    },
-    "defaultBuyLink": {
-        "en": "amazon",
-        "he": "israel"
+    "he": {
+      "display": "\"Frank Ruhl Libre\", \"Times New Roman\", serif",
+      "body": "\"David Libre\", \"Frank Ruhl Libre\", serif",
+      "meta": "\"Heebo\", -apple-system, BlinkMacSystemFont, sans-serif"
     }
+  },
+  "geo": {
+    "region": "IL-JM",
+    "placename": "Jerusalem, Israel",
+    "position": "31.7683;35.2137",
+    "icbm": "31.7683, 35.2137"
+  },
+  "buyLinks": {
+    "amazon": "https://www.amazon.com/dp/9655982092",
+    "israel": "https://bookpod.co.il/product/%d7%90%d7%95%d7%a8-%d7%94%d7%a9%d7%9d/",
+    "marketplaces": [
+      { "code": "UK", "name": "United Kingdom", "url": "https://www.amazon.co.uk/dp/9655982092" },
+      { "code": "DE", "name": "Germany", "url": "https://www.amazon.de/dp/9655982092" },
+      { "code": "FR", "name": "France", "url": "https://www.amazon.fr/dp/9655982092" },
+      { "code": "ES", "name": "Spain", "url": "https://www.amazon.es/dp/9655982092" },
+      { "code": "IT", "name": "Italy", "url": "https://www.amazon.it/dp/9655982092" },
+      { "code": "NL", "name": "Netherlands", "url": "https://www.amazon.nl/dp/9655982092" },
+      { "code": "PL", "name": "Poland", "url": "https://www.amazon.pl/dp/9655982092" },
+      { "code": "SE", "name": "Sweden", "url": "https://www.amazon.se/dp/9655982092" },
+      { "code": "JP", "name": "Japan", "url": "https://www.amazon.co.jp/dp/9655982092" },
+      { "code": "CA", "name": "Canada", "url": "https://www.amazon.ca/dp/9655982092" },
+      { "code": "AU", "name": "Australia", "url": "https://www.amazon.com.au/dp/9655982092" }
+    ]
+  },
+  "defaultBuyLink": {
+    "en": "amazon",
+    "he": "israel"
+  },
+  "samplePdf": "/static/Pages_from_Ohr_haShem_8nov2019_marks.pdf"
 }
