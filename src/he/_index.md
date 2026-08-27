@@ -14,14 +14,17 @@ isCustomHome: true
   <div class="section-inner">
     <div class="grid-2 flip reveal is-in">
       <div class="plate-col">
-        <div class="cover-plate">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true">
-            <path d="M5 4c4-1.4 10-1.4 14 0v16c-4-1.4-10-1.4-14 0z"/>
-            <path d="M12 4v16"/>
-          </svg>
-          <div class="cover-title">אור ה׳</div>
-          <div class="cover-author">רבנו חסדאי קרשקש</div>
-          <span class="tag">מהדורה מדעית ביקורתית</span>
+        <div class="book-media-card is-square">
+          <img src="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_800/v1787846434/crescas_double_book_cc_sul138.jpg"
+               srcset="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_400/v1787846434/crescas_double_book_cc_sul138.jpg 400w,
+                       https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_800/v1787846434/crescas_double_book_cc_sul138.jpg 800w,
+                       https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_1200/v1787846434/crescas_double_book_cc_sul138.jpg 1200w"
+               sizes="(max-width: 768px) 100vw, 490px"
+               alt="ספר אור ה׳ — מהדורה מדעית ביקורתית"
+               class="media-img"
+               width="800"
+               height="800"
+               loading="eager">
         </div>
       </div>
       <div class="hero-text">
@@ -64,12 +67,17 @@ isCustomHome: true
         </div>
       </div>
       <div class="plate-col">
-        <div class="plate">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true">
-            <path d="M4 4h9l7 7v9H4z"/><path d="M13 4v7h7"/><path d="M8 13h8M8 16h5"/>
-          </svg>
-          <span>השוואה בין מהדורת דפוס משובשת לבין הנוסח המתוקן</span>
-          <span class="tag">מהדורה ביקורתית</span>
+        <div class="book-media-card">
+          <img src="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,w_800/v1787847075/crescas_revised_cover_2026_07_13_front_f6jxw0.jpg"
+               srcset="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,w_400/v1787847075/crescas_revised_cover_2026_07_13_front_f6jxw0.jpg 400w,
+                       https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,w_800/v1787847075/crescas_revised_cover_2026_07_13_front_f6jxw0.jpg 800w,
+                       https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,w_1200/v1787847075/crescas_revised_cover_2026_07_13_front_f6jxw0.jpg 1200w"
+               sizes="(max-width: 768px) 100vw, 420px"
+               alt="עטיפת ספר אור ה׳ — מהדורה מתוקנת"
+               class="media-img"
+               width="800"
+               height="1100"
+               loading="lazy">
         </div>
       </div>
     </div>
@@ -81,12 +89,17 @@ isCustomHome: true
   <div class="section-inner">
     <div class="grid-2 flip reveal">
       <div class="plate-col">
-        <div class="plate">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true">
-            <rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 8h8M8 12h8M8 16h5"/>
-          </svg>
-          <span>כתב יד פירנצה, דף פתיחה — טיוטת המחבר</span>
-          <span class="tag">Florence Ms. Conv. Soppr. 417</span>
+        <div class="book-media-card is-square">
+          <img src="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_800/v1787846538/crescas_double_book_vert_cc_2_eoaqv0.jpg"
+               srcset="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_400/v1787846538/crescas_double_book_vert_cc_2_eoaqv0.jpg 400w,
+                       https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_800/v1787846538/crescas_double_book_vert_cc_2_eoaqv0.jpg 800w,
+                       https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_1200/v1787846538/crescas_double_book_vert_cc_2_eoaqv0.jpg 1200w"
+               sizes="(max-width: 768px) 100vw, 490px"
+               alt="ספרי אור ה׳ — מראה מהדורה"
+               class="media-img"
+               width="800"
+               height="800"
+               loading="lazy">
         </div>
       </div>
       <div>
@@ -182,12 +195,17 @@ isCustomHome: true
         </div>
       </div>
       <div class="plate-col">
-        <div class="plate">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true">
-            <path d="M5 4c4-1.4 10-1.4 14 0v16c-4-1.4-10-1.4-14 0z"/><path d="M12 4v16"/>
-          </svg>
-          <span>כתיב מקורי, קיצורים ומראי מקום בשוליים</span>
-          <span class="tag">טקסט אותנטי</span>
+        <div class="book-media-card is-square">
+          <img src="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_800/v1787846931/Paperback_Book_Mockup_5_bftgh1.jpg"
+               srcset="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_400/v1787846931/Paperback_Book_Mockup_5_bftgh1.jpg 400w,
+                       https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_800/v1787846931/Paperback_Book_Mockup_5_bftgh1.jpg 800w,
+                       https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_1200/v1787846931/Paperback_Book_Mockup_5_bftgh1.jpg 1200w"
+               sizes="(max-width: 768px) 100vw, 490px"
+               alt="ספר אור ה׳ בכריכה רכה"
+               class="media-img"
+               width="800"
+               height="800"
+               loading="lazy">
         </div>
       </div>
     </div>
