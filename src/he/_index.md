@@ -14,24 +14,24 @@ isCustomHome: true
   <div class="section-inner">
     <div class="grid-2 flip reveal is-in">
       <div class="plate-col">
-        <div class="book-media-card is-square">
-          <img src="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_800/v1787846434/crescas_double_book_cc_sul138.jpg"
-               srcset="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_400/v1787846434/crescas_double_book_cc_sul138.jpg 400w,
-                       https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_800/v1787846434/crescas_double_book_cc_sul138.jpg 800w,
-                       https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_1200/v1787846434/crescas_double_book_cc_sul138.jpg 1200w"
-               sizes="(max-width: 768px) 100vw, 490px"
+        <div class="book-media-card hero-media-card">
+          <img src="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,w_800/v1787847075/crescas_revised_cover_2026_07_13_front_f6jxw0.jpg"
+               srcset="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,w_400/v1787847075/crescas_revised_cover_2026_07_13_front_f6jxw0.jpg 400w,
+                       https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,w_800/v1787847075/crescas_revised_cover_2026_07_13_front_f6jxw0.jpg 800w,
+                       https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,w_1200/v1787847075/crescas_revised_cover_2026_07_13_front_f6jxw0.jpg 1200w"
+               sizes="(max-width: 768px) 100vw, 360px"
                alt="ספר אור ה׳ — מהדורה מדעית ביקורתית"
                class="media-img"
                width="800"
-               height="800"
+               height="1100"
                loading="eager">
         </div>
       </div>
       <div class="hero-text">
-        <div class="hero-eyebrow">מהדורה מדעית ביקורתית</div>
-        <h1>אור ה׳</h1>
-        <p class="byline">לרבנו חסדאי בן יהודה קרשקש</p>
-        <p class="tagline">״להחזיר עטרה ליושנה״</p>
+        <div class="hero-eyebrow">מהדורה ביקורתית של ספר</div>
+        <h1>אור השם</h1>
+        <p class="tagline">לרבי חסדאי קרשקש</p>
+        <p class="byline">בעריכת דניאל לוין</p>
         <div class="hero-cta">
           <a class="btn btn-primary" href="{{ site.buyLinks.israel }}" target="_blank" rel="noopener noreferrer">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -56,27 +56,26 @@ isCustomHome: true
   <div class="section-inner">
     <div class="grid-2 reveal">
       <div>
-        <div class="eyebrow">פתח דבר</div>
-        <h2 class="lede">להחזיר עטרה ליושנה</h2>
+        <div class="eyebrow">מהדורה רביעית, מתוקנת ומעודכנת</div>
+        <h2 class="lede">על הספר</h2>
         <p class="body-text">
-          לאחר 600 שנה של נוסחאות משובשות וטעויות העתקה, ראה אור נוסח מדעי, מדויק ומוער של חיבור המופת מאת רבי חסדאי קרשקש. נקי משיבושי הדפוס, ונאמן לטקסט המקורי.
-        </p>
-        <div class="stat-row">
+באחד החיבורים החשובים ביותר בהגות היהודית של ימי הביניים פורש ר׳ חסדאי קרשקש – מגדולי רבני ספרד – את שיטתו המקורית בסוגיית עיקרי האמונה. תכליתו היא לנתק את הקשר שקשר הרמב״ם בין אידיאל השלמות הפילוסופי – המבוסס על שלמות השכל, לבין אידיאל השלמות על פי התורה – דבקות המושגת על ידי אהבת ה׳ ועבודתו. לשם כך נטל על עצמו ר׳ חסדאי למוטט את סמכותו הכמעט בלתי מעורערת של אריסטו בתחומי הפיזיקה והמטאפיזיקה ולהעמיד מחדש את יסודות היהדות על אדני מסורת חז״ל.        </p>
+        <!-- div class="stat-row">
           <div class="stat-num">600</div>
           <div class="stat-label">שנה של נוסחאות משובשות וטעויות העתקה — עד היום</div>
-        </div>
+        </div -->
       </div>
       <div class="plate-col">
-        <div class="book-media-card">
-          <img src="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,w_800/v1787847075/crescas_revised_cover_2026_07_13_front_f6jxw0.jpg"
-               srcset="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,w_400/v1787847075/crescas_revised_cover_2026_07_13_front_f6jxw0.jpg 400w,
-                       https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,w_800/v1787847075/crescas_revised_cover_2026_07_13_front_f6jxw0.jpg 800w,
-                       https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,w_1200/v1787847075/crescas_revised_cover_2026_07_13_front_f6jxw0.jpg 1200w"
-               sizes="(max-width: 768px) 100vw, 420px"
-               alt="עטיפת ספר אור ה׳ — מהדורה מתוקנת"
+        <div class="book-media-card is-square">
+          <img src="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_800/v1787846434/crescas_double_book_cc_sul138.jpg"
+               srcset="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_400/v1787846434/crescas_double_book_cc_sul138.jpg 400w,
+                       https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_800/v1787846434/crescas_double_book_cc_sul138.jpg 800w,
+                       https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_1200/v1787846434/crescas_double_book_cc_sul138.jpg 1200w"
+               sizes="(max-width: 768px) 100vw, 490px"
+               alt="השוואה בין מהדורת דפוס משובשת לבין הנוסח המתוקן"
                class="media-img"
                width="800"
-               height="1100"
+               height="800"
                loading="lazy">
         </div>
       </div>
@@ -104,7 +103,7 @@ isCustomHome: true
       </div>
       <div>
         <div class="eyebrow">המקור</div>
-        <h2 class="lede">חזרה למקורות:<br>כתב יד פירנצה</h2>
+        <h2 class="lede">כתב יד פירנצה</h2>
         <p class="body-text">
           המהדורה החדשה נוטשת לחלוטין את מהדורות הדפוס המאוחרות. בבסיסה עומדת טיוטה נדירה משנת 1405 – כחמש שנים לפני חתימת הספר – החושפת את שלבי העריכה ההיסטוריים, ההגהות והתוספות המקוריות שאבדו ברבות השנים.
         </p>

@@ -14,16 +14,16 @@ isCustomHome: true
   <div class="section-inner">
     <div class="grid-2 flip reveal is-in">
       <div class="plate-col">
-        <div class="book-media-card is-square">
-          <img src="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_800/v1787846434/crescas_double_book_cc_sul138.jpg"
-               srcset="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_400/v1787846434/crescas_double_book_cc_sul138.jpg 400w,
-                       https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_800/v1787846434/crescas_double_book_cc_sul138.jpg 800w,
-                       https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_1200/v1787846434/crescas_double_book_cc_sul138.jpg 1200w"
-               sizes="(max-width: 768px) 100vw, 490px"
+        <div class="book-media-card hero-media-card">
+          <img src="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,w_800/v1787847075/crescas_revised_cover_2026_07_13_front_f6jxw0.jpg"
+               srcset="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,w_400/v1787847075/crescas_revised_cover_2026_07_13_front_f6jxw0.jpg 400w,
+                       https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,w_800/v1787847075/crescas_revised_cover_2026_07_13_front_f6jxw0.jpg 800w,
+                       https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,w_1200/v1787847075/crescas_revised_cover_2026_07_13_front_f6jxw0.jpg 1200w"
+               sizes="(max-width: 768px) 100vw, 360px"
                alt="Light of the Lord — Critical Scholarly Edition"
                class="media-img"
                width="800"
-               height="800"
+               height="1100"
                loading="eager">
         </div>
       </div>
@@ -67,16 +67,16 @@ isCustomHome: true
         </div>
       </div>
       <div class="plate-col">
-        <div class="book-media-card">
-          <img src="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,w_800/v1787847075/crescas_revised_cover_2026_07_13_front_f6jxw0.jpg"
-               srcset="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,w_400/v1787847075/crescas_revised_cover_2026_07_13_front_f6jxw0.jpg 400w,
-                       https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,w_800/v1787847075/crescas_revised_cover_2026_07_13_front_f6jxw0.jpg 800w,
-                       https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,w_1200/v1787847075/crescas_revised_cover_2026_07_13_front_f6jxw0.jpg 1200w"
-               sizes="(max-width: 768px) 100vw, 420px"
-               alt="Book cover of Light of the Lord — Revised Edition"
+        <div class="book-media-card is-square">
+          <img src="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_800/v1787846434/crescas_double_book_cc_sul138.jpg"
+               srcset="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_400/v1787846434/crescas_double_book_cc_sul138.jpg 400w,
+                       https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_800/v1787846434/crescas_double_book_cc_sul138.jpg 800w,
+                       https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_1200/v1787846434/crescas_double_book_cc_sul138.jpg 1200w"
+               sizes="(max-width: 768px) 100vw, 490px"
+               alt="Comparison between faulty printed editions and the restored text"
                class="media-img"
                width="800"
-               height="1100"
+               height="800"
                loading="lazy">
         </div>
       </div>
