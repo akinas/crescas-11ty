@@ -2,11 +2,11 @@
   "url": "https://crescas.org",
   "title": {
     "en": "Rabbi Hasdai Crescas — Light of the Lord (Ohr HaShem) | Critical Edition",
-    "he": "אור ה׳ — מהדורה מדעית ביקורתית | רבנו חסדאי קרשקש"
+    "he": "אור השם — מהדורה ביקורתית | רבנו חסדאי קרשקש"
   },
   "siteName": {
     "en": "Light of the Lord",
-    "he": "אור ה׳"
+    "he": "אור השם"
   },
   "author": {
     "en": "Rabbi Hasdai Crescas",
@@ -18,9 +18,9 @@
   },
   "description": {
     "en": "Scholarly and annotated critical edition of 'Light of the Lord' (Ohr HaShem) by Rabbi Hasdai Crescas, based on the rare 1405 Florence manuscript and cross-referenced with primary historical codices.",
-    "he": "מהדורה מדעית ביקורתית ומוערת לספר ״אור ה׳״ מאת רבנו חסדאי קרשקש. נוסח מדויק ונאמן לטקסט המקורי, מבוסס על כתב יד פירנצה 1405."
+    "he": "מהדורה ביקורתית ומוערת לספר ״אור השם״ מאת רבנו חסדאי קרשקש. נוסח מדויק ונאמן לטקסט המקורי, מבוסס על כתב יד פירנצה."
   },
-  "isbn": "978-965-598-209-1",
+  "isbn": "978-965-93323-7-3",
   "googleFontsUrl": "https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&family=Frank+Ruhl+Libre:wght@400;500;700;900&family=Heebo:wght@400;500;600;700&display=swap",
   "fonts": {
     "en": {

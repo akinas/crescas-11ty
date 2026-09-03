@@ -35,7 +35,7 @@
 
   {# Open Graph / Facebook #}
   <meta property="og:type" content="book">
-  <meta property="og:site_name" content="{{ site.siteName[lang] or 'אור ה׳' }}">
+  <meta property="og:site_name" content="{{ site.siteName[lang] or 'אור השם' }}">
   <meta property="og:title" content="{{ pageTitle }}">
   <meta property="og:description" content="{{ metaDesc }}">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
@@ -69,7 +69,7 @@
       {
         "@type": "Book",
         "@id": "{{ site.url }}/#book",
-        "name": "אור ה׳",
+        "name": "אור השם",
         "alternateName": "Light of the Lord (Ohr HaShem)",
         "author": {
           "@type": "Person",
@@ -157,9 +157,9 @@
         <div class="header-top">
           <span class="header-top-tagline">
             {% if lang == 'he' %}
-              מהדורה מדעית ביקורתית מבוססת על כתב יד פירנצה 1405
+              מהדורה ביקורתית מבוססת על כתב יד פירנצה
             {% else %}
-              Critical Scholarly Edition based on the 1405 Florence Manuscript
+              Critical Edition based on the Florence Manuscript
             {% endif %}
           </span>
           <nav class="lang-switch" aria-label="{% if lang == 'he' %}בחירת שפה{% else %}Language Selection{% endif %}">
@@ -171,7 +171,7 @@
 
         <!-- Header Main Bar -->
         <div class="header-main">
-          <a href="{{ '/en/' if lang == 'en' else '/' }}" class="site-brand" aria-label="{{ site.siteName[lang] or 'אור ה׳' }}">
+          <a href="{{ '/en/' if lang == 'en' else '/' }}" class="site-brand" aria-label="{{ site.siteName[lang] or 'אור השם' }}">
             <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
               <path d="M5 4c4-1.4 10-1.4 14 0v16c-4-1.4-10-1.4-14 0z"/>
               <path d="M12 4v16"/>
@@ -243,7 +243,7 @@
           <div class="page-header">
             <div class="container">
               <div class="eyebrow">
-                {% if lang == 'he' %}אור ה׳ · מהדורה מדעית ביקורתית{% else %}Light of the Lord · Critical Edition{% endif %}
+                {% if lang == 'he' %}אור השם · מהדורה ביקורתית{% else %}Light of the Lord · Critical Edition{% endif %}
               </div>
               <h1>{{ title }}</h1>
             </div>
@@ -270,11 +270,11 @@
     <footer class="site-footer" role="contentinfo">
       <div class="container">
         <h3>
-          {% if lang == 'he' %}אור ה׳ — מהדורה מדעית מוערת{% else %}Light of the Lord — Critical Edition{% endif %}
+          {% if lang == 'he' %}אור השם — מהדורה ביקורתית מוערת{% else %}Light of the Lord — Critical Edition{% endif %}
         </h3>
         <p class="sub">
           {% if lang == 'he' %}
-            בעריכה מדעית · מבוססת על כתב יד פירנצה ומכתבי יד מרכזיים נוספים
+            מהדורה ביקורתית · מבוססת על כתב יד פירנצה ומכתבי יד מרכזיים נוספים
           {% else %}
             Scholarly critical edition based on the 1405 Florence manuscript and primary historical codices
           {% endif %}
@@ -299,7 +299,7 @@
         <div class="colophon">
           <div class="rule" aria-hidden="true"></div>
           {% if lang == 'he' %}
-            מהדורה ביקורתית לספר ״אור ה׳״ לרבנו חסדאי בן יהודה קרשקש | עורך: דניאל לוין<br>
+            מהדורה ביקורתית לספר ״אור השם״ לרבנו חסדאי בן יהודה קרשקש | עורך: דניאל לוין<br>
             © כל הזכויות שמורות
           {% else %}
             Critical Edition of <em>Light of the Lord</em> by Rabbi Hasdai Crescas | Editor: Daniel Levin<br>

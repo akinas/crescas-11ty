@@ -84,7 +84,7 @@ isCustomHome: true
   </div>
 </section>
 
-<!-- ================= SECTION 2: TIMELINE & SOURCES ================= -->
+<!-- ================= SECTION 2: PRINT EDITIONS & CORRUPTION ================= -->
 <section class="section section-paper">
   <div class="section-inner">
     <div class="grid-2 flip reveal">
@@ -103,10 +103,43 @@ isCustomHome: true
         </div>
       </div>
       <div>
-        <div class="eyebrow">The Source</div>
-        <h2 class="lede">Returning to the Roots:<br>The Florence Manuscript</h2>
+        <div class="eyebrow">History of Textual Corruption</div>
+        <h2 class="lede">Beyond the Print Tradition</h2>
         <p class="body-text">
-          This new edition abandons corrupted late printings. It is founded upon a rare 1405 draft created approximately five years before the completion of the work, uncovering authorial revisions, marginalia, and original readings lost across centuries.
+          For centuries, scholars studying <em>Light of the Lord</em> had to grapple with corrupted texts. Since it was first printed in Ferrara in 1555, subsequent editions accumulated scribal blunders, omissions, and editorial distortions that obscured the author's original intent. Later printings, despite editors' efforts, rested on the same faulty print genealogy and could not reconstruct the authentic text.
+        </p>
+        <div class="glosses print-editions-glosses">
+          <div class="gloss">
+            <div class="gloss-mark">1555</div>
+            <p><strong>Ferrara</strong> — Heavily corrupted first print</p>
+          </div>
+          <div class="gloss">
+            <div class="gloss-mark">1860</div>
+            <p><strong>Vienna</strong> — Second print edition</p>
+          </div>
+          <div class="gloss">
+            <div class="gloss-mark">1861</div>
+            <p><strong>Johannesburg</strong> — Third print edition</p>
+          </div>
+          <div class="gloss">
+            <div class="gloss-mark">1990</div>
+            <p><strong>Jerusalem</strong> — Rabbi Shlomo Fischer edition</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SECTION 3: FLORENCE MANUSCRIPT ================= -->
+<section class="section section-pale">
+  <div class="section-inner">
+    <div class="grid-2 reveal">
+      <div>
+        <div class="eyebrow">The Florence Manuscript</div>
+        <h2 class="lede">The Most Authoritative Textual Witness</h2>
+        <p class="body-text">
+          At the foundation of this critical edition lies the Florence Manuscript, regarded in scholarship as the most accurate surviving textual witness of <em>Light of the Lord</em>. Produced approximately five years prior to the final completion of the work, this singular codex allows the identification and rectification of distortions accumulated over generations, bringing the reader as close as possible to the authentic words of Rabbi Hasdai Crescas.
         </p>
         <div class="timeline">
           <div class="tl-point">
@@ -125,21 +158,23 @@ isCustomHome: true
           </div>
         </div>
       </div>
+      <div class="plate-col">
+        <div class="book-media-card is-square">
+          <img src="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_800/v1768680865/ohr_hashem_edited_paperback_opt_kjxk9d.png"
+               srcset="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_400/v1768680865/ohr_hashem_edited_paperback_opt_kjxk9d.png 400w,
+                       https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_800/v1768680865/ohr_hashem_edited_paperback_opt_kjxk9d.png 800w,
+                       https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_1200/v1768680865/ohr_hashem_edited_paperback_opt_kjxk9d.png 1200w"
+               sizes="(max-width: 768px) 100vw, 490px"
+               alt="Florence Manuscript — Definitive Text Witness"
+               class="media-img"
+               width="800"
+               height="800"
+               loading="lazy">
+        </div>
+      </div>
     </div>
-  </div>
-</section>
 
-<!-- ================= SECTION 3: APPARATUS CRITICUS ================= -->
-<section class="section section-pale">
-  <div class="section-inner">
-    <div class="reveal">
-      <div class="eyebrow">The Methodology</div>
-      <h2 class="lede">Textual Archaeology</h2>
-      <p class="body-text">
-        With more than 2,000 systematically mapped textual variants, this edition reconstructs the evolution of the text. The critical apparatus distinguishes four historical scribal and editorial hands, cross-referencing all major surviving medieval manuscripts.
-      </p>
-    </div>
-
+    {# Commented out apparatus section for future reuse
     <div class="apparatus reveal">
       <div class="apparatus-caption">Illustrative demonstration of editorial hand classification in the text apparatus</div>
 
@@ -175,25 +210,14 @@ isCustomHome: true
         </div>
       </div>
     </div>
+    #}
   </div>
 </section>
 
 <!-- ================= SECTION 4: TEXTUAL FIDELITY & GLOSSES ================= -->
 <section class="section section-paper">
   <div class="section-inner">
-    <div class="grid-2 reveal">
-      <div>
-        <div class="eyebrow">Authenticity</div>
-        <h2 class="lede">Strict Fidelity to the<br>Author's Language</h2>
-        <p class="body-text">
-          The edition preserves Rabbi Crescas's authentic spelling without modernizing distortions or speculative acronym expansions. Coupled with precise citations of philosophical sources and original manuscript pagination, it provides a transparent and authoritative reading experience.
-        </p>
-        <div class="glosses">
-          <div class="gloss"><div class="gloss-mark">A</div><p>No modernizing corrections or forced deciphering of abbreviations</p></div>
-          <div class="gloss"><div class="gloss-mark">B</div><p>Accurate philosophical source cross-references throughout</p></div>
-          <div class="gloss"><div class="gloss-mark">C</div><p>Direct notation of original manuscript folio numbering</p></div>
-        </div>
-      </div>
+    <div class="grid-2 flip reveal">
       <div class="plate-col">
         <div class="book-media-card is-square">
           <img src="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_800/v1787846931/Paperback_Book_Mockup_5_bftgh1.jpg"
@@ -208,64 +232,96 @@ isCustomHome: true
                loading="lazy">
         </div>
       </div>
+      <div>
+        <div class="eyebrow">A Modern Scholarly Edition</div>
+        <h2 class="lede">Scholarly Precision, Modern Accessibility</h2>
+        <p class="body-text">
+          This edition harmonizes rigorous manuscript fidelity with clarity for the modern reader. The text, established on the Florence Manuscript, was collated against all major surviving witnesses. Beyond the refined Hebrew text, the volume incorporates an extensive reference system to Crescas's philosophical and rabbinic sources, alongside transparent textual apparatus notes displaying all significant variants.
+        </p>
+        <div class="glosses">
+          <div class="gloss"><div class="gloss-mark">A</div><p>No modernizing corrections or forced deciphering of abbreviations</p></div>
+          <div class="gloss"><div class="gloss-mark">B</div><p>Accurate philosophical source cross-references throughout</p></div>
+          <div class="gloss"><div class="gloss-mark">C</div><p>Direct notation of original manuscript folio numbering</p></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ================= SECTION 5: EDITION DETAILS & PURCHASING ================= -->
-<section class="section section-pale">
+<section class="section section-pale" id="purchase">
   <div class="section-inner">
-    <div class="content-wrapper reveal">
-      <div class="eyebrow">Edition Details</div>
-      <h2 class="lede">Light of the Lord — Third Corrected Edition</h2>
-
-      <div class="notice-box">
-        <strong>New!</strong> Available for immediate order in Israel on <a href="{{ site.buyLinks.israel }}" target="_blank" rel="noopener noreferrer">BookPod</a> and worldwide via <a href="{{ site.buyLinks.amazon }}" target="_blank" rel="noopener noreferrer">Amazon</a>.
-      </div>
-
-      <p class="body-text">
-        <em>Light of the Lord</em> (<em>Ohr HaShem</em>) is one of the most seminal works in medieval Jewish philosophy. Rabbi Hasdai Crescas, one of the foremost rabbinic authorities and thinkers of 14th-century Spain, puts forward his original system on the principles of faith. His primary aim is to disentangle Maimonides's synthesis between philosophical intellectual perfection and Torah's devotion through divine love. To this end, Crescas challenged and dismantled Aristotle's physics and metaphysics.
-      </p>
-
-      <ul style="line-height:2; font-size:1.05rem;">
-        <li><strong>Detailed Indices</strong>, philosophical source references, and full textual apparatus</li>
-        <li><strong>Format:</strong> Paperback</li>
-        <li><strong>Pages:</strong> 393 pages</li>
-        <li><strong>Dimensions:</strong> 16 x 24 cm (6.3 x 9.4 in)</li>
-        <li><strong>ISBN:</strong> 978-965-598-209-1</li>
-      </ul>
-
-      {% include "where-to-buy.njk" %}
-
-      <!-- Sample Pages Download -->
-      <div style="margin:2.5rem 0; padding:1.5rem; background:var(--surface); border:1px solid var(--line); border-radius:var(--radius-sm); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
-        <div>
-          <h3 style="margin-bottom:0.3rem;">Sample Pages from the Book</h3>
-          <p style="margin:0; font-family:var(--meta); font-size:0.9rem; color:rgba(12,26,43,0.7);">Inspect page layout, apparatus criticus, and source annotations.</p>
+    <div class="grid-2 reveal">
+      <div>
+        <div class="eyebrow">Edition Details</div>
+        <h2 class="lede">Edition Features</h2>
+        <ul class="edition-features-list">
+          <li><strong>Text established on the Florence Manuscript:</strong> Reconstructed from the earliest and most complete witness, collated with additional historical manuscripts.</li>
+          <li><strong>New typography and typesetting:</strong> Re-designed layout with clear, elegant typography optimized for fluent and in-depth study.</li>
+          <li><strong>Modern paragraph division and punctuation:</strong> Integrated contemporary punctuation, sentence, and paragraph structures to facilitate reading and conceptual progression.</li>
+          <li><strong>Comprehensive cross-references and sources:</strong> Systematic identification of the author's sources from Rabbinic literature, Aristotle, his medieval commentators, and medieval philosophy.</li>
+          <li><strong>Critical apparatus:</strong> Exhaustive collection of textual variants, manuscript collations, and historical glosses.</li>
+          <li><strong>Research reference tool:</strong> Notation of Florence manuscript folio and page numbers directly in the text (in square brackets) for rapid cross-referencing with the codex.</li>
+        </ul>
+        <h3 class="specs-heading">Specifications:</h3>
+        <ul class="edition-specs-list">
+          <li>420 pages.</li>
+          <li>Paperback.</li>
+          <li><strong>Format:</strong> 15.20 × 22.90 cm (6x9 inches).</li>
+          <li><strong>ISBN:</strong> 978-965-93323-7-3.</li>
+        </ul>
+        <div class="edition-actions">
+          <a class="btn btn-primary" href="{{ site.buyLinks.israel }}" target="_blank" rel="noopener noreferrer">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M6 6h15l-1.5 9h-12z"/><path d="M6 6 5 3H2"/><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/>
+            </svg>
+            Order on BookPod (Israel)
+          </a>
+          <a class="btn btn-primary" href="{{ site.buyLinks.amazon }}" target="_blank" rel="noopener noreferrer">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M6 6h15l-1.5 9h-12z"/><path d="M6 6 5 3H2"/><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/>
+            </svg>
+            Order on Amazon (US)
+          </a>
+          <a class="btn btn-secondary" href="{{ site.samplePdf }}" target="_blank" rel="noopener noreferrer">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/>
+            </svg>
+            Download Sample Chapter
+          </a>
         </div>
-        <a class="btn btn-primary" href="{{ site.samplePdf }}" target="_blank" rel="noopener noreferrer">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/>
-          </svg>
-          Download PDF Sample
-        </a>
       </div>
+      <div class="plate-col">
+        <div class="book-media-card hero-media-card">
+          <img src="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,w_800/v1787847075/crescas_revised_cover_2026_07_13_front_f6jxw0.jpg"
+               srcset="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,w_400/v1787847075/crescas_revised_cover_2026_07_13_front_f6jxw0.jpg 400w,
+                       https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,w_800/v1787847075/crescas_revised_cover_2026_07_13_front_f6jxw0.jpg 800w,
+                       https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,w_1200/v1787847075/crescas_revised_cover_2026_07_13_front_f6jxw0.jpg 1200w"
+               sizes="(max-width: 768px) 100vw, 360px"
+               alt="Light of the Lord — Critical Edition Cover"
+               class="media-img"
+               width="800"
+               height="1100"
+               loading="lazy">
+        </div>
+      </div>
+    </div>
 
-      <!-- Crescas Library Section -->
-      <div class="crescas-library-section">
-        <h2>Rabbi Hasdai Crescas’s Library</h2>
-        <h3>A Book Series on Medieval Jewish Thought</h3>
-        <p style="max-width:48ch; margin:0 auto 1.5rem; font-family:var(--meta); color:rgba(12,26,43,0.8);">
-          An annotated publication series of key philosophical treatises cited in Crescas's writings, elucidating the intellectual currents of his era.
-        </p>
-        <a class="library-card" href="/en/docs/library/maamar/">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
-            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
-          </svg>
-          <span><em>Metaphysical Treatise</em> by Rabbi Moshe ben Yosef Halevi &rarr;</span>
-        </a>
-      </div>
+    <!-- Crescas Library Section -->
+    <div class="crescas-library-section">
+      <h2>Rabbi Hasdai Crescas’s Library</h2>
+      <h3>A Book Series on Medieval Jewish Thought</h3>
+      <p style="max-width:48ch; margin:0 auto 1.5rem; font-family:var(--meta); color:rgba(12,26,43,0.8);">
+        An annotated publication series of key philosophical treatises cited in Crescas's writings, elucidating the intellectual currents of his era.
+      </p>
+      <a class="library-card" href="/en/docs/library/maamar/">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+        </svg>
+        <span><em>Metaphysical Treatise</em> by Rabbi Moshe ben Yosef Halevi &rarr;</span>
+      </a>
+    </div>
 
     </div>
   </div>

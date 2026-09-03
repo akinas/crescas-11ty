@@ -7,7 +7,7 @@ translationKey: 'contact'
 lang: he
 ---
 
-<p class="lede">לשאלות, הערות מדעיות, הזמנות מרוכזות או פניות למהדיר:</p>
+<p class="lede">לשאלות, הערות, הזמנות מרוכזות או פניות למהדיר:</p>
 
 <p>
   <a class="btn btn-primary" href="mailto:daniel@shinmem.org" style="font-size:1.05rem; padding:0.9em 2em;">
