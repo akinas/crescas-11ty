@@ -102,27 +102,11 @@ isCustomHome: true
         </div>
       </div>
       <div>
-        <div class="eyebrow">המקור</div>
-        <h2 class="lede">כתב יד פירנצה</h2>
+        <div class="eyebrow">היסטוריה של שיבושים</div>
+        <h2 class="lede">מעבר למסורת הדפוס</h2>
         <p class="body-text">
-          המהדורה החדשה נוטשת לחלוטין את מהדורות הדפוס המאוחרות. בבסיסה עומדת טיוטה נדירה משנת 1405 – כחמש שנים לפני חתימת הספר – החושפת את שלבי העריכה ההיסטוריים, ההגהות והתוספות המקוריות שאבדו ברבות השנים.
-        </p>
-        <div class="timeline">
-          <div class="tl-point">
-            <div class="tl-dot"></div>
-            <div class="tl-year">1405</div>
-            <div class="tl-label">טיוטת כתב היד</div>
-          </div>
-          <div style="flex:1 1 auto;">
-            <div class="tl-connector"></div>
-            <div class="tl-connector-label">כחמש שנים</div>
-          </div>
-          <div class="tl-point">
-            <div class="tl-dot" style="background:var(--rubric); box-shadow:0 0 0 1.5px var(--rubric);"></div>
-            <div class="tl-year">≈1410</div>
-            <div class="tl-label">חתימת הספר</div>
-          </div>
-        </div>
+במשך מאות שנים נאלצו לומדי הספר להתמודד עם טקסטים פגומים. מאז נדפס לראשונה בפירארה בשנת 1555, סבלו דפוסי ״אור השם״ מהצטברות של טעויות סופר, השמטות ושיבושי עריכה שעיוותו את כוונתו של המחבר. המהדורות המאוחרות, למרות מאמצי המהדירים, התבססו על אותה שושלת דפוס שגויה ולא הצליחו לשחזר את הנוסח המקורי.
+        </p>        
       </div>
     </div>
   </div>
@@ -132,11 +116,27 @@ isCustomHome: true
 <section class="section section-pale">
   <div class="section-inner">
     <div class="reveal">
-      <div class="eyebrow">השיטה המדעית</div>
-      <h2 class="lede">ארכיאולוגיה של טקסט</h2>
+      <div class="eyebrow">כתב יד פירנצה</div>
+      <h2 class="lede">עד נוסח של הטקסט הטוב ביותר</h2>
       <p class="body-text">
-        עם למעלה מ־2,000 תיקוני נוסח ממופים, המהדורה מתחקה אחר התפתחות הספר. האפראט המדעי מסווג במדויק ארבע ׳ידיים׳ שונות של עריכה היסטורית, ומצליב עדויות מכתבי יד מרכזיים נוספים, לגיבוש הנוסח השלם ביותר שהיה בידי בני דורו של המחבר.
+בבסיסה של מהדורה זו עומד כתב יד פירנצה, הנחשב במחקר לעד הנוסח המדויק ביותר של ״אור השם״. כתב יד ייחודי זה, שנכתב כחמש שנים לפני חתימתו הסופי של הספר, מאפשר זיהוי ותיקון שיבושים רבים שהצטברו במרוצת הדורות. ההישענות עליו מעניקה לקורא טקסט קרוב ככל האפשר לנוסח המקורי שיצא מתחת ידו של רבי חסדאי קרשקש.
       </p>
+      <div class="timeline">
+          <div class="tl-point">
+            <div class="tl-dot"></div>
+            <div class="tl-year">1405</div>
+            <div class="tl-label">העתקת כתב היד</div>
+          </div>
+          <div style="flex:1 1 auto;">
+            <div class="tl-connector"></div>
+            <div class="tl-connector-label">חמש שנים</div>
+          </div>
+          <div class="tl-point">
+            <div class="tl-dot" style="background:var(--rubric); box-shadow:0 0 0 1.5px var(--rubric);"></div>
+            <div class="tl-year">1410</div>
+            <div class="tl-label">חתימת הספר</div>
+          </div>
+        </div>
     </div>
 
     <div class="apparatus reveal">
@@ -182,10 +182,10 @@ isCustomHome: true
   <div class="section-inner">
     <div class="grid-2 reveal">
       <div>
-        <div class="eyebrow">הנאמנות למקור</div>
-        <h2 class="lede">נאמנות מוחלטת<br>לשפת המחבר</h2>
+        <div class="eyebrow">מהדורה מודרנית</div>
+        <h2 class="lede">דיוק מחקרי, הנגשה ללומד</h2>
         <p class="body-text">
-          המהדורה משמרת את כתיבו המקורי של רבנו קרשקש, ללא ׳תיקונים׳ מודרניים או פיענוח מאולץ של קיצורים. בשילוב מראי מקום מדויקים למקורות פילוסופיים וציון מספור העמודים של כתב היד המקורי, מוגשת לקורא חוויית עיון אותנטית, מחקרית ושקופה לחלוטין.
+המהדורה החדשה משלבת בין נאמנות קפדנית למקור לבין הנגשה לקורא בן זמננו. הנוסח, המבוסס על כתב היד פירנצה, אומת מול כתבי יד נוספים. מעבר לטקסט המזוקק, שולב בספר מנגנון הפניות מקיף למקורותיו של רבי חסדאי קרשקש – החל מספרות חז״ל ועד לכתבי הפילוסופים – לצד הערות נוסח המציגות בשקיפות את החלופות הטקסטואליות.
         </p>
         <div class="glosses">
           <div class="gloss"><div class="gloss-mark">א</div><p>ללא תיקונים מודרניים או פיענוח מאולץ של קיצורים</p></div>
