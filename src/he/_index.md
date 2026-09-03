@@ -336,4 +336,88 @@ isCustomHome: true
   </div>
 </section>
 
+<!-- ================= SECTION 6: ADDITIONAL BOOKS ================= -->
+<section class="section section-paper" id="additional-books">
+  <div class="section-inner">
+    <div class="showcase-header reveal">
+      <div class="eyebrow">ספרייה פילוסופית</div>
+      <h2 class="lede">ספרים נוספים בעריכת דניאל לוין</h2>
+    </div>
+    <div class="books-showcase-grid reveal">
+      <!-- Book 1: Al-Tabrizi -->
+      <div class="showcase-book-card">
+        <div class="showcase-book-cover-wrap">
+          <a href="https://shinmem.org/he/books/al-tabrizi-hebrew/" target="_blank" rel="noopener noreferrer" class="showcase-book-cover-link">
+            <img src="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,h_700/v1781807431/book_HE_b7r38f.png"
+                 alt="פירוש עשרים וחמש הקדמות שבמורה נבוכים — מוחמד אל־תבריזי"
+                 class="showcase-book-img"
+                 width="400"
+                 height="600"
+                 loading="lazy">
+            <div class="showcase-book-overlay">
+              <p class="showcase-book-desc">אל־תבריזי מפתח את הקדמות הרמב״ם לכדי מערכת פילוסופית שהושפעה עמוקות מאבן סינא, וסיפקה לר׳ חסדאי קרשקש את התשתית למתקפתו השיטתית על המדע האריסטוטלי.</p>
+              <span class="showcase-book-isbn">ISBN: 978-965-93323-4-2</span>
+              <span class="showcase-book-cta">למידע נוסף ורכישה &larr;</span>
+            </div>
+          </a>
+        </div>
+        <div class="showcase-book-info">
+          <h3 class="showcase-book-title">
+            <a href="https://shinmem.org/he/books/al-tabrizi-hebrew/" target="_blank" rel="noopener noreferrer">פירוש עשרים וחמש הקדמות שבמורה נבוכים</a>
+          </h3>
+          <p class="showcase-book-author">מוחמד אל־תבריזי</p>
+        </div>
+      </div>
+      <!-- Book 2: Halevi -->
+      <div class="showcase-book-card">
+        <div class="showcase-book-cover-wrap">
+          <a href="https://shinmem.org/he/books/halevi-maamar/" target="_blank" rel="noopener noreferrer" class="showcase-book-cover-link">
+            <img src="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,h_700/v1781808367/halawi_cover_2026_05_18_swnkv8.jpg"
+                 alt="מאמר אלוהי — רבי משה בן יוסף הלוי מסביליה"
+                 class="showcase-book-img"
+                 width="400"
+                 height="600"
+                 loading="lazy">
+            <div class="showcase-book-overlay">
+              <p class="showcase-book-desc">דיון תמציתי, בהיר ונגיש בשאלת זהותו של המניע הראשון. ר׳ חסדאי קרשקש החשיב את ר׳ משה הלוי לאחד מגדולי הפילוסופים.</p>
+              <span class="showcase-book-isbn">ISBN: 978-965-93323-1-1</span>
+              <span class="showcase-book-cta">למידע נוסף ורכישה &larr;</span>
+            </div>
+          </a>
+        </div>
+        <div class="showcase-book-info">
+          <h3 class="showcase-book-title">
+            <a href="https://shinmem.org/he/books/halevi-maamar/" target="_blank" rel="noopener noreferrer">מאמר אלוהי</a>
+          </h3>
+          <p class="showcase-book-author">רבי משה בן יוסף הלוי מסביליה</p>
+        </div>
+      </div>
+      <!-- Book 3: Bibago -->
+      <div class="showcase-book-card">
+        <div class="showcase-book-cover-wrap">
+          <a href="https://shinmem.org/he/books/bibago-derekh-emunah_1/" target="_blank" rel="noopener noreferrer" class="showcase-book-cover-link">
+            <img src="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,h_700/v1781807503/bibago_floral_cover_ub0fsw.jpg"
+                 alt="דרך אמונה – המאמר הראשון — רבי אברהם בן שם טוב ביבאג׳"
+                 class="showcase-book-img"
+                 width="400"
+                 height="600"
+                 loading="lazy">
+            <div class="showcase-book-overlay">
+              <p class="showcase-book-desc">ספר דרשות המשלב חקירה פילוסופית וקבלה, הנחשב לשיא היצירה בספרד לפני הגירוש. המאמר הראשון מתמקד בפעולות האלוהים, ידיעתו והשגחתו.</p>
+              <span class="showcase-book-isbn">ISBN: 978-965-93323-0-4</span>
+              <span class="showcase-book-cta">למידע נוסף ורכישה &larr;</span>
+            </div>
+          </a>
+        </div>
+        <div class="showcase-book-info">
+          <h3 class="showcase-book-title">
+            <a href="https://shinmem.org/he/books/bibago-derekh-emunah_1/" target="_blank" rel="noopener noreferrer">דרך אמונה – המאמר הראשון</a>
+          </h3>
+          <p class="showcase-book-author">רבי אברהם בן שם טוב ביבאג׳</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 

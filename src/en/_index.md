@@ -305,24 +305,89 @@ isCustomHome: true
                loading="lazy">
         </div>
       </div>
-    </div>
+  </div>
+</section>
 
-    <!-- Crescas Library Section -->
-    <div class="crescas-library-section">
-      <h2>Rabbi Hasdai Crescas’s Library</h2>
-      <h3>A Book Series on Medieval Jewish Thought</h3>
-      <p style="max-width:48ch; margin:0 auto 1.5rem; font-family:var(--meta); color:rgba(12,26,43,0.8);">
-        An annotated publication series of key philosophical treatises cited in Crescas's writings, elucidating the intellectual currents of his era.
-      </p>
-      <a class="library-card" href="/en/docs/library/maamar/">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
-          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
-        </svg>
-        <span><em>Metaphysical Treatise</em> by Rabbi Moshe ben Yosef Halevi &rarr;</span>
-      </a>
+<!-- ================= SECTION 6: ADDITIONAL BOOKS ================= -->
+<section class="section section-paper" id="additional-books">
+  <div class="section-inner">
+    <div class="showcase-header reveal">
+      <div class="eyebrow">Philosophical Library</div>
+      <h2 class="lede">Additional Books Edited by Daniel Levin</h2>
     </div>
-
+    <div class="books-showcase-grid reveal">
+      <!-- Book 1: Al-Tabrizi -->
+      <div class="showcase-book-card">
+        <div class="showcase-book-cover-wrap">
+          <a href="https://shinmem.org/en/books/al-tabrizi-hebrew/" target="_blank" rel="noopener noreferrer" class="showcase-book-cover-link">
+            <img src="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,h_700/v1781807431/book_HE_b7r38f.png"
+                 alt="Commentary on the 25 Premises of the Guide of the Perplexed — Muhammad al-Tabrizi"
+                 class="showcase-book-img"
+                 width="400"
+                 height="600"
+                 loading="lazy">
+            <div class="showcase-book-overlay">
+              <p class="showcase-book-desc">Al-Tabrizi develops Maimonides's concise premises into a comprehensive Avicennian system that provided Crescas with the crucial groundwork for his systematic critique of Aristotle.</p>
+              <span class="showcase-book-isbn">ISBN: 978-965-93323-4-2</span>
+              <span class="showcase-book-cta">Learn More &rarr;</span>
+            </div>
+          </a>
+        </div>
+        <div class="showcase-book-info">
+          <h3 class="showcase-book-title">
+            <a href="https://shinmem.org/en/books/al-tabrizi-hebrew/" target="_blank" rel="noopener noreferrer">Commentary on the 25 Premises of the Guide</a>
+          </h3>
+          <p class="showcase-book-author">Muhammad al-Tabrizi</p>
+        </div>
+      </div>
+      <!-- Book 2: Halevi -->
+      <div class="showcase-book-card">
+        <div class="showcase-book-cover-wrap">
+          <a href="https://shinmem.org/en/books/halevi-maamar/" target="_blank" rel="noopener noreferrer" class="showcase-book-cover-link">
+            <img src="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,h_700/v1781808367/halawi_cover_2026_05_18_swnkv8.jpg"
+                 alt="Metaphysical Treatise (Ma’amar Elohi) — Rabbi Moshe ben Yosef Halevi of Seville"
+                 class="showcase-book-img"
+                 width="400"
+                 height="600"
+                 loading="lazy">
+            <div class="showcase-book-overlay">
+              <p class="showcase-book-desc">A lucid, accessible investigation into the identity of the First Mover. Crescas revered Halevi as one of the preeminent philosophers of his era.</p>
+              <span class="showcase-book-isbn">ISBN: 978-965-93323-1-1</span>
+              <span class="showcase-book-cta">Learn More &rarr;</span>
+            </div>
+          </a>
+        </div>
+        <div class="showcase-book-info">
+          <h3 class="showcase-book-title">
+            <a href="https://shinmem.org/en/books/halevi-maamar/" target="_blank" rel="noopener noreferrer">Metaphysical Treatise (Ma’amar Elohi)</a>
+          </h3>
+          <p class="showcase-book-author">Rabbi Moshe ben Yosef Halevi</p>
+        </div>
+      </div>
+      <!-- Book 3: Bibago -->
+      <div class="showcase-book-card">
+        <div class="showcase-book-cover-wrap">
+          <a href="https://shinmem.org/en/books/bibago-derekh-emunah_1/" target="_blank" rel="noopener noreferrer" class="showcase-book-cover-link">
+            <img src="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,h_700/v1781807503/bibago_floral_cover_ub0fsw.jpg"
+                 alt="Derekh Emunah (The Way of Faith) – Part I — Rabbi Abraham ben Shem Tov Bibago"
+                 class="showcase-book-img"
+                 width="400"
+                 height="600"
+                 loading="lazy">
+            <div class="showcase-book-overlay">
+              <p class="showcase-book-desc">Profound philosophical homilies integrating metaphysical inquiry and Jewish thought in 15th-century pre-expulsion Spain, focused on divine action and providence.</p>
+              <span class="showcase-book-isbn">ISBN: 978-965-93323-0-4</span>
+              <span class="showcase-book-cta">Learn More &rarr;</span>
+            </div>
+          </a>
+        </div>
+        <div class="showcase-book-info">
+          <h3 class="showcase-book-title">
+            <a href="https://shinmem.org/en/books/bibago-derekh-emunah_1/" target="_blank" rel="noopener noreferrer">Derekh Emunah – Part I</a>
+          </h3>
+          <p class="showcase-book-author">Rabbi Abraham ben Shem Tov Bibago</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
