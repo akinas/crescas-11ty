@@ -1,7 +1,7 @@
 ---
 title: רשימת תיקוני טעויות (אראטה)
-weight: 1
-bookHidden: true
+weight: 60
+lang: he
 ---
 
 ## אראטה למהדורה ראשונה

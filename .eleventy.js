@@ -22,6 +22,10 @@ export default function (eleventyConfig) {
     return content ? md.renderInline(content) : "";
   });
 
+  eleventyConfig.addFilter("isoDate", function (date) {
+    return (date instanceof Date ? date : new Date(date || Date.now())).toISOString();
+  });
+
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/static");
   eleventyConfig.addPlugin(eleventyNavigation);

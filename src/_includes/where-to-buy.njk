@@ -1,73 +1,79 @@
-
-<div class="buy-section-container">
-{% if lang == 'he' %}
-  <h2>איפה להשיג?</h2>
-  
-  <div class="buy-section-item">
-    <strong>בישראל:</strong> <a href="https://bookpod.co.il/product/%d7%90%d7%95%d7%a8-%d7%94%d7%a9%d7%9d/">BookPod</a>
+<div class="buy-section-container reveal">
+  {% if lang == 'he' %}
+    <h2>איפה להשיג?</h2>
     
-    
-    <a class="button" href="https://bookpod.co.il/product/%d7%90%d7%95%d7%a8-%d7%94%d7%a9%d7%9d/">קנה עכשיו</a>
-  </div>
+    <div class="buy-grid">
+      <!-- Israel Purchase Card -->
+      <div class="buy-card">
+        <div class="buy-card-header">
+          <h3>בישראל (משלוח מקומי)</h3>
+          <p>זמין לרכישה ישירה בישראל דרך אתר BookPod במהדורה מודפסת ואיכותית.</p>
+        </div>
+        <a class="btn btn-rubric" href="{{ site.buyLinks.israel }}" target="_blank" rel="noopener noreferrer">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M6 6h15l-1.5 9h-12z"/><path d="M6 6 5 3H2"/><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/>
+          </svg>
+          רכישה ב-BookPod ישראל
+        </a>
+      </div>
 
-  <div class="buy-section-item">
-    <strong>בארץ ובחו"ל:</strong> <a href="https://www.amazon.com/dp/9655982092">Amazon.com</a>
+      <!-- Worldwide Amazon Card -->
+      <div class="buy-card">
+        <div class="buy-card-header">
+          <h3>בארץ ובחו״ל (Amazon)</h3>
+          <p>משלוח לכל רחבי העולם דרך זירות המסחר הבינלאומיות של אמזון.</p>
+          <ul class="marketplaces" aria-label="זירות מסחר בינלאומיות של אמזון">
+            {% for mp in site.buyLinks.marketplaces %}
+              <li><a href="{{ mp.url }}" target="_blank" rel="noopener noreferrer" title="{{ mp.name }}">{{ mp.code }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+        <a class="btn btn-primary" href="{{ site.buyLinks.amazon }}" target="_blank" rel="noopener noreferrer">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M6 6h15l-1.5 9h-12z"/><path d="M6 6 5 3H2"/><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/>
+          </svg>
+          לרכישה ב-Amazon
+        </a>
+      </div>
+    </div>
+  {% else %}
+    <h2>Where to Buy?</h2>
     
-    
-    <a class="button" href="https://www.amazon.com/dp/9655982092">לרכישה באמזון</a>
+    <div class="buy-grid">
+      <!-- Israel Purchase Card -->
+      <div class="buy-card">
+        <div class="buy-card-header">
+          <h3>In Israel (Local Delivery)</h3>
+          <p>Available directly in Israel via BookPod in high quality paperback edition.</p>
+        </div>
+        <a class="btn btn-rubric" href="{{ site.buyLinks.israel }}" target="_blank" rel="noopener noreferrer">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M6 6h15l-1.5 9h-12z"/><path d="M6 6 5 3H2"/><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/>
+          </svg>
+          Order on BookPod Israel
+        </a>
+      </div>
 
-    <p><strong>זירות מסחר של Amazon במדינות אחרות:</strong></p>
-        <ul class="marketplaces">
-          <li><a href="https://www.amazon.co.uk/dp/9655982092">UK</a></li>
-          <li><a href="https://www.amazon.de/dp/9655982092">DE</a></li>
-          <li><a href="https://www.amazon.fr/dp/9655982092">FR</a></li>
-          <li><a href="https://www.amazon.es/dp/9655982092">ES</a></li>
-          <li><a href="https://www.amazon.it/dp/9655982092">IT</a></li>
-          <li><a href="https://www.amazon.nl/dp/9655982092">NL</a></li>
-          <li><a href="https://www.amazon.pl/dp/9655982092">PL</a></li>
-          <li><a href="https://www.amazon.se/dp/9655982092">SE</a></li>
-          <li><a href="https://www.amazon.co.jp/dp/9655982092">JP</a></li>
-          <li><a href="https://www.amazon.ca/dp/9655982092">CA</a></li>
-          <li><a href="https://www.amazon.com.au/dp/9655982092">AU</a></li>
-        </ul>
-      
-  </div>
-
-  
-{% else %}
-
-  <h2>Where to buy?</h2>
-  
-  <div class="buy-section-item">
-    <strong>In Israel:</strong> <a href="https://bookpod.co.il/product/%d7%90%d7%95%d7%a8-%d7%94%d7%a9%d7%9d/">BookPod</a>
-    
-    
-    <a class="button" href="https://bookpod.co.il/product/%d7%90%d7%95%d7%a8-%d7%94%d7%a9%d7%9d/">Buy now on BookPod</a>
-  </div>
-
-  <div class="buy-section-item">
-    <strong>Internationally:</strong> <a href="https://www.amazon.com/dp/9655982092">Amazon.com</a>
-    
-    
-    <a class="button" href="https://www.amazon.com/dp/9655982092">Buy now on Amazon</a>
-
-    <p><strong>Other Amazon marketplaces:</strong></p>
-        <ul class="marketplaces">
-          <li><a href="https://www.amazon.co.uk/dp/9655982092">UK</a></li>
-          <li><a href="https://www.amazon.de/dp/9655982092">DE</a></li>
-          <li><a href="https://www.amazon.fr/dp/9655982092">FR</a></li>
-          <li><a href="https://www.amazon.es/dp/9655982092">ES</a></li>
-          <li><a href="https://www.amazon.it/dp/9655982092">IT</a></li>
-          <li><a href="https://www.amazon.nl/dp/9655982092">NL</a></li>
-          <li><a href="https://www.amazon.pl/dp/9655982092">PL</a></li>
-          <li><a href="https://www.amazon.se/dp/9655982092">SE</a></li>
-          <li><a href="https://www.amazon.co.jp/dp/9655982092">JP</a></li>
-          <li><a href="https://www.amazon.ca/dp/9655982092">CA</a></li>
-          <li><a href="https://www.amazon.com.au/dp/9655982092">AU</a></li>
-        </ul>
-      
-  </div>
-
-{% endif %}
+      <!-- Worldwide Amazon Card -->
+      <div class="buy-card">
+        <div class="buy-card-header">
+          <h3>Worldwide (Amazon)</h3>
+          <p>Worldwide shipping available through Amazon international marketplaces.</p>
+          <ul class="marketplaces" aria-label="Amazon International Marketplaces">
+            {% for mp in site.buyLinks.marketplaces %}
+              <li><a href="{{ mp.url }}" target="_blank" rel="noopener noreferrer" title="{{ mp.name }}">{{ mp.code }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+        <a class="btn btn-primary" href="{{ site.buyLinks.amazon }}" target="_blank" rel="noopener noreferrer">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M6 6h15l-1.5 9h-12z"/><path d="M6 6 5 3H2"/><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/>
+          </svg>
+          Order on Amazon.com
+        </a>
+      </div>
+    </div>
+  {% endif %}
 </div>
+
 
