@@ -10,7 +10,6 @@ isCustomHome: true
 
 <!-- ================= HERO ================= -->
 <header class="hero">
-  <div class="hero-mark">כתב יד פירנצה · 1405</div>
   <div class="section-inner">
     <div class="grid-2 flip reveal is-in">
       <div class="plate-col">
@@ -43,7 +42,7 @@ isCustomHome: true
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/>
             </svg>
-            הורידו פרק לדוגמה
+            הורד עמודים לדוגמה (PDF)
           </a>
         </div>
       </div>
@@ -89,12 +88,12 @@ isCustomHome: true
     <div class="grid-2 flip reveal">
       <div class="plate-col">
         <div class="book-media-card is-square">
-          <img src="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_800/v1787846538/crescas_double_book_vert_cc_2_eoaqv0.jpg"
-               srcset="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_400/v1787846538/crescas_double_book_vert_cc_2_eoaqv0.jpg 400w,
-                       https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_800/v1787846538/crescas_double_book_vert_cc_2_eoaqv0.jpg 800w,
-                       https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_1200/v1787846538/crescas_double_book_vert_cc_2_eoaqv0.jpg 1200w"
+          <img src="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_800/v1788696684/ferrara_edition_mockup_sq5qh1.jpg"
+               srcset="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_400/v1788696684/ferrara_edition_mockup_sq5qh1.jpg 400w,
+                       https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_800/v1788696684/ferrara_edition_mockup_sq5qh1.jpg 800w,
+                       https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_1200/v1788696684/ferrara_edition_mockup_sq5qh1.jpg 1200w"
                sizes="(max-width: 768px) 100vw, 490px"
-               alt="ספרי אור השם — מראה מהדורה"
+               alt="מהדורת דפוס פירארה (1555)"
                class="media-img"
                width="800"
                height="800"
@@ -158,16 +157,16 @@ isCustomHome: true
         </div>
       </div>
       <div class="plate-col">
-        <div class="book-media-card is-square">
-          <img src="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_800/v1768680865/ohr_hashem_edited_paperback_opt_kjxk9d.png"
-               srcset="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_400/v1768680865/ohr_hashem_edited_paperback_opt_kjxk9d.png 400w,
-                       https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_800/v1768680865/ohr_hashem_edited_paperback_opt_kjxk9d.png 800w,
-                       https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_1200/v1768680865/ohr_hashem_edited_paperback_opt_kjxk9d.png 1200w"
+        <div class="book-media-card">
+          <img src="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,w_800/v1788712667/firenze_colorized_efpdyw.jpg"
+               srcset="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,w_400/v1788712667/firenze_colorized_efpdyw.jpg 400w,
+                       https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,w_800/v1788712667/firenze_colorized_efpdyw.jpg 800w,
+                       https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,w_1200/v1788712667/firenze_colorized_efpdyw.jpg 1200w"
                sizes="(max-width: 768px) 100vw, 490px"
                alt="כתב יד פירנצה — עד הנוסח המדויק"
                class="media-img"
-               width="800"
-               height="800"
+               width="1200"
+               height="794"
                loading="lazy">
         </div>
       </div>
@@ -219,12 +218,12 @@ isCustomHome: true
     <div class="grid-2 flip reveal">
       <div class="plate-col">
         <div class="book-media-card is-square">
-          <img src="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_800/v1787846931/Paperback_Book_Mockup_5_bftgh1.jpg"
-               srcset="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_400/v1787846931/Paperback_Book_Mockup_5_bftgh1.jpg 400w,
-                       https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_800/v1787846931/Paperback_Book_Mockup_5_bftgh1.jpg 800w,
-                       https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_1200/v1787846931/Paperback_Book_Mockup_5_bftgh1.jpg 1200w"
+          <img src="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_800/v1788713808/crescas_spread_middle_ed_oxieqm.jpg"
+               srcset="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_400/v1788713808/crescas_spread_middle_ed_oxieqm.jpg 400w,
+                       https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_800/v1788713808/crescas_spread_middle_ed_oxieqm.jpg 800w,
+                       https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,c_fill,ar_1:1,w_1200/v1788713808/crescas_spread_middle_ed_oxieqm.jpg 1200w"
                sizes="(max-width: 768px) 100vw, 490px"
-               alt="ספר אור השם בכריכה רכה"
+               alt="ספר אור השם — מראה עמודי המהדורה"
                class="media-img"
                width="800"
                height="800"
@@ -262,8 +261,8 @@ isCustomHome: true
         </ul>
         <h3 class="specs-heading">מפרט:</h3>
         <ul class="edition-specs-list">
-          <li>420 עמודים.</li>
-          <li>כריכה רכה.</li>
+          <li><strong>מספר העמודים:</strong> 420.</li>
+          <li><strong>כריכה:</strong> רכה.</li>
           <li><strong>פורמט:</strong> 15.20 × 22.90 ס״מ (6x9 אינץ׳).</li>
           <li><strong>מסת״ב (ISBN):</strong> 978-965-93323-7-3.</li>
         </ul>
@@ -284,7 +283,7 @@ isCustomHome: true
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/>
             </svg>
-            הורידו פרק לדוגמה
+            הורד עמודים לדוגמה (PDF)
           </a>
         </div>
       </div>

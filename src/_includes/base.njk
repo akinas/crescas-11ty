@@ -172,10 +172,6 @@
         <!-- Header Main Bar -->
         <div class="header-main">
           <a href="{{ '/en/' if lang == 'en' else '/' }}" class="site-brand" aria-label="{{ site.siteName[lang] or 'אור השם' }}">
-            <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
-              <path d="M5 4c4-1.4 10-1.4 14 0v16c-4-1.4-10-1.4-14 0z"/>
-              <path d="M12 4v16"/>
-            </svg>
             <span class="site-title-text">{{ site.siteName[lang] or site.siteName.he }}</span>
           </a>
 
@@ -192,7 +188,7 @@
           <nav class="main-nav" id="main-nav" role="navigation" aria-label="{% if lang == 'he' %}תפריט ראשי{% else %}Main Navigation{% endif %}">
             <ul class="nav-list">
               {% for item in collections.nav %}
-                {% if item.data.lang == lang %}
+                {% if item.data.lang == lang and item.data.translationKey != 'contact' and item.data.translationKey != 'library' and not ('contact' in item.url or 'library' in item.url) %}
                   <li class="nav-item">
                     <a href="{{ item.url }}" class="nav-link {{ 'active' if page.url == item.url }}" {% if page.url == item.url %}aria-current="page"{% endif %}>
                       {{ item.data.title }}
@@ -274,9 +270,13 @@
         </h3>
         <p class="sub">
           {% if lang == 'he' %}
-            מהדורה ביקורתית · מבוססת על כתב יד פירנצה ומכתבי יד מרכזיים נוספים
+            ההדיר על פי כתב יד פירנצה<br>
+            וכתבי יד נוספים<br>
+            דניאל לוין
           {% else %}
-            Scholarly critical edition based on the 1405 Florence manuscript and primary historical codices
+            Edited according to the Florence manuscript<br>
+            and additional manuscripts by<br>
+            Daniel Levin
           {% endif %}
         </p>
 
@@ -287,22 +287,11 @@
           {% if lang == 'he' %}לפרטים ורכישה{% else %}Purchase Book{% endif %}
         </a>
 
-        <ul class="footer-nav">
-          {% for item in collections.nav %}
-            {% if item.data.lang == lang %}
-              <li><a href="{{ item.url }}">{{ item.data.title }}</a></li>
-            {% endif %}
-          {% endfor %}
-          <li><a href="{{ site.samplePdf }}">{% if lang == 'he' %}פרק לדוגמה (PDF){% else %}Sample Pages (PDF){% endif %}</a></li>
-        </ul>
-
         <div class="colophon">
           <div class="rule" aria-hidden="true"></div>
           {% if lang == 'he' %}
-            מהדורה ביקורתית לספר ״אור השם״ לרבנו חסדאי בן יהודה קרשקש | עורך: דניאל לוין<br>
             © כל הזכויות שמורות
           {% else %}
-            Critical Edition of <em>Light of the Lord</em> by Rabbi Hasdai Crescas | Editor: Daniel Levin<br>
             © All Rights Reserved
           {% endif %}
         </div>

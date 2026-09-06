@@ -41,25 +41,25 @@
     "icbm": "31.7683, 35.2137"
   },
   "buyLinks": {
-    "amazon": "https://www.amazon.com/dp/9655982092",
-    "israel": "https://bookpod.co.il/product/%d7%90%d7%95%d7%a8-%d7%94%d7%a9%d7%9d/",
+    "amazon": "https://www.amazon.com/dp/9659332378",
+    "israel": "https://bookpod.co.il/book/%D7%90%D7%95%D7%A8-%D7%94%D7%A9%D7%9D-%D7%9E%D7%94%D7%93%D7%95%D7%A8%D7%94-%D7%9E%D7%A2%D7%95%D7%93%D7%9B%D7%A0%D7%AA-25522",
     "marketplaces": [
-      { "code": "UK", "name": "United Kingdom", "url": "https://www.amazon.co.uk/dp/9655982092" },
-      { "code": "DE", "name": "Germany", "url": "https://www.amazon.de/dp/9655982092" },
-      { "code": "FR", "name": "France", "url": "https://www.amazon.fr/dp/9655982092" },
-      { "code": "ES", "name": "Spain", "url": "https://www.amazon.es/dp/9655982092" },
-      { "code": "IT", "name": "Italy", "url": "https://www.amazon.it/dp/9655982092" },
-      { "code": "NL", "name": "Netherlands", "url": "https://www.amazon.nl/dp/9655982092" },
-      { "code": "PL", "name": "Poland", "url": "https://www.amazon.pl/dp/9655982092" },
-      { "code": "SE", "name": "Sweden", "url": "https://www.amazon.se/dp/9655982092" },
-      { "code": "JP", "name": "Japan", "url": "https://www.amazon.co.jp/dp/9655982092" },
-      { "code": "CA", "name": "Canada", "url": "https://www.amazon.ca/dp/9655982092" },
-      { "code": "AU", "name": "Australia", "url": "https://www.amazon.com.au/dp/9655982092" }
+      { "code": "UK", "name": "United Kingdom", "url": "https://www.amazon.co.uk/dp/9659332378" },
+      { "code": "DE", "name": "Germany", "url": "https://www.amazon.de/dp/9659332378" },
+      { "code": "FR", "name": "France", "url": "https://www.amazon.fr/dp/9659332378" },
+      { "code": "ES", "name": "Spain", "url": "https://www.amazon.es/dp/9659332378" },
+      { "code": "IT", "name": "Italy", "url": "https://www.amazon.it/dp/9659332378" },
+      { "code": "NL", "name": "Netherlands", "url": "https://www.amazon.nl/dp/9659332378" },
+      { "code": "PL", "name": "Poland", "url": "https://www.amazon.pl/dp/9659332378" },
+      { "code": "SE", "name": "Sweden", "url": "https://www.amazon.se/dp/9659332378" },
+      { "code": "JP", "name": "Japan", "url": "https://www.amazon.co.jp/dp/9659332378" },
+      { "code": "CA", "name": "Canada", "url": "https://www.amazon.ca/dp/9659332378" },
+      { "code": "AU", "name": "Australia", "url": "https://www.amazon.com.au/dp/9659332378" }
     ]
   },
   "defaultBuyLink": {
     "en": "amazon",
     "he": "israel"
   },
-  "samplePdf": "/static/Pages_from_Ohr_haShem_8nov2019_marks.pdf"
+  "samplePdf": "/static/crescas_ohr_hashem_2026_08_15_sample.pdf"
 }

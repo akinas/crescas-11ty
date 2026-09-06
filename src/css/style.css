@@ -613,27 +613,6 @@ img, svg {
   }
 }
 
-.hero-mark {
-  position: absolute;
-  top: 1.4rem;
-  inset-inline-end: 1.25rem;
-  font-family: var(--meta);
-  font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.16em;
-  color: rgba(244, 242, 232, 0.6);
-  background: rgba(12, 26, 43, 0.4);
-  padding: 0.3em 0.8em;
-  border-radius: 999px;
-  border: 1px solid rgba(244, 242, 232, 0.15);
-}
-
-@media (min-width: 768px) {
-  .hero-mark {
-    inset-inline-end: 6vw;
-  }
-}
-
 .hero-eyebrow {
   font-family: var(--meta);
   font-size: 0.8rem;
@@ -858,6 +837,10 @@ img, svg {
   height: 100%;
   object-fit: cover;
   transition: transform 0.4s ease;
+}
+
+.book-media-card:not(.is-square) .media-img {
+  height: auto;
 }
 
 .book-media-card:not(.hero-media-card):hover .media-img {
@@ -1900,6 +1883,7 @@ blockquote {
 .site-footer .sub {
   font-family: var(--meta);
   font-size: 0.9rem;
+  line-height: 1.65;
   color: rgba(240, 241, 248, 0.7);
   max-width: 50ch;
   margin-inline: auto;
