@@ -19,7 +19,7 @@ isCustomHome: true
                        https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,w_800/v1787847075/crescas_revised_cover_2026_07_13_front_f6jxw0.jpg 800w,
                        https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,w_1200/v1787847075/crescas_revised_cover_2026_07_13_front_f6jxw0.jpg 1200w"
                sizes="(max-width: 768px) 100vw, 360px"
-               alt="Light of the Lord — Critical Scholarly Edition"
+               alt="Light of the Lord — Critical Edition"
                class="media-img"
                width="800"
                height="1100"
@@ -27,10 +27,10 @@ isCustomHome: true
         </div>
       </div>
       <div class="hero-text">
-        <div class="hero-eyebrow">Critical Scholarly Edition</div>
+        <div class="hero-eyebrow">Critical Edition of the Book</div>
         <h1>Light of the Lord</h1>
-        <p class="byline">By Rabbi Hasdai ben Judah Crescas · Edited by Daniel Levin</p>
-        <p class="tagline">“Restoring the Crown to its Former Glory”</p>
+        <p class="tagline">By Rabbi Hasdai Crescas</p>
+        <p class="byline">Edited by Daniel Levin</p>
         <div class="hero-cta">
           <a class="btn btn-primary" href="{{ site.buyLinks.amazon }}" target="_blank" rel="noopener noreferrer">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -50,20 +50,20 @@ isCustomHome: true
   </div>
 </header>
 
-<!-- ================= SECTION 1: PREFACE & STAT ================= -->
+<!-- ================= SECTION 1: INTRODUCTION & STAT ================= -->
 <section class="section section-pale">
   <div class="section-inner">
     <div class="grid-2 reveal">
       <div>
-        <div class="eyebrow">Preface</div>
-        <h2 class="lede">Restoring the Original Text</h2>
+        <div class="eyebrow">Fourth Edition, Revised and Updated</div>
+        <h2 class="lede">About the Book</h2>
         <p class="body-text">
-          After 600 years of corrupted printed editions and transmission errors, a definitive, annotated critical Hebrew edition of Rabbi Hasdai Crescas's masterpiece has now been published. Free from print distortions and faithful to the original manuscript tradition.
+          In one of the most important works of medieval Jewish thought, Rabbi Hasdai Crescas—among the greatest Spanish rabbinic luminaries—unfolds his original philosophy regarding the fundamental principles of faith. His objective is to sever the link forged by Maimonides between the philosophical ideal of perfection—founded on intellectual perfection—and the Torah’s ideal of perfection: communion achieved through the love of God and divine service. To this end, Rabbi Hasdai undertook to dismantle Aristotle’s near-undisputed authority in physics and metaphysics, re-establishing the foundations of Judaism firmly upon the rabbinic tradition of the Sages.
         </p>
-        <div class="stat-row">
+        <!-- div class="stat-row">
           <div class="stat-num">600</div>
           <div class="stat-label">Years of corrupted printed texts — corrected at last</div>
-        </div>
+        </div -->
       </div>
       <div class="plate-col">
         <div class="book-media-card is-square">
@@ -110,19 +110,19 @@ isCustomHome: true
         <div class="glosses print-editions-glosses">
           <div class="gloss">
             <div class="gloss-mark">1555</div>
-            <p><strong>Ferrara</strong> — Heavily corrupted first print</p>
+            <p>Ferrara</p>
           </div>
           <div class="gloss">
             <div class="gloss-mark">1860</div>
-            <p><strong>Vienna</strong> — Second print edition</p>
+            <p>Vienna</p>
           </div>
           <div class="gloss">
             <div class="gloss-mark">1861</div>
-            <p><strong>Johannesburg</strong> — Third print edition</p>
+            <p>Johannesburg</p>
           </div>
           <div class="gloss">
             <div class="gloss-mark">1990</div>
-            <p><strong>Jerusalem</strong> — Rabbi Shlomo Fischer edition</p>
+            <p>Jerusalem</p>
           </div>
         </div>
       </div>
@@ -144,16 +144,16 @@ isCustomHome: true
           <div class="tl-point">
             <div class="tl-dot"></div>
             <div class="tl-year">1405</div>
-            <div class="tl-label">Author Draft</div>
+            <div class="tl-label">Copying of the Manuscript</div>
           </div>
           <div style="flex:1 1 auto;">
             <div class="tl-connector"></div>
-            <div class="tl-connector-label">~5 Years</div>
+            <div class="tl-connector-label">Five Years</div>
           </div>
           <div class="tl-point">
             <div class="tl-dot" style="background:var(--rubric); box-shadow:0 0 0 1.5px var(--rubric);"></div>
-            <div class="tl-year">≈1410</div>
-            <div class="tl-label">Final Completion</div>
+            <div class="tl-year">1410</div>
+            <div class="tl-label">Completion of the Book</div>
           </div>
         </div>
       </div>
@@ -232,7 +232,7 @@ isCustomHome: true
         </div>
       </div>
       <div>
-        <div class="eyebrow">A Modern Scholarly Edition</div>
+        <div class="eyebrow">Modern Edition</div>
         <h2 class="lede">Scholarly Precision, Modern Accessibility</h2>
         <p class="body-text">
           This edition harmonizes rigorous manuscript fidelity with clarity for the modern reader. The text, established on the Florence Manuscript, was collated against all major surviving witnesses. Beyond the refined Hebrew text, the volume incorporates an extensive reference system to Crescas's philosophical and rabbinic sources, alongside transparent textual apparatus notes displaying all significant variants.
@@ -252,15 +252,13 @@ isCustomHome: true
   <div class="section-inner">
     <div class="grid-2 reveal">
       <div>
-        <div class="eyebrow">Edition Details</div>
+        <div class="eyebrow">Content, Design & Specifications</div>
         <h2 class="lede">Edition Features</h2>
         <ul class="edition-features-list">
-          <li><strong>Text established on the Florence Manuscript:</strong> Reconstructed from the earliest and most complete witness, collated with additional historical manuscripts.</li>
-          <li><strong>New typography and typesetting:</strong> Re-designed layout with clear, elegant typography optimized for fluent and in-depth study.</li>
-          <li><strong>Modern paragraph division and punctuation:</strong> Integrated contemporary punctuation, sentence, and paragraph structures to facilitate reading and conceptual progression.</li>
-          <li><strong>Comprehensive cross-references and sources:</strong> Systematic identification of the author's sources from Rabbinic literature, Aristotle, his medieval commentators, and medieval philosophy.</li>
-          <li><strong>Critical apparatus:</strong> Exhaustive collection of textual variants, manuscript collations, and historical glosses.</li>
-          <li><strong>Research reference tool:</strong> Notation of Florence manuscript folio and page numbers directly in the text (in square brackets) for rapid cross-referencing with the codex.</li>
+          <li><strong>New typography and typesetting:</strong> Redesigned layout with clear, elegant typography formatted for fluent reading and study.</li>
+          <li><strong>Paragraph division and punctuation:</strong> Contemporary punctuation and paragraph structure to facilitate reading and conceptual progression.</li>
+          <li><strong>Comprehensive references and sources:</strong> Systematic identification of the author's sources from Rabbinic literature, Aristotle and his commentators, and medieval parallels.</li>
+          <li><strong>Critical apparatus:</strong> Collection of textual variants, manuscript collations, and historical glosses.</li>
         </ul>
         <h3 class="specs-heading">Specifications:</h3>
         <ul class="edition-specs-list">
@@ -297,13 +295,44 @@ isCustomHome: true
                        https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,w_800/v1787847075/crescas_revised_cover_2026_07_13_front_f6jxw0.jpg 800w,
                        https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,w_1200/v1787847075/crescas_revised_cover_2026_07_13_front_f6jxw0.jpg 1200w"
                sizes="(max-width: 768px) 100vw, 360px"
-               alt="Light of the Lord — Critical Edition Cover"
+               alt="Light of the Lord — Critical Edition"
                class="media-img"
                width="800"
                height="1100"
                loading="lazy">
         </div>
       </div>
+    </div>
+    {# Commented out manuscripts list for the time being
+    <details>
+      <summary>List of Manuscripts of <em>Light of the Lord</em> (by National Library numbers)</summary>
+
+      <h3>Complete Texts</h3>
+      <ol class="manuscripts-list">
+        <li>Ms. Heb. 8°2075 — National Library of Israel, Jerusalem (1556)</li>
+        <li>Cod.hebr. 301 — Bavarian State Library, Munich, Germany (15th–16th c.)</li>
+        <li>Cod. Parm. 3020 — Palatine Library, Parma, Italy (15th c.)</li>
+        <li>Ms. hebr. 737 — National Library of France, Paris (15th–16th c.)</li>
+        <li>Ms. 2251 — Jewish Theological Seminary, New York (15th c.)</li>
+        <li>Ms. 2514 — Jewish Theological Seminary, New York (1457)</li>
+        <li>Cod.hebr. 303 — Bavarian State Library, Munich, Germany (1553)</li>
+        <li>Ms. Conv. Soppr. 417 — Laurentian Library, Florence, Italy (15th c. — Base of Edition)</li>
+        <li>Cod. hebr. 46 — Austrian National Library, Vienna (15th c.)</li>
+        <li>Ms. 281 — Montefiore Library, London, England (15th c.)</li>
+        <li>Vat.ebr.261 — Vatican Library, Vatican City (15th c.)</li>
+      </ol>
+
+      <h3>Partial Texts</h3>
+      <ol class="manuscripts-list">
+        <li>Ms. 2428 — Jewish Theological Seminary, New York (15th c.)</li>
+        <li>Ms. Oct. 224 — University Library, Frankfurt am Main, Germany (15th c.)</li>
+        <li>Ms. EVR II A 552 — National Library of Russia, Saint Petersburg (15th c.)</li>
+        <li>Ms. Mich. 386, Ms. Mich. 505 — Bodleian Library, Oxford, England (15th c.)</li>
+        <li>Ms. ebr. 427 — Vatican Library, Vatican City (15th c.)</li>
+        <li>Ms. V A 23 — Alliance Israélite Universelle, Paris, France (15th c.)</li>
+      </ol>
+    </details>
+    #}
   </div>
 </section>
 
@@ -328,7 +357,7 @@ isCustomHome: true
             <div class="showcase-book-overlay">
               <p class="showcase-book-desc">Al-Tabrizi develops Maimonides's concise premises into a comprehensive Avicennian system that provided Crescas with the crucial groundwork for his systematic critique of Aristotle.</p>
               <span class="showcase-book-isbn">ISBN: 978-965-93323-4-2</span>
-              <span class="showcase-book-cta">Learn More &rarr;</span>
+              <span class="showcase-book-cta">Learn More & Purchase &rarr;</span>
             </div>
           </a>
         </div>
@@ -350,9 +379,9 @@ isCustomHome: true
                  height="600"
                  loading="lazy">
             <div class="showcase-book-overlay">
-              <p class="showcase-book-desc">A lucid, accessible investigation into the identity of the First Mover. Crescas revered Halevi as one of the preeminent philosophers of his era.</p>
+              <p class="showcase-book-desc">A concise, lucid, and accessible inquiry into the identity of the First Mover. Rabbi Hasdai Crescas regarded Rabbi Moshe Halevi as one of the preeminent philosophers.</p>
               <span class="showcase-book-isbn">ISBN: 978-965-93323-1-1</span>
-              <span class="showcase-book-cta">Learn More &rarr;</span>
+              <span class="showcase-book-cta">Learn More & Purchase &rarr;</span>
             </div>
           </a>
         </div>
@@ -360,7 +389,7 @@ isCustomHome: true
           <h3 class="showcase-book-title">
             <a href="https://shinmem.org/en/books/halevi-maamar/" target="_blank" rel="noopener noreferrer">Metaphysical Treatise (Ma’amar Elohi)</a>
           </h3>
-          <p class="showcase-book-author">Rabbi Moshe ben Yosef Halevi</p>
+          <p class="showcase-book-author">Rabbi Moshe ben Yosef Halevi of Seville</p>
         </div>
       </div>
       <!-- Book 3: Bibago -->
@@ -374,9 +403,9 @@ isCustomHome: true
                  height="600"
                  loading="lazy">
             <div class="showcase-book-overlay">
-              <p class="showcase-book-desc">Profound philosophical homilies integrating metaphysical inquiry and Jewish thought in 15th-century pre-expulsion Spain, focused on divine action and providence.</p>
+              <p class="showcase-book-desc">Philosophical homilies integrating metaphysical inquiry and Kabbalah, representing the zenith of thought in pre-expulsion Spain. Part I focuses on divine actions, knowledge, and providence.</p>
               <span class="showcase-book-isbn">ISBN: 978-965-93323-0-4</span>
-              <span class="showcase-book-cta">Learn More &rarr;</span>
+              <span class="showcase-book-cta">Learn More & Purchase &rarr;</span>
             </div>
           </a>
         </div>
