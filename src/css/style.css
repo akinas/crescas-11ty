@@ -1969,3 +1969,1229 @@ blockquote {
     font-weight: bold;
   }
 }
+
+
+/* ==========================================================================
+   BLOG ("רשימות" / "Notes") & SCHOLARLY TYPOGRAPHY SYSTEM
+   ========================================================================== */
+
+/* --- Blog Archive & Taxonomy Headers --- */
+.blog-archive-header {
+  background:
+    repeating-linear-gradient(115deg, rgba(12, 26, 43, 0.018) 0 2px, transparent 2px 24px),
+    linear-gradient(180deg, var(--pale-alt) 0%, var(--pale) 100%);
+  border-bottom: 1px solid var(--line);
+  padding: 3rem 0 2.4rem;
+  margin-bottom: 2.75rem;
+}
+
+@media (min-width: 768px) {
+  .blog-archive-header {
+    padding: 3.8rem 0 2.8rem;
+  }
+}
+
+.blog-archive-header-inner {
+  max-width: 78ch;
+  margin-inline: auto;
+}
+
+.blog-archive-title-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.65rem;
+}
+
+.blog-archive-title-row h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 5.5vw, 3.25rem);
+  font-weight: 900;
+  color: var(--ink);
+}
+
+.tax-heading-hash {
+  color: var(--rubric);
+  font-weight: 700;
+  margin-inline-end: 0.08em;
+}
+
+.blog-count-badge {
+  font-family: var(--meta);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--navy);
+  background: rgba(29, 68, 125, 0.09);
+  border: 1px solid rgba(29, 68, 125, 0.18);
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+}
+
+.blog-archive-lede {
+  font-family: var(--body);
+  font-size: 1.15rem;
+  line-height: 1.75;
+  color: var(--ink-light);
+  opacity: 0.9;
+  margin: 0.5rem 0 0;
+  max-width: 62ch;
+}
+
+.post-taxonomy-kind {
+  font-family: var(--meta);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--rubric);
+}
+
+/* --- Taxonomy Browse Bar & Pills --- */
+.blog-taxonomy-bar {
+  margin-top: 1.65rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.blog-tax-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.blog-tax-heading {
+  font-family: var(--meta);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-inline-end: 0.25rem;
+}
+
+.blog-tax-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.tax-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--meta);
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.3;
+  text-decoration: none;
+  padding: 0.32rem 0.75rem;
+  border-radius: var(--radius-sm);
+  transition: all 0.18s ease;
+}
+
+.tax-pill--sm {
+  font-size: 0.78rem;
+  padding: 0.22rem 0.58rem;
+}
+
+.tax-pill--category {
+  background: var(--surface);
+  color: var(--navy);
+  border: 1px solid rgba(29, 68, 125, 0.22);
+  box-shadow: 0 1px 2px rgba(12, 26, 43, 0.04);
+}
+
+.tax-pill--category:hover {
+  background: var(--navy);
+  color: #ffffff;
+  border-color: var(--navy);
+  text-decoration: none;
+}
+
+.tax-pill--category.is-active {
+  background: var(--rubric);
+  color: #ffffff;
+  border-color: var(--rubric);
+}
+
+.tax-pill--tag {
+  background: var(--paper-light);
+  color: var(--ink-light);
+  border: 1px solid var(--paper-2);
+}
+
+.tax-pill--tag:hover {
+  background: var(--surface);
+  color: var(--blue);
+  border-color: var(--blue);
+  text-decoration: none;
+}
+
+.tax-pill--tag.is-active {
+  background: var(--navy);
+  color: #ffffff;
+  border-color: var(--navy);
+}
+
+.tax-pill--tag.is-active .tax-hash {
+  color: var(--paper);
+}
+
+.tax-hash {
+  color: var(--rubric);
+  font-weight: 700;
+}
+
+.tax-count {
+  font-size: 0.72rem;
+  opacity: 0.72;
+  background: rgba(12, 26, 43, 0.07);
+  padding: 0.05rem 0.38rem;
+  border-radius: 999px;
+}
+
+.tax-pill:hover .tax-count,
+.tax-pill.is-active .tax-count {
+  background: rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+  opacity: 1;
+}
+
+/* --- Post Index Card List --- */
+.post-list {
+  max-width: 78ch;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.post-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-inline-start: 3.5px solid var(--navy);
+  border-radius: var(--radius-sm);
+  padding: 1.75rem 1.6rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+@media (min-width: 640px) {
+  .post-card {
+    padding: 2.1rem 2.35rem;
+  }
+}
+
+.post-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-inline-start-color: var(--rubric);
+}
+
+.post-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--meta);
+  font-size: 0.82rem;
+  color: rgba(12, 26, 43, 0.66);
+  margin-bottom: 0.7rem;
+}
+
+.post-card-categories {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.post-card-cat {
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--rubric);
+  text-decoration: none;
+}
+
+.post-card-cat:hover {
+  color: var(--blue);
+  text-decoration: underline;
+}
+
+.post-meta-sep,
+.post-cat-dot {
+  opacity: 0.45;
+}
+
+.post-card-title {
+  font-family: var(--display);
+  font-size: clamp(1.45rem, 3.2vw, 1.9rem);
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0 0 0.75rem;
+}
+
+.post-card-title a {
+  color: var(--ink);
+  text-decoration: none;
+  transition: color 0.18s ease;
+}
+
+.post-card-title a:hover {
+  color: var(--blue);
+}
+
+.post-card-blurb {
+  font-family: var(--body);
+  font-size: 1.08rem;
+  line-height: 1.8;
+  color: rgba(12, 26, 43, 0.86);
+  margin: 0 0 1.25rem;
+}
+
+.post-card-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.85rem;
+  padding-top: 0.95rem;
+  border-top: 1px solid rgba(12, 26, 43, 0.07);
+}
+
+.post-card-readmore {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--meta);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.post-card-readmore:hover {
+  color: var(--rubric);
+  text-decoration: none;
+}
+
+.post-readmore-arrow {
+  transition: transform 0.18s ease;
+}
+
+[dir="rtl"] .post-card-readmore:hover .post-readmore-arrow {
+  transform: translateX(-3px);
+}
+
+[dir="ltr"] .post-card-readmore:hover .post-readmore-arrow {
+  transform: translateX(3px);
+}
+
+.post-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+/* ==========================================================================
+   SINGLE POST HEADER & METADATA
+   ========================================================================== */
+
+.post-header {
+  background:
+    repeating-linear-gradient(115deg, rgba(12, 26, 43, 0.018) 0 2px, transparent 2px 24px),
+    linear-gradient(180deg, var(--pale-alt) 0%, var(--pale) 100%);
+  border-bottom: 1px solid var(--line);
+  padding: 2.75rem 0 2.5rem;
+  margin-bottom: 2.75rem;
+}
+
+@media (min-width: 768px) {
+  .post-header {
+    padding: 3.75rem 0 3rem;
+    margin-bottom: 3.25rem;
+  }
+}
+
+.post-header-inner {
+  max-width: 68ch;
+  margin-inline: auto;
+}
+
+.post-eyebrow-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: var(--meta);
+  font-size: 0.83rem;
+  margin-bottom: 1.1rem;
+}
+
+.post-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  transition: color 0.18s ease;
+}
+
+.post-back-link:hover {
+  color: var(--rubric);
+  text-decoration: none;
+}
+
+.post-eyebrow-sep {
+  color: rgba(12, 26, 43, 0.3);
+}
+
+.post-header-categories {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.post-category-eyebrow {
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--rubric);
+  text-decoration: none;
+}
+
+.post-category-eyebrow:hover {
+  color: var(--blue);
+  text-decoration: underline;
+}
+
+.post-title {
+  font-family: var(--display);
+  font-weight: 900;
+  font-size: clamp(2.15rem, 5.2vw, 3.35rem);
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  margin: 0 0 1.1rem;
+  text-wrap: balance;
+}
+
+.post-blurb {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(1.18rem, 2.3vw, 1.38rem);
+  line-height: 1.65;
+  color: var(--ink-light);
+  opacity: 0.92;
+  margin: 0 0 1.5rem;
+  max-width: 60ch;
+}
+
+.post-header-rule {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin: 1.4rem 0 1.15rem;
+}
+
+.post-header-rule::after {
+  content: "";
+  flex: 1 1 auto;
+  height: 1px;
+  background: linear-gradient(90deg, var(--line), transparent);
+}
+
+[dir="rtl"] .post-header-rule::after {
+  background: linear-gradient(270deg, var(--line), transparent);
+}
+
+.post-ornament {
+  color: var(--rubric);
+  font-size: 0.85rem;
+  line-height: 1;
+}
+
+.post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  row-gap: 0.35rem;
+  font-family: var(--meta);
+  font-size: 0.88rem;
+  color: rgba(12, 26, 43, 0.72);
+}
+
+.post-meta-item + .post-meta-item::before {
+  content: "·";
+  margin-inline: 0.55rem;
+  opacity: 0.5;
+}
+
+.post-meta-author {
+  font-weight: 700;
+  color: var(--navy);
+}
+
+/* ==========================================================================
+   POST PROSE & RICH MARKDOWN TYPOGRAPHY
+   ========================================================================== */
+
+.post-body-container {
+  padding-bottom: 4.5rem;
+}
+
+.post-hero-figure {
+  max-width: 78ch;
+  margin: 0 auto 2.75rem;
+}
+
+.post-prose {
+  max-width: 66ch;
+  margin-inline: auto;
+  font-family: var(--body);
+  font-size: clamp(1.125rem, 1.6vw, 1.22rem);
+  line-height: 1.9;
+  color: var(--ink);
+  font-kerning: normal;
+}
+
+.post-prose > *:first-child {
+  margin-top: 0;
+}
+
+.post-prose p {
+  margin: 0 0 1.4rem;
+  line-height: 1.9;
+}
+
+/* --- Lead / Standfirst Block (::: lead) --- */
+.post-lead {
+  font-family: var(--display);
+  font-size: clamp(1.22rem, 2.1vw, 1.36rem);
+  line-height: 1.75;
+  color: var(--navy);
+  margin: 0 0 1.9rem;
+}
+
+.post-lead p {
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.post-lead p:last-child {
+  margin-bottom: 0;
+}
+
+/* --- Illuminated Drop Cap (dropcap: true or ::: dropcap) --- */
+.post-prose.has-dropcap > p:first-of-type::first-letter,
+.post-dropcap > p:first-of-type::first-letter {
+  font-family: var(--display);
+  font-weight: 900;
+  font-size: 3.4em;
+  line-height: 0.85;
+  color: var(--rubric);
+  padding-top: 0.06em;
+  padding-inline-end: 0.14em;
+  float: inline-start;
+}
+
+[dir="rtl"] .post-prose.has-dropcap > p:first-of-type::first-letter,
+[dir="rtl"] .post-dropcap > p:first-of-type::first-letter {
+  float: right;
+}
+
+[dir="ltr"] .post-prose.has-dropcap > p:first-of-type::first-letter,
+[dir="ltr"] .post-dropcap > p:first-of-type::first-letter {
+  float: left;
+}
+
+/* --- Headings & Subheadings --- */
+.post-prose h2 {
+  clear: both;
+  font-family: var(--display);
+  font-size: clamp(1.6rem, 3.2vw, 2.05rem);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--navy);
+  margin: 2.9rem 0 1.1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+}
+
+.post-prose h2::after {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  bottom: -1px;
+  width: 2.75rem;
+  height: 2.5px;
+  background: var(--rubric);
+}
+
+.post-prose h3 {
+  font-family: var(--display);
+  font-size: clamp(1.3rem, 2.4vw, 1.56rem);
+  font-weight: 700;
+  line-height: 1.32;
+  color: var(--ink);
+  margin: 2.25rem 0 0.8rem;
+}
+
+.post-prose h4 {
+  font-family: var(--meta);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--rubric-dark);
+  margin: 1.85rem 0 0.6rem;
+}
+
+.post-prose h5,
+.post-prose h6 {
+  font-family: var(--display);
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 1.5rem 0 0.5rem;
+}
+
+/* Subheading deck right beneath an h2 or h3 */
+.post-prose h2 + h3 {
+  margin-top: 0.35rem;
+  font-weight: 500;
+  color: var(--ink-light);
+}
+
+/* --- Asides & Marginalia (::: aside) --- */
+.post-aside {
+  margin: 1.85rem 0;
+  padding: 1.05rem 1.3rem;
+  background: var(--paper-light);
+  border: 1px solid var(--paper-2);
+  border-inline-start: 3px solid var(--rubric);
+  border-radius: var(--radius-sm);
+  font-family: var(--body);
+  font-size: 0.96rem;
+  line-height: 1.72;
+  color: var(--ink-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.post-aside-title {
+  font-family: var(--meta);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--rubric-dark);
+  margin-bottom: 0.45rem;
+}
+
+.post-aside-body > *:last-child,
+.post-aside p:last-child {
+  margin-bottom: 0;
+}
+
+.post-aside p {
+  line-height: 1.72;
+  margin-bottom: 0.75rem;
+}
+
+@media (min-width: 1200px) {
+  .post-aside {
+    width: 16.5rem;
+    margin-block: 0.3rem 1.35rem;
+    font-size: 0.92rem;
+  }
+
+  [dir="rtl"] .post-aside {
+    float: left;
+    margin-left: -9.5rem;
+    margin-right: 1.85rem;
+  }
+
+  [dir="ltr"] .post-aside {
+    float: right;
+    margin-right: -9.5rem;
+    margin-left: 1.85rem;
+  }
+}
+
+/* --- Blockquotes & Citations --- */
+.post-prose blockquote {
+  position: relative;
+  margin: 2.1rem 0;
+  padding: 1.45rem 1.75rem;
+  background: linear-gradient(155deg, var(--paper-light) 0%, #efeae0 100%);
+  border: 1px solid var(--paper-2);
+  border-inline-start: 4px solid var(--rubric);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+  font-family: var(--display);
+  font-size: 1.16rem;
+  line-height: 1.82;
+  color: var(--ink);
+}
+
+[dir="rtl"] .post-prose blockquote {
+  font-style: normal;
+}
+
+[dir="ltr"] .post-prose blockquote {
+  font-style: italic;
+}
+
+.post-prose blockquote > p:last-of-type {
+  margin-bottom: 0;
+}
+
+.post-quote-cite {
+  margin-top: 0.9rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid rgba(12, 26, 43, 0.1);
+  font-family: var(--meta);
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-style: normal;
+  color: var(--navy);
+}
+
+.post-quote-cite cite {
+  font-style: normal;
+}
+
+.post-quote-cite cite::before {
+  content: "— ";
+  color: var(--rubric);
+  font-weight: 700;
+}
+
+/* --- Callout & Apparatus Boxes (::: box, ::: manuscript, ::: important, ::: note) --- */
+.post-box {
+  clear: both;
+  margin: 2.2rem 0;
+  padding: 1.5rem 1.75rem;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+}
+
+.post-box-title {
+  font-family: var(--display);
+  font-size: 1.18rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.post-box-title::before {
+  content: "❖";
+  font-size: 0.82em;
+  color: var(--rubric);
+  flex-shrink: 0;
+}
+
+.post-box-body > *:last-child,
+.post-box-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* Default Parchment Box */
+.post-box--parchment {
+  background: var(--paper-light);
+  border: 1px solid var(--paper-2);
+  box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.6), var(--shadow-sm);
+}
+
+.post-box--parchment .post-box-title {
+  color: var(--navy);
+}
+
+/* Navy Manuscript / Apparatus Box */
+.post-box--navy {
+  position: relative;
+  background: var(--navy);
+  color: var(--pale);
+  border: 1px solid var(--navy-dark);
+  box-shadow: var(--shadow-md);
+}
+
+.post-box--navy::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(0deg, rgba(240, 241, 248, 0.035) 0 1px, transparent 1px 32px);
+  pointer-events: none;
+}
+
+.post-box--navy > * {
+  position: relative;
+}
+
+.post-box--navy .post-box-title {
+  color: #ffffff;
+}
+
+.post-box--navy .post-box-title::before {
+  color: var(--paper);
+}
+
+.post-box--navy a {
+  color: #ffffff;
+}
+
+.post-box--navy strong {
+  color: #ffffff;
+}
+
+/* Rubric Highlight Box */
+.post-box--rubric {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-top: 3.5px solid var(--rubric);
+}
+
+.post-box--rubric .post-box-title {
+  color: var(--rubric-dark);
+}
+
+/* Pale Blue Info / Note Box */
+.post-box--info {
+  background: var(--pale-alt);
+  border: 1px solid rgba(6, 100, 164, 0.18);
+  border-inline-start: 4px solid var(--blue);
+}
+
+.post-box--info .post-box-title {
+  color: var(--navy);
+}
+
+.post-box--info .post-box-title::before {
+  color: var(--blue);
+}
+
+/* --- Figures, Plates & Image Captions --- */
+.post-figure {
+  margin: 2.35rem auto;
+  max-width: 100%;
+}
+
+.post-figure--small {
+  max-width: 420px;
+}
+
+.post-figure--wide,
+.post-figure--full {
+  clear: both;
+}
+
+@media (min-width: 960px) {
+  .post-prose .post-figure--wide {
+    margin-inline: -4.5rem;
+    max-width: calc(100% + 9rem);
+  }
+
+  .post-prose .post-figure--full {
+    margin-inline: -8rem;
+    max-width: calc(100% + 16rem);
+  }
+}
+
+.post-figure-frame,
+.post-figure-media {
+  background: var(--surface);
+  padding: 0.5rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-md);
+}
+
+.post-figure-frame img,
+.post-figure-media img {
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+  margin-inline: auto;
+}
+
+.post-figure-media > p {
+  margin: 0;
+}
+
+/* Multi-image comparison grid inside ::: figure */
+.post-figure-media:has(> p + p) {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .post-figure-media:has(> p + p) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.post-figcaption {
+  margin-top: 0.75rem;
+  font-family: var(--meta);
+  font-size: 0.86rem;
+  line-height: 1.58;
+  color: rgba(12, 26, 43, 0.74);
+  text-align: center;
+  padding-inline: 0.5rem;
+}
+
+/* Standalone markdown image without caption */
+.post-prose > p > img {
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-md);
+  margin: 1.75rem auto;
+}
+
+/* --- Inline Textual Marks, Code, Lists, HR & Tables --- */
+.post-mark,
+.post-prose mark {
+  background: rgba(156, 43, 43, 0.13);
+  color: var(--rubric-dark);
+  padding: 0.06em 0.3em;
+  border-radius: 2px;
+  border-bottom: 1.5px solid rgba(156, 43, 43, 0.35);
+}
+
+.post-prose del,
+.post-prose s {
+  color: rgba(12, 26, 43, 0.55);
+  text-decoration-color: var(--rubric);
+}
+
+.post-prose code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.88em;
+  background: var(--pale-alt);
+  border: 1px solid var(--line);
+  padding: 0.12em 0.38em;
+  border-radius: var(--radius-sm);
+}
+
+.post-prose pre {
+  background: var(--ink);
+  color: var(--pale);
+  padding: 1.25rem 1.5rem;
+  border-radius: var(--radius-sm);
+  overflow-x: auto;
+  margin: 1.85rem 0;
+  line-height: 1.6;
+}
+
+.post-prose pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
+}
+
+.post-prose ul,
+.post-prose ol {
+  padding-inline-start: 1.6rem;
+  margin: 1.35rem 0 1.6rem;
+}
+
+.post-prose li {
+  margin-bottom: 0.55rem;
+  line-height: 1.82;
+}
+
+.post-prose ul li::marker {
+  color: var(--rubric);
+}
+
+.post-prose ol li::marker {
+  font-family: var(--meta);
+  font-weight: 600;
+  color: var(--navy);
+}
+
+/* Ornamental Section Break (--- / ***) */
+.post-prose hr {
+  clear: both;
+  border: none;
+  height: auto;
+  margin: 2.75rem auto;
+  text-align: center;
+  position: relative;
+}
+
+.post-prose hr::before {
+  content: "❖   ❖   ❖";
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  color: var(--rubric);
+  opacity: 0.75;
+}
+
+/* Scholarly Tables */
+.post-prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-size: 0.98rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-sm);
+}
+
+.post-prose th,
+.post-prose td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--line);
+  text-align: start;
+  vertical-align: top;
+  line-height: 1.6;
+}
+
+.post-prose th {
+  font-family: var(--meta);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--navy);
+  background: var(--pale-alt);
+  border-bottom: 2px solid var(--navy);
+}
+
+.post-prose tbody tr:nth-child(even) {
+  background: rgba(240, 241, 248, 0.45);
+}
+
+/* --- Scholarly Footnotes --- */
+.footnote-ref {
+  font-family: var(--meta);
+  font-size: 0.72em;
+  font-weight: 700;
+  line-height: 0;
+  margin-inline-start: 0.1em;
+}
+
+.footnote-ref a {
+  color: var(--rubric);
+  text-decoration: none;
+  padding: 0.05em 0.18em;
+  border-radius: 2px;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.footnote-ref a:hover,
+.footnote-ref a:target {
+  background: var(--rubric);
+  color: #ffffff;
+}
+
+.post-footnotes {
+  clear: both;
+  margin-top: 3.25rem;
+  padding-top: 1.5rem;
+}
+
+.post-footnotes-rule {
+  width: 6rem;
+  height: 2px;
+  background: var(--rubric);
+  margin-bottom: 1.15rem;
+}
+
+.post-footnotes-heading {
+  font-family: var(--display) !important;
+  font-size: 1.25rem !important;
+  color: var(--navy) !important;
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+  margin: 0 0 1rem !important;
+}
+
+.post-footnotes-heading::after {
+  display: none !important;
+}
+
+.post-footnotes-list {
+  font-size: 0.94rem;
+  line-height: 1.72;
+  color: var(--ink-light);
+  padding-inline-start: 1.5rem;
+  margin: 0;
+}
+
+.footnote-item {
+  margin-bottom: 0.7rem;
+  padding: 0.25rem 0.4rem;
+  border-radius: var(--radius-sm);
+  transition: background-color 0.3s ease;
+}
+
+.footnote-item:target {
+  background: var(--paper-light);
+  box-shadow: inset 3px 0 0 var(--rubric);
+}
+
+[dir="rtl"] .footnote-item:target {
+  box-shadow: inset -3px 0 0 var(--rubric);
+}
+
+.footnote-item p {
+  margin: 0 0 0.45rem;
+  line-height: 1.72;
+}
+
+.footnote-item p:last-child {
+  margin-bottom: 0;
+}
+
+.footnote-backref {
+  font-family: var(--meta);
+  font-size: 0.85em;
+  text-decoration: none;
+  color: var(--blue);
+  margin-inline-start: 0.3rem;
+}
+
+.footnote-backref:hover {
+  color: var(--rubric);
+}
+
+/* ==========================================================================
+   POST FOOTER, TAXONOMIES & ADJACENT NAVIGATION
+   ========================================================================== */
+
+.post-footer {
+  max-width: 66ch;
+  margin: 3rem auto 0;
+  clear: both;
+}
+
+.post-fleuron {
+  text-align: center;
+  color: var(--rubric);
+  font-size: 0.85rem;
+  letter-spacing: 0.3em;
+  opacity: 0.7;
+  margin-bottom: 2.25rem;
+}
+
+.post-taxonomies {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-bottom: 2.25rem;
+}
+
+.post-tax-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.post-tax-label {
+  font-family: var(--meta);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--navy);
+  min-width: 5.5rem;
+}
+
+.post-tax-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.post-adjacent-nav {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .post-adjacent-nav {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.post-adj-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1.15rem 1.35rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+}
+
+.post-adj-card:hover {
+  border-color: var(--navy);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.post-adj-card--older {
+  text-align: end;
+}
+
+.post-adj-label {
+  font-family: var(--meta);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--rubric);
+}
+
+.post-adj-title {
+  font-family: var(--display);
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.35;
+}
+
+@media print {
+  .post-back-link,
+  .post-eyebrow-sep,
+  .post-adjacent-nav,
+  .blog-taxonomy-bar {
+    display: none !important;
+  }
+
+  .post-header {
+    background: none !important;
+    padding: 0 0 1.5rem !important;
+  }
+
+  .post-aside {
+    float: none !important;
+    width: auto !important;
+    margin: 1rem 0 !important;
+  }
+}

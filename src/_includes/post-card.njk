@@ -1,0 +1,51 @@
+{% set cardIsHe = (post.data.lang == 'he') %}
+{% set cardCats = post.data | postCategories %}
+{% set cardTags = post.data | postTags %}
+{% set cardBlurb = post.data.blurb or post.data.subtitle or post.data.description %}
+
+<article class="post-card reveal is-in">
+  <div class="post-card-meta">
+    {% if cardCats.length > 0 %}
+      <div class="post-card-categories">
+        {% for cat in cardCats %}
+          <a href="{{ cat.url }}" class="post-card-cat">{{ cat.name }}</a>{% if not loop.last %}<span class="post-cat-dot" aria-hidden="true">·</span>{% endif %}
+        {% endfor %}
+      </div>
+      <span class="post-meta-sep" aria-hidden="true">·</span>
+    {% endif %}
+    {% if post.date %}
+      <time class="post-card-date" datetime="{{ post.date | isoDate }}">
+        {{ post.date | formatPostDate(post.data.lang) }}
+      </time>
+    {% endif %}
+    {% if post.data.hebrewDate %}
+      <span class="post-meta-sep" aria-hidden="true">·</span>
+      <span class="post-card-hebdate">{{ post.data.hebrewDate }}</span>
+    {% endif %}
+    <span class="post-meta-sep" aria-hidden="true">·</span>
+    <span class="post-card-reading">{{ post.templateContent | readingTime(post.data.lang) }}</span>
+  </div>
+
+  <h2 class="post-card-title">
+    <a href="{{ post.url }}">{{ post.data.title }}</a>
+  </h2>
+
+  {% if cardBlurb %}
+    <p class="post-card-blurb">{{ cardBlurb | markdownInline | safe }}</p>
+  {% endif %}
+
+  <div class="post-card-footer">
+    <a href="{{ post.url }}" class="post-card-readmore">
+      <span>{{ 'קריאת הרשימה' if cardIsHe else 'Read note' }}</span>
+      <span class="post-readmore-arrow" aria-hidden="true">{{ '←' if cardIsHe else '→' }}</span>
+    </a>
+
+    {% if cardTags.length > 0 %}
+      <div class="post-card-tags" aria-label="{{ 'תגיות' if cardIsHe else 'Tags' }}">
+        {% for tag in cardTags %}
+          <a href="{{ tag.url }}" class="tax-pill tax-pill--tag tax-pill--sm"><span class="tax-hash" aria-hidden="true">#</span>{{ tag.name }}</a>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</article>

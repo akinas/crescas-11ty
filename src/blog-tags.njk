@@ -1,0 +1,65 @@
+---
+layout: base.njk
+isCustomLayout: true
+pagination:
+  data: collections.blogTags
+  size: 1
+  alias: taxArchive
+  addAllPagesToCollections: true
+---
+{% if taxArchive %}
+{% set isHe = (taxArchive.lang == 'he') %}
+<div class="blog-archive">
+  <header class="page-header blog-archive-header">
+    <div class="container">
+      <div class="blog-archive-header-inner">
+        <div class="post-eyebrow-bar" style="margin-bottom:0.85rem;">
+          <a href="{{ taxArchive.indexUrl }}" class="post-back-link">
+            <span class="post-back-arrow" aria-hidden="true">{{ '→' if isHe else '←' }}</span>
+            <span>{{ 'כל הרשימות' if isHe else 'All Notes' }}</span>
+          </a>
+          <span class="post-eyebrow-sep" aria-hidden="true">/</span>
+          <span class="post-taxonomy-kind">{{ 'תגית' if isHe else 'Tag' }}</span>
+        </div>
+
+        <div class="blog-archive-title-row">
+          <h1><span class="tax-heading-hash" aria-hidden="true">#</span>{{ taxArchive.name }}</h1>
+          <span class="blog-count-badge">
+            {% if isHe %}
+              {{ 'רשימה אחת' if taxArchive.count == 1 else (taxArchive.count ~ ' רשימות') }}
+            {% else %}
+              {{ '1 note' if taxArchive.count == 1 else (taxArchive.count ~ ' notes') }}
+            {% endif %}
+          </span>
+        </div>
+
+        {% if taxArchive.allTags.length > 1 %}
+          <nav class="blog-taxonomy-bar" aria-label="{{ 'תגיות' if isHe else 'Tags' }}">
+            <div class="blog-tax-row">
+              <div class="blog-tax-list">
+                <a href="{{ taxArchive.indexUrl }}" class="tax-pill tax-pill--tag tax-pill--sm">
+                  <span>{{ 'כל הרשימות' if isHe else 'All Notes' }}</span>
+                </a>
+                {% for tag in taxArchive.allTags %}
+                  <a href="{{ tag.url }}" class="tax-pill tax-pill--tag tax-pill--sm {{ 'is-active' if tag.slug == taxArchive.slug }}" {% if tag.slug == taxArchive.slug %}aria-current="page"{% endif %}>
+                    <span class="tax-hash" aria-hidden="true">#</span><span>{{ tag.name }}</span>
+                    <span class="tax-count">{{ tag.count }}</span>
+                  </a>
+                {% endfor %}
+              </div>
+            </div>
+          </nav>
+        {% endif %}
+      </div>
+    </div>
+  </header>
+
+  <div class="container page-body">
+    <div class="post-list">
+      {% for post in taxArchive.posts %}
+        {% include "post-card.njk" %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endif %}

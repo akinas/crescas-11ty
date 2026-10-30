@@ -1,0 +1,65 @@
+---
+layout: base.njk
+isCustomLayout: true
+pagination:
+  data: collections.blogCategories
+  size: 1
+  alias: taxArchive
+  addAllPagesToCollections: true
+---
+{% if taxArchive %}
+{% set isHe = (taxArchive.lang == 'he') %}
+<div class="blog-archive">
+  <header class="page-header blog-archive-header">
+    <div class="container">
+      <div class="blog-archive-header-inner">
+        <div class="post-eyebrow-bar" style="margin-bottom:0.85rem;">
+          <a href="{{ taxArchive.indexUrl }}" class="post-back-link">
+            <span class="post-back-arrow" aria-hidden="true">{{ '→' if isHe else '←' }}</span>
+            <span>{{ 'כל הרשימות' if isHe else 'All Notes' }}</span>
+          </a>
+          <span class="post-eyebrow-sep" aria-hidden="true">/</span>
+          <span class="post-taxonomy-kind">{{ 'קטגוריה' if isHe else 'Category' }}</span>
+        </div>
+
+        <div class="blog-archive-title-row">
+          <h1>{{ taxArchive.name }}</h1>
+          <span class="blog-count-badge">
+            {% if isHe %}
+              {{ 'רשימה אחת' if taxArchive.count == 1 else (taxArchive.count ~ ' רשימות') }}
+            {% else %}
+              {{ '1 note' if taxArchive.count == 1 else (taxArchive.count ~ ' notes') }}
+            {% endif %}
+          </span>
+        </div>
+
+        {% if taxArchive.allCategories.length > 1 %}
+          <nav class="blog-taxonomy-bar" aria-label="{{ 'קטגוריות' if isHe else 'Categories' }}">
+            <div class="blog-tax-row">
+              <div class="blog-tax-list">
+                <a href="{{ taxArchive.indexUrl }}" class="tax-pill tax-pill--category">
+                  <span>{{ 'הכל' if isHe else 'All' }}</span>
+                </a>
+                {% for cat in taxArchive.allCategories %}
+                  <a href="{{ cat.url }}" class="tax-pill tax-pill--category {{ 'is-active' if cat.slug == taxArchive.slug }}" {% if cat.slug == taxArchive.slug %}aria-current="page"{% endif %}>
+                    <span>{{ cat.name }}</span>
+                    <span class="tax-count">{{ cat.count }}</span>
+                  </a>
+                {% endfor %}
+              </div>
+            </div>
+          </nav>
+        {% endif %}
+      </div>
+    </div>
+  </header>
+
+  <div class="container page-body">
+    <div class="post-list">
+      {% for post in taxArchive.posts %}
+        {% include "post-card.njk" %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endif %}

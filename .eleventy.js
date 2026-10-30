@@ -1,8 +1,12 @@
-import markdownIt from "markdown-it";
 import eleventyNavigation from "@11ty/eleventy-navigation";
+import { createScholarlyMarkdown } from "./src/_11ty/markdown.js";
+import { registerBlogPlugin } from "./src/_11ty/blog.js";
 
 export default function (eleventyConfig) {
-  const md = markdownIt({ html: true });
+  const md = createScholarlyMarkdown();
+  eleventyConfig.setLibrary("md", md);
+
+  registerBlogPlugin(eleventyConfig);
 
   eleventyConfig.addCollection("nav", function (collectionApi) {
     return collectionApi.getFilteredByTag("nav").sort(function (a, b) {

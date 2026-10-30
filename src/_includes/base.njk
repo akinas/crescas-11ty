@@ -9,20 +9,24 @@
   <title>{{ pageTitle }}</title>
   
   {# SEO & Canonical Metadata #}
-  {% set metaDesc = description or site.description[lang] or site.description.he %}
+  {% set metaDesc = description or blurb or subtitle or site.description[lang] or site.description.he %}
+  {% set metaAuthor = author or site.author[lang] or site.author.he %}
+  {% set defaultOgImg = "https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,w_1200/v1768680865/ohr_hashem_edited_paperback_opt_kjxk9d.png" %}
+  {% set ogImage = (image if ('http' in image) else (site.url ~ image)) if image else defaultOgImg %}
   <meta name="description" content="{{ metaDesc }}">
-  <meta name="author" content="{{ site.author[lang] or site.author.he }}">
+  <meta name="author" content="{{ metaAuthor }}">
   <meta name="publisher" content="{{ site.editor[lang] or site.editor.he }}">
-  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <link rel="canonical" href="{{ site.url }}{{ page.url | encodeUrlPath }}">
 
   {# Multilingual Hreflang Tags #}
-  {% set translatedLink = lang | getTranslatedLink %}
+  {% set heSwitchUrl = page.url | resolveTranslatedUrl('he', translationKey, collections) %}
+  {% set enSwitchUrl = page.url | resolveTranslatedUrl('en', translationKey, collections) %}
   {% if lang == 'he' %}
-    <link rel="alternate" hreflang="he" href="{{ site.url }}/">
-    <link rel="alternate" hreflang="en" href="{{ site.url }}/en/">
+    <link rel="alternate" hreflang="he" href="{{ site.url }}{{ page.url | encodeUrlPath }}">
+    <link rel="alternate" hreflang="en" href="{{ site.url }}{{ enSwitchUrl | encodeUrlPath }}">
   {% else %}
-    <link rel="alternate" hreflang="en" href="{{ site.url }}/en/">
-    <link rel="alternate" hreflang="he" href="{{ site.url }}/">
+    <link rel="alternate" hreflang="en" href="{{ site.url }}{{ page.url | encodeUrlPath }}">
+    <link rel="alternate" hreflang="he" href="{{ site.url }}{{ heSwitchUrl | encodeUrlPath }}">
   {% endif %}
   <link rel="alternate" hreflang="x-default" href="{{ site.url }}/">
 
@@ -34,23 +38,31 @@
   <meta name="dcterms.spatial" content="{{ site.geo.placename }}">
 
   {# Open Graph / Facebook #}
-  <meta property="og:type" content="book">
+  <meta property="og:type" content="{{ 'article' if isPost else 'book' }}">
   <meta property="og:site_name" content="{{ site.siteName[lang] or 'אור השם' }}">
   <meta property="og:title" content="{{ pageTitle }}">
   <meta property="og:description" content="{{ metaDesc }}">
-  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url | encodeUrlPath }}">
   <meta property="og:locale" content="{{ 'he_IL' if lang == 'he' else 'en_US' }}">
   <meta property="og:locale:alternate" content="{{ 'en_US' if lang == 'he' else 'he_IL' }}">
-  <meta property="og:image" content="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,w_1200/v1768680865/ohr_hashem_edited_paperback_opt_kjxk9d.png">
+  <meta property="og:image" content="{{ ogImage }}">
+  {% if not image %}
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="800">
-  <meta property="og:image:alt" content="{{ site.title[lang] or site.title.he }}">
+  {% endif %}
+  <meta property="og:image:alt" content="{{ imageAlt or title or site.title[lang] or site.title.he }}">
+  {% if isPost and page.date %}
+  <meta property="article:published_time" content="{{ page.date | isoDate }}">
+  {% endif %}
+  {% if isPost and updated %}
+  <meta property="article:modified_time" content="{{ updated | isoDate }}">
+  {% endif %}
 
   {# Twitter Card #}
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ pageTitle }}">
   <meta name="twitter:description" content="{{ metaDesc }}">
-  <meta name="twitter:image" content="https://res.cloudinary.com/dyj4i2vhr/image/upload/f_auto,q_auto,w_1200/v1768680865/ohr_hashem_edited_paperback_opt_kjxk9d.png">
+  <meta name="twitter:image" content="{{ ogImage }}">
 
   {# JSON-LD Structured Data #}
   <script type="application/ld+json">
@@ -121,7 +133,24 @@
             }
           }
         ]
-      }
+      }{% if isPost %},
+      {
+        "@type": "BlogPosting",
+        "@id": "{{ site.url }}{{ page.url | encodeUrlPath }}#article",
+        "headline": {{ title | dump | safe }},
+        "description": {{ metaDesc | dump | safe }},
+        "datePublished": "{{ page.date | isoDate }}",
+        {% if updated %}"dateModified": "{{ updated | isoDate }}",{% endif %}
+        "inLanguage": "{{ lang or 'he' }}",
+        "author": {
+          "@type": "Person",
+          "name": {{ (author or site.editor[lang] or site.editor.he) | dump | safe }}
+        },
+        "isPartOf": {
+          "@id": "{{ site.url }}/#website"
+        },
+        "mainEntityOfPage": "{{ site.url }}{{ page.url | encodeUrlPath }}"
+      }{% endif %}
     ]
   }
   </script>
@@ -163,9 +192,9 @@
             {% endif %}
           </span>
           <nav class="lang-switch" aria-label="{% if lang == 'he' %}בחירת שפה{% else %}Language Selection{% endif %}">
-            <a href="{{ '/' if lang == 'en' else '#' }}" class="lang-btn {{ 'active' if lang == 'he' }}" aria-label="עברית" {% if lang == 'he' %}aria-current="page"{% endif %}>עב</a>
+            <a href="{{ heSwitchUrl if lang == 'en' else '#' }}" class="lang-btn {{ 'active' if lang == 'he' }}" aria-label="עברית" {% if lang == 'he' %}aria-current="page"{% endif %}>עב</a>
             <span class="lang-sep" style="opacity:0.3;">|</span>
-            <a href="{{ '/en/' if lang == 'he' else '#' }}" class="lang-btn {{ 'active' if lang == 'en' }}" aria-label="English" {% if lang == 'en' %}aria-current="page"{% endif %}>EN</a>
+            <a href="{{ enSwitchUrl if lang == 'he' else '#' }}" class="lang-btn {{ 'active' if lang == 'en' }}" aria-label="English" {% if lang == 'en' %}aria-current="page"{% endif %}>EN</a>
           </nav>
         </div>
 
@@ -186,9 +215,22 @@
 
           <!-- Navigation Drawer / Menu -->
           <nav class="main-nav" id="main-nav" role="navigation" aria-label="{% if lang == 'he' %}תפריט ראשי{% else %}Main Navigation{% endif %}">
+            {% set langPosts = collections.posts_he if lang == 'he' else collections.posts_en %}
+            {% set hasBlogPosts = (langPosts and langPosts.length > 0) %}
+            {% set blogIndexUrl = '/he/posts/' if lang == 'he' else '/en/posts/' %}
+            {% set blogMenuTitle = 'רשימות' if lang == 'he' else 'Notes' %}
+            {% set blogInserted = false %}
             <ul class="nav-list">
               {% for item in collections.nav %}
                 {% if item.data.lang == lang and item.data.translationKey != 'contact' and item.data.translationKey != 'library' and not ('contact' in item.url or 'library' in item.url) %}
+                  {% if hasBlogPosts and not blogInserted and item.data.weight > 50 %}
+                    {% set blogInserted = true %}
+                    <li class="nav-item">
+                      <a href="{{ blogIndexUrl }}" class="nav-link {{ 'active' if page.url and ('/posts/' in page.url) }}" {% if page.url == blogIndexUrl %}aria-current="page"{% endif %}>
+                        {{ blogMenuTitle }}
+                      </a>
+                    </li>
+                  {% endif %}
                   <li class="nav-item">
                     <a href="{{ item.url }}" class="nav-link {{ 'active' if page.url == item.url }}" {% if page.url == item.url %}aria-current="page"{% endif %}>
                       {{ item.data.title }}
@@ -196,6 +238,13 @@
                   </li>
                 {% endif %}
               {% endfor %}
+              {% if hasBlogPosts and not blogInserted %}
+                <li class="nav-item">
+                  <a href="{{ blogIndexUrl }}" class="nav-link {{ 'active' if page.url and ('/posts/' in page.url) }}" {% if page.url == blogIndexUrl %}aria-current="page"{% endif %}>
+                    {{ blogMenuTitle }}
+                  </a>
+                </li>
+              {% endif %}
               <li class="nav-item">
                 {% if lang == 'he' %}
                   <a href="https://shinmem.org/" class="nav-link" target="_blank" rel="noopener noreferrer">
@@ -243,7 +292,7 @@
 
     <!-- Main Content Area -->
     <main class="main-content" id="main-content" role="main">
-      {% if isCustomHome %}
+      {% if isCustomHome or isCustomLayout %}
         {{ content | safe }}
       {% else %}
         {% if isSubpage or (title and title != "ראשי" and title != "Home") %}

@@ -1,0 +1,139 @@
+---
+layout: base.njk
+isCustomLayout: true
+---
+{% set isHe = (lang == 'he') %}
+{% set postCats = { lang: lang, categories: categories, category: category } | postCategories %}
+{% set postTagList = { lang: lang, tags: tags, postTags: postTags } | postTags %}
+{% set postBlurb = blurb or subtitle %}
+{% set langPosts = collections.posts_he if isHe else collections.posts_en %}
+{% set adj = langPosts | adjacentPosts(page.url) %}
+{% set blogIndexUrl = '/he/posts/' if isHe else '/en/posts/' %}
+
+<article class="post-article" itemscope itemtype="https://schema.org/BlogPosting">
+  <!-- Scholarly Article Header -->
+  <header class="post-header">
+    <div class="container">
+      <div class="post-header-inner">
+        <div class="post-eyebrow-bar">
+          <a href="{{ blogIndexUrl }}" class="post-back-link">
+            <span class="post-back-arrow" aria-hidden="true">{{ '→' if isHe else '←' }}</span>
+            <span>{{ 'כל הרשימות' if isHe else 'All Notes' }}</span>
+          </a>
+          {% if postCats.length > 0 %}
+            <span class="post-eyebrow-sep" aria-hidden="true">/</span>
+            <div class="post-header-categories" aria-label="{{ 'קטגוריות' if isHe else 'Categories' }}">
+              {% for cat in postCats %}
+                <a href="{{ cat.url }}" class="post-category-eyebrow" itemprop="articleSection">{{ cat.name }}</a>{% if not loop.last %}<span class="post-cat-dot" aria-hidden="true">·</span>{% endif %}
+              {% endfor %}
+            </div>
+          {% endif %}
+        </div>
+
+        <h1 class="post-title" itemprop="headline">{{ title }}</h1>
+
+        {% if postBlurb %}
+          <p class="post-blurb" itemprop="description">{{ postBlurb | markdownInline | safe }}</p>
+        {% endif %}
+
+        <div class="post-header-rule" aria-hidden="true">
+          <span class="post-ornament">❖</span>
+        </div>
+
+        <div class="post-meta">
+          {% if author %}
+            <span class="post-meta-item post-meta-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+              <span itemprop="name">{{ author }}</span>
+            </span>
+          {% endif %}
+          {% if page.date %}
+            <time class="post-meta-item post-meta-date" datetime="{{ page.date | isoDate }}" itemprop="datePublished">
+              {{ page.date | formatPostDate(lang) }}
+            </time>
+          {% endif %}
+          {% if hebrewDate %}
+            <span class="post-meta-item post-meta-hebdate">{{ hebrewDate }}</span>
+          {% endif %}
+          {% if updated %}
+            <span class="post-meta-item post-meta-updated">
+              {{ 'עודכן:' if isHe else 'Updated:' }}
+              <time datetime="{{ updated | isoDate }}" itemprop="dateModified">{{ updated | formatPostDate(lang) }}</time>
+            </span>
+          {% endif %}
+          <span class="post-meta-item post-meta-reading">
+            {{ content | readingTime(lang) }}
+          </span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Article Body -->
+  <div class="container post-body-container">
+    {% if image %}
+      <figure class="post-figure post-hero-figure">
+        <div class="post-figure-frame">
+          <img src="{{ image }}" alt="{{ imageAlt or title }}" loading="eager" decoding="async" itemprop="image">
+        </div>
+        {% if imageCaption %}
+          <figcaption class="post-figcaption">{{ imageCaption | markdownInline | safe }}</figcaption>
+        {% endif %}
+      </figure>
+    {% endif %}
+
+    <div class="post-prose{{ ' has-dropcap' if dropcap else '' }} reveal is-in" itemprop="articleBody">
+      {{ content | safe }}
+    </div>
+
+    <!-- Article Colophon & Taxonomies Footer -->
+    <footer class="post-footer">
+      <div class="post-fleuron" aria-hidden="true">❖ ❖ ❖</div>
+
+      {% if postCats.length > 0 or postTagList.length > 0 %}
+        <div class="post-taxonomies">
+          {% if postCats.length > 0 %}
+            <div class="post-tax-group">
+              <span class="post-tax-label">{{ 'קטגוריות:' if isHe else 'Categories:' }}</span>
+              <div class="post-tax-pills">
+                {% for cat in postCats %}
+                  <a href="{{ cat.url }}" class="tax-pill tax-pill--category">{{ cat.name }}</a>
+                {% endfor %}
+              </div>
+            </div>
+          {% endif %}
+
+          {% if postTagList.length > 0 %}
+            <div class="post-tax-group">
+              <span class="post-tax-label">{{ 'תגיות:' if isHe else 'Tags:' }}</span>
+              <div class="post-tax-pills">
+                {% for tag in postTagList %}
+                  <a href="{{ tag.url }}" class="tax-pill tax-pill--tag" itemprop="keywords"><span class="tax-hash" aria-hidden="true">#</span>{{ tag.name }}</a>
+                {% endfor %}
+              </div>
+            </div>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% if adj.newer or adj.older %}
+        <nav class="post-adjacent-nav" aria-label="{{ 'ניווט בין רשימות' if isHe else 'Post navigation' }}">
+          {% if adj.newer %}
+            <a href="{{ adj.newer.url }}" class="post-adj-card post-adj-card--newer">
+              <span class="post-adj-label">{{ '→ הרשימה הבאה' if isHe else '← Newer Note' }}</span>
+              <span class="post-adj-title">{{ adj.newer.data.title }}</span>
+            </a>
+          {% else %}
+            <div class="post-adj-spacer" aria-hidden="true"></div>
+          {% endif %}
+
+          {% if adj.older %}
+            <a href="{{ adj.older.url }}" class="post-adj-card post-adj-card--older">
+              <span class="post-adj-label">{{ 'הרשימה הקודמת ←' if isHe else 'Older Note →' }}</span>
+              <span class="post-adj-title">{{ adj.older.data.title }}</span>
+            </a>
+          {% endif %}
+        </nav>
+      {% endif %}
+    </footer>
+  </div>
+</article>

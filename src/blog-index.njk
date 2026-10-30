@@ -1,0 +1,79 @@
+---
+layout: base.njk
+isCustomLayout: true
+pagination:
+  data: collections.blogIndexes
+  size: 1
+  alias: archive
+  addAllPagesToCollections: true
+---
+{% if archive %}
+{% set isHe = (archive.lang == 'he') %}
+<div class="blog-archive">
+  <header class="page-header blog-archive-header">
+    <div class="container">
+      <div class="blog-archive-header-inner">
+        <div class="eyebrow">
+          {% if isHe %}אור השם · מהדורה ביקורתית{% else %}Light of the Lord · Critical Edition{% endif %}
+        </div>
+        <div class="blog-archive-title-row">
+          <h1>{{ archive.title }}</h1>
+          <span class="blog-count-badge">
+            {% if isHe %}
+              {{ 'רשימה אחת' if archive.posts.length == 1 else (archive.posts.length ~ ' רשימות') }}
+            {% else %}
+              {{ '1 note' if archive.posts.length == 1 else (archive.posts.length ~ ' notes') }}
+            {% endif %}
+          </span>
+        </div>
+        <p class="blog-archive-lede">
+          {% if isHe %}
+            רשימות מחקריות, עיוני נוסח והערות על כתבי היד והמהדורה הביקורתית של ספר ״אור השם״.
+          {% else %}
+            Scholarly notes, textual studies, and editorial observations on the manuscripts and critical edition of <em>Light of the Lord</em>.
+          {% endif %}
+        </p>
+
+        {% if archive.categories.length > 0 or archive.tags.length > 0 %}
+          <nav class="blog-taxonomy-bar" aria-label="{{ 'סינון לפי קטגוריות ותגיות' if isHe else 'Browse by categories and tags' }}">
+            {% if archive.categories.length > 0 %}
+              <div class="blog-tax-row">
+                <span class="blog-tax-heading">{{ 'קטגוריות:' if isHe else 'Categories:' }}</span>
+                <div class="blog-tax-list">
+                  {% for cat in archive.categories %}
+                    <a href="{{ cat.url }}" class="tax-pill tax-pill--category">
+                      <span>{{ cat.name }}</span>
+                      <span class="tax-count">{{ cat.count }}</span>
+                    </a>
+                  {% endfor %}
+                </div>
+              </div>
+            {% endif %}
+
+            {% if archive.tags.length > 0 %}
+              <div class="blog-tax-row">
+                <span class="blog-tax-heading">{{ 'תגיות:' if isHe else 'Tags:' }}</span>
+                <div class="blog-tax-list">
+                  {% for tag in archive.tags %}
+                    <a href="{{ tag.url }}" class="tax-pill tax-pill--tag tax-pill--sm">
+                      <span class="tax-hash" aria-hidden="true">#</span><span>{{ tag.name }}</span>
+                    </a>
+                  {% endfor %}
+                </div>
+              </div>
+            {% endif %}
+          </nav>
+        {% endif %}
+      </div>
+    </div>
+  </header>
+
+  <div class="container page-body">
+    <div class="post-list">
+      {% for post in archive.posts %}
+        {% include "post-card.njk" %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endif %}
